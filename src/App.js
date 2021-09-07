@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+
+// components
+import Navbar from './components/Navbar';
+import TopNews from './pages/TopNews';
+
+
+// General imports
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+
+
+// bootsrapt css
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// main css
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={TopNews}/>
+      </Switch>
+      </Router>
     </div>
   );
 }
