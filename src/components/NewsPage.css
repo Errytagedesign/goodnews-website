@@ -1,0 +1,17 @@
+.newsPage p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 1.2em;
+}
+
+.newsPage {
+  background-color: white;
+  padding: 1.5em 0.5em;
+}
+
+.newstime p {
+  font-size: 0.9rem;
+  color: rgb(170, 170, 170);
+}

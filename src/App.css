@@ -9,7 +9,19 @@
 
 body {
   background-color: #e5e5e5;
+  font-family: "Montserrat", sans-serif;
 }
+
+/* ====================
+=======TYPOGRAPHY============ */
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ====================
+=======TYPOGRAPHY============ */
 
 .NewsCategory a {
   text-decoration: none;
@@ -22,7 +34,7 @@ body {
 
 .LogoSearch {
   align-items: center;
-  background-color: var(--active-text);
+  background-color: var(--main-color);
   padding: 1.5em;
 }
 

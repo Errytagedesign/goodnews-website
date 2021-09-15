@@ -1,11 +1,11 @@
 import React from 'react'
 
-function TopNews() {
+function Sport() {
     return (
         <div>
-            <h1> Testing too</h1>
+            <h1> Sport Page </h1>
         </div>
     )
 }
 
-export default TopNews
+export default Sport

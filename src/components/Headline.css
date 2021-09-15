@@ -1,0 +1,42 @@
+.wrapper {
+  position: relative;
+  background-color: white;
+  box-shadow: 1px 1px 1px grey;
+}
+
+.excerpt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 1.1em;
+  background-color: white;
+  text-align: left;
+}
+
+.NewsName {
+  position: absolute;
+  top: 125px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.3rem;
+  width: 100%;
+  color: #fff;
+}
+
+.Readmore {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2em;
+  color: var(--main-color);
+}
+
+img {
+  width: 100%;
+}
+
+.headicon {
+  background-color: var(--main-color);
+  color: white;
+  width: 20px;
+  padding: 0.15em;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/GOOD-NEWS-NG-LOGO.png';
+import logo from '../assets/GOOD-NEWS-NG-LOGO-WHITE.png';
 import { Link } from 'react-router-dom';
 // import Carousel from 'react-elastic-carousel'
 import "slick-carousel/slick/slick.css"; 
@@ -75,12 +75,16 @@ function Navbar() {
                 <div className="">
                    
                     <Slider {...settings}>
-                    <Link className="newsCat " to="/"> Top News </Link>
-                    <Link className="newsCat  " to="/"> Entertainment </Link>
-                    <Link className="newsCat  " to="/"> Fashion </Link>
-                    <Link className="newsCat " to="/"> Lifestyle </Link>
-                    <Link className="newsCat " to="/"> Sport </Link>
-                    <Link className="newsCat " to="/"> Politics </Link>
+                    <Link className="newsCat " to="/"> Top Stories </Link>
+                    <Link className="newsCat  " to="/businessFinance"> Business and Finance </Link>
+                    <Link className="newsCat  " to="/education"> Education </Link>
+                    <Link className="newsCat " to="/entertainments"> Entertainments </Link>
+                    <Link className="newsCat " to="/fashionLifestyle"> Fashion and Lifestyle </Link>
+                    <Link className="newsCat " to="/fashionLifestyle"> Polictics </Link>
+                    <Link className="newsCat " to="/technology"> Technology </Link>
+                    <Link className="newsCat " to="/sport"> Sport </Link>
+                    <Link className="newsCat " to="/greaterLagos"> Greater Lagos</Link>
+                    <Link className="newsCat " to="/opinion"> Opinion</Link>
                     </Slider>
                 </div>
 
