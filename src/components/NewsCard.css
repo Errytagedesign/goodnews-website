@@ -1,22 +1,25 @@
-.wrapper {
-  position: relative;
+.newscard {
   background-color: white;
   box-shadow: 1px 1px 1px grey;
 }
 
-.excerpt {
+.NewsCardWrapper {
+  position: relative;
+}
+
+.NewsCardExcerpt {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  padding: 1.1em;
+  margin-top: -1em;
   background-color: white;
   text-align: left;
 }
 
-.NewsName {
+.NewsCardTitle {
   position: inherit;
-  top: -25px;
   background-color: rgba(0, 0, 0, 0.4);
+  top: -25px;
   color: #fff;
 }
 
@@ -29,11 +32,4 @@
 
 img {
   width: 100%;
-}
-
-.headicon {
-  background-color: var(--main-color);
-  color: white;
-  width: 20px;
-  padding: 0.15em;
 }

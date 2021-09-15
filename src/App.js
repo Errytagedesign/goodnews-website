@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 
 
 
+
 // pages
 import HeadlineStories from './pages/HeadlineStories';
 import TopStories from './pages/TopStories';
@@ -42,6 +43,7 @@ function App() {
 
       <Router>
       <Navbar />
+      
       
       <Switch>
         <Route path="/" exact component={TopStories}/>
