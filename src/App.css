@@ -51,7 +51,7 @@ h2 {
   font-size: 1rem;
 }
 
-/* .slick-prev {
+.slick-prev {
   left: -15px !important;
   z-index: 1;
   visibility: hidden;
@@ -67,4 +67,4 @@ h2 {
   .slick-prev {
     visibility: visible;
   }
-} */
+}

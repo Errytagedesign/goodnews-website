@@ -1,61 +1,26 @@
 import React from 'react';
 
+// News Components
+import Headlines from '../components/Headlines';
 import Newscard from '../components/NewsCard';
+
+
+
 import vector from '../assets/icons/Vector.svg'
 import { Link } from 'react-router-dom';
 
-import Headline from '../components/Headline';
-import Slider from "react-slick";
 
 // bootsrapt css
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Images
 
-import Image1 from '../assets/Headline 1.jpg';
-import Image2 from '../assets/Headline 2.webp';
-import Image3 from '../assets/Greater Lagos 5.jpg';
+import Dtiger from '../assets/Sports 3.jpg'
 
-
-
+// import Data from '../index.json'
 
 
 
-
-const settings = {
-    className: "center",
-  infinite: true,
-  centerPadding: "60px",
-  slidesToShow: 2,
-  swipeToSlide: true,
- 
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        
-        
-      }
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2
-      }
-    },
-    {
-      breakpoint: 500,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1
-      }
-    }
-  ]
-  };
 
 
 function TopNews() {
@@ -68,29 +33,35 @@ function TopNews() {
                 <div>  <Link to="/HeadlineStories"> See All </Link> </div>
             </div>
 
-            <section className="">
-                
-                <Slider {...settings}>
-
-                        <div className="">
-                            <Headline imgsrc={Image1} excerpt='Director-General of the Nigeria Centre for Disease Control (NCDC), Dr. Chikwe Ihekweazu, has been appointed Assistant..' pageurl="/Headline1" />
-                        </div>
-
-                        <div className="">
-                            <Headline imgsrc={Image2} excerpt='The Nigerian Railway Corporation (NRC) has constructed a 40-bed hotel worth N320 million at its Ebute-Meta station in Lagos..' pageurl="/Headline2" />
-                        </div>
-
-                        <div className="">
-                            <Headline imgsrc={Image3} excerpt='Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of ..' pageurl="/Headline3" />
-                        </div>
-                 </Slider>
-            </section>
-
+            <Headlines />
 
              
+            {/* News Cards Thumbnails */}
+
              <section className="container d-flex flex-wrap">
 
+                 
+                 
+                 {/* {Data.map(news=> (
+                   <div className="col-12 col-md-6 col-lg-4 p-1"> 
+                   <Newscard  Title={news.title} Imagesrc={news.url} Description={news.Description.slice(0,150)} />
+                   </div> 
+                     
+                  ))}
+  */}
+                 
              
+                <div className="col-12 col-md-6 col-lg-4 p-1">
+                    <Newscard Title="D'Tigers Shock US in Pre-Olympics Warm-Up" name="Good News" 
+                    Imagesrc={Dtiger} pageurl="/DTigersShockUs"
+                    Description="Nigeria's male basketball team, popularly known as D'Tigers, began preparations for the Tokyo 2020 Olympics by pulling off a shock 90-87 win over the United States of America. " />
+                </div> 
+
+                <div className="col-12 col-md-6 col-lg-4 p-1">
+                    <Newscard   />
+                </div> 
+
+
                 <div className="col-12 col-md-6 col-lg-4 p-1">
                     <Newscard  />
                 </div> 

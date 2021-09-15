@@ -22,7 +22,7 @@ const settings = {
     className: "center",
   infinite: true,
   centerPadding: "60px",
-  slidesToShow: 5,
+  slidesToShow: 3,
   swipeToSlide: true,
  
   responsive: [
@@ -64,15 +64,15 @@ function Headlines() {
 
                 <Slider {...settings}>
                         <div className="col-12 col-md-6">
-                            <Headline imgsrc={Image1} excerpt='Director-General of the Nigeria Centre for Disease Control (NCDC), Dr. Chikwe Ihekweazu, has been appointed Assistant..' pageurl="/Headline1" />
+                            <Headline imgsrc={Image1} name="Good News" description='Director-General of the Nigeria Centre for Disease Control (NCDC), Dr. Chikwe Ihekweazu, has been appointed Assistant..' pageurl="/Headline1" />
                         </div>
 
                         <div className="col-12 col-md-6">
-                            <Headline imgsrc={Image2} excerpt='The Nigerian Railway Corporation (NRC) has constructed a 40-bed hotel worth N320 million at its Ebute-Meta station in Lagos..' pageurl="/Headline2" />
+                            <Headline imgsrc={Image2} name="Good News" description='The Nigerian Railway Corporation (NRC) has constructed a 40-bed hotel worth N320 million at its Ebute-Meta station in Lagos..' pageurl="/Headline2" />
                         </div>
 
                         <div className="col-12 col-md-6">
-                            <Headline imgsrc={Image3} excerpt='Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of ..' pageurl="/Headline3" />
+                            <Headline imgsrc={Image3} name="Good News" description='Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of ..' pageurl="/Headline3" />
                         </div>
                 </Slider>
             

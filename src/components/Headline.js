@@ -12,9 +12,9 @@ function Headline(props) {
                 <img className="card-img-top" src={props.imgsrc} alt="" />
                
                 
-                <p className="NewsName" >Good News </p>
+                <p className="NewsName" > {props.name} </p>
                
-               <p className="excerpt"> {props.excerpt} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
+               <p className="excerpt"> {props.description} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
 
             
 

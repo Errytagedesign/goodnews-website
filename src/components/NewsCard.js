@@ -1,25 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import  './NewsCard.css';
-import Image from '../assets/Greater Lagos 5.jpg'
+// import Image from '../assets/Greater Lagos 5.jpg'
 
 function NewsCard(props) {
     return (
         <div>
             <section className="p-3 mt-2 newscard">
 
-                <h4>Sanwo-Olu’s wife presents vehicles to rev up the fight against rape, defilement, others</h4>
+                <h4>{props.Title}</h4>
            
            <div className="NewsCardWrapper">
              
-              <div> <img className="" src={Image} alt="" /> </div> 
+              <div> <img className="" src={props.Imagesrc} alt="" /> </div> 
               
                
-              <p className="NewsCardTitle"> Good News </p>
+              <p className="NewsCardTitle"> {props.name} </p>
               
            </div> 
-              <p className="NewsCardExcerpt"> Director-General of the Nigeria Centre for Disease Control (NCDC), Dr. Chikwe Ihekweazu, has
-                    been appointed Assistant.. <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
+              <p className="NewsCardExcerpt"> {props.Description} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
 
            
            
