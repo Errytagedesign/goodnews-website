@@ -22,6 +22,7 @@ import BusinessFinance from './pages/BusinessFinance';
 import Headline1 from './pages/Headline1';
 import Headline2 from './pages/Headline2';
 import Headline3 from './pages/Headline3';
+import Headline from './pages/Headline';
 
 
 // General imports
@@ -60,6 +61,7 @@ function App() {
         <Route path="/headline1" exact component={Headline1}/>
         <Route path="/headline2" exact component={Headline2}/>
         <Route path="/headline3" exact component={Headline3}/>
+        <Route path="/headline" exact component={Headline}/>
       </Switch>
       </Router>
     

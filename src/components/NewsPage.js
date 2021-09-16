@@ -1,5 +1,6 @@
 import React from 'react'
 import  './NewsPage.css'
+import { Link } from 'react-router-dom'
 
 function NewsPage(props) {
     return (
@@ -11,6 +12,8 @@ function NewsPage(props) {
             <img className="col-12 " src={props.articleImage } alt="" /> 
             
             <p> {props.articleContents} </p>
+
+            {/* <p><Link to={props.url} className="Readmore"> Read More </Link></p> */}
         </div>
     )
 }

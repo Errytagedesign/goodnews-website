@@ -17,10 +17,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Dtiger from '../assets/Sports 3.jpg'
 
-// import Data from '../index.json'
-
-
-
+import Data from '../index.json'
 
 
 function TopNews() {
@@ -42,13 +39,12 @@ function TopNews() {
 
                  
                  
-                 {/* {Data.map(news=> (
+                {Data.map(news=> (
                    <div className="col-12 col-md-6 col-lg-4 p-1"> 
-                   <Newscard  Title={news.title} Imagesrc={news.url} Description={news.Description.slice(0,150)} />
+                   <Newscard  Title={news.title} Imagesrc={news.url} Description={news.Description.slice(0,150)} url={"/headline?id=" + news.id} />
                    </div> 
-                     
-                  ))}
-  */}
+                ))}
+ 
                  
              
                 <div className="col-12 col-md-6 col-lg-4 p-1">

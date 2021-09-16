@@ -18,9 +18,9 @@ function NewsCard(props) {
               <p className="NewsCardTitle"> {props.name} </p>
               
            </div> 
-              <p className="NewsCardExcerpt"> {props.Description} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
+              <p className="NewsCardExcerpt"> {props.Description} </p>
 
-           
+              <p><Link to={props.url} className="Readmore"> Read More </Link></p>
            
        </section>
         </div>
