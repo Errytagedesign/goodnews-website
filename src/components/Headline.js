@@ -9,7 +9,9 @@ function Headline(props) {
            
             <div className="wrapper card">
               
+               <div className="overflow-hidden">
                 <img className="card-img-top" src={props.imgsrc} alt="" />
+                </div> 
                
                 
                 <p className="NewsName" > {props.name} </p>

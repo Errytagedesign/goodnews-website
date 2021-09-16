@@ -25,7 +25,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import PiggyVest from '../assets/piggyvest.jpg'
 // import Deola from '../assets/Fashion and Lifestyle 1.jpeg'
 
-import Data from '../topstories.json';
+// import Data from '../topstories.json';
+import {Data} from '../components/test';
 // import Headline1 from './Headline1';
 // import DTigersShockUS from './TopStories/DTigersShockUS';
 // import DTigersShockUS from './TopStories/DTigersShockUS';

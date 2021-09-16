@@ -15,18 +15,18 @@ function NewsCard(props) {
            
            <div className="NewsCardWrapper">
              
-              <div> <img className="" src={imagesrc} alt="" /> </div> 
+              <div className="col-12 overflow-hidden"> <img className="col-12 card-img-top" src={imagesrc} alt="" /> 
+              </div> 
               
                
               <p className="NewsCardTitle"> {name} </p>
               
            </div> 
-              <p className="NewsCardExcerpt"> {description} 
-              <Link to={url} className="Readmore"> Read More </Link> </p>
+              <p className="NewsCardExcerpt"> {description.slice(0,150)} 
+              <Link to={url} className="Readmore"> Read More </Link> </p>          
+           
+             </section>
 
-           
-           
-       </section>
         </div>
     )
 }

@@ -1,6 +1,22 @@
 .newscard {
   background-color: white;
   box-shadow: 1px 1px 1px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.newscard:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+}
+
+.card-img-top {
+  transform: scale(1);
+}
+
+.card-img-top:hover {
+  transform: scale(1.8);
 }
 
 .NewsCardWrapper {
