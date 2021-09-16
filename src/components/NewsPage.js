@@ -13,7 +13,7 @@ function NewsPage(props) {
             <img className="col-12 " src={props.articleImage } alt="" /> 
            
             
-            <p> {props.articleContents} </p>
+            <p className="p-5"> {props.articleContents} </p>
         </div>
     )
 }

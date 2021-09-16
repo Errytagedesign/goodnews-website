@@ -1,14 +1,8 @@
 
-const text = () =>{
-
-    return <>
-    <p> </p>
-    
-     </>
-}
 
 
-export  const data = [
+
+export  const Data = [
     {
       id: 1,
       title: "Nigerian maths prodigy, Faith Odunsi, shines on the global stage",
@@ -16,7 +10,8 @@ export  const data = [
       Description: "Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australia. ",
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Education_2_ns7tlh.png",
   
-      contents: `Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australian ${text} Odunsi, an SS3 student from Ijebu in Ogun state, shared her experience winning the global competition in an interview with The Punch. She disclosed that winning the 'tough competition' made her happy and honored. Odunsi also narrated how she excelled in different stages of the contest to emerge the overall winner.Her words: In the first stage, there was a computer-based test, and we had to answer many questions in one hour. My score in the test was 66. The second stage took the same format, and I also scored 66. 'The quarter and semi-finals were on Microsoft Teams. We were asked questions, and we put in our answers; the first to put in the correct answers got 10 points.' Revealing how she prepared for the contest, Odunsi said she made sure the competition did not affect her academic activities. She had after-school lessons and also studied at night from 11 pm to 12 am. As the winner of the contest, Faith was presented with a cash prize of $1,000. Before winning the global contest, Faith had in 2018 set a record in Cowbellpedia by answering 19 questions in 60 seconds. See the link below. `
+      contents: [`Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australian`, <br />, <br />, `Odunsi, an SS3 student from Ijebu in Ogun state, shared her experience winning the global competition in an interview with The Punch.`, `She disclosed that winning the 'tough competition' made her happy and honored. Odunsi also narrated how she excelled in different stages of the contest to emerge the overall winner.`, <br />, <br />,  `Her words: In the first stage, there was a computer-based test, and we had to answer many questions in one hour. My score in the test was 66. The second stage took the same format, and I also scored 66.`, 'The quarter and semi-finals were on Microsoft Teams. We were asked questions, and we put in our answers; the first to put in the correct answers got 10 points.', <br />, <br />,  `Revealing how she prepared for the contest, Odunsi said she made sure the competition did not affect her academic activities. She had after-school lessons and also studied at night from 11 pm to 12 am. As the winner of the contest, Faith was presented with a cash prize of $1,000.`, <br />, <br />, 
+       `Before winning the global contest, Faith had in 2018 set a record in Cowbellpedia by answering 19 questions in 60 seconds. See the link below.`] 
     },
   
     {

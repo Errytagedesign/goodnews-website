@@ -4,7 +4,7 @@ import NewsPage from '../components/NewsPage'
 
 // import Data from '../topstories.json'
 
-import {data} from '../components/test'
+import {Data} from '../components/test'
 
 
 
@@ -18,7 +18,7 @@ function getQuery() {
 }
 
 function NewsReadUrl() {
-    let news = data.filter(news => news.id === getQuery())
+    let news = Data.filter(news => news.id === getQuery())
    
     
     return (
