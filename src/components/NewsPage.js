@@ -2,6 +2,8 @@ import React from 'react'
 import  './NewsPage.css'
 
 function NewsPage(props) {
+    
+        
     return (
         <div className="newsPage mt-5 container">
 
@@ -9,6 +11,7 @@ function NewsPage(props) {
             <h2> {props.articleTitle} </h2>
             
             <img className="col-12 " src={props.articleImage } alt="" /> 
+           
             
             <p> {props.articleContents} </p>
         </div>

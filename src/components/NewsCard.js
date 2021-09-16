@@ -4,21 +4,25 @@ import  './NewsCard.css';
 // import Image from '../assets/Greater Lagos 5.jpg'
 
 function NewsCard(props) {
+
+    const {title, imagesrc, description, name, url} = props;
+
     return (
         <div>
             <section className="p-3 mt-2 newscard">
 
-                <h4>{props.Title}</h4>
+                <h4>{title}</h4>
            
            <div className="NewsCardWrapper">
              
-              <div> <img className="" src={props.Imagesrc} alt="" /> </div> 
+              <div> <img className="" src={imagesrc} alt="" /> </div> 
               
                
-              <p className="NewsCardTitle"> {props.name} </p>
+              <p className="NewsCardTitle"> {name} </p>
               
            </div> 
-              <p className="NewsCardExcerpt"> {props.Description} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
+              <p className="NewsCardExcerpt"> {description} 
+              <Link to={url} className="Readmore"> Read More </Link> </p>
 
            
            

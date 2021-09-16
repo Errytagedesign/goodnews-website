@@ -22,6 +22,8 @@ import BusinessFinance from './pages/BusinessFinance';
 import Headline1 from './pages/Headline1';
 import Headline2 from './pages/Headline2';
 import Headline3 from './pages/Headline3';
+import NewsReadUrl from './pages/NewsReadUrl';
+
 
 
 // General imports
@@ -34,6 +36,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // main css
 import './App.css';
+// import DTigersShockUS from './pages/TopStories/DTigersShockUS';
+// import CanadaAppointsNigerianbornKayceeMadu from './pages/TopStories/CanadaAppointsNigerianbornKayceeMadu';
+// import GovtboostMSMEs from './pages/TopStories/GovtboostMSMEs';
+// import IkoroduBois from './pages/TopStories/IkoroduBois';
+// import MikanoGeelyAssemblyPlant from './pages/TopStories/MikanoGeelyAssemblyPlant';
+// import NigerianmathsprodigyFaithOdunsi from './pages/TopStories/NigerianmathsprodigyFaithOdunsi';
+// import TheStoryofDeolaSagoe from './pages/TopStories/TheStoryofDeolaSagoe';
+// import PiggyVestuduXunveilPopRev from './pages/TopStories/PiggyVestuduXunveilPopRev';
 
 
 
@@ -60,6 +70,16 @@ function App() {
         <Route path="/headline1" exact component={Headline1}/>
         <Route path="/headline2" exact component={Headline2}/>
         <Route path="/headline3" exact component={Headline3}/>
+        <Route path="/newsReadUrl" exact component={NewsReadUrl}/>
+        {/* <Route path="/dtigershockus" exact component={DTigersShockUS}/>
+        <Route path="/canadaAppointsNigerianbornKayceeMadu" exact component={CanadaAppointsNigerianbornKayceeMadu}/>
+        <Route path="/govtboostMSMEs" exact component={GovtboostMSMEs}/>
+        <Route path="/ikoroduBois" exact component={IkoroduBois}/>
+        <Route path="/mikanoGeelyAssemblyPlant" exact component={MikanoGeelyAssemblyPlant}/>
+        <Route path="/nigerianmathsprodigyFaithOdunsi" exact component={NigerianmathsprodigyFaithOdunsi}/>
+        <Route path="/theStoryofDeolaSagoe" exact component={TheStoryofDeolaSagoe}/>
+        <Route path="/piggyVestuduXunveilPopRev" exact component={PiggyVestuduXunveilPopRev}/> */}
+      
       </Switch>
       </Router>
     
