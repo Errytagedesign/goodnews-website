@@ -58,7 +58,7 @@ function Navbar() {
                 
                 {/* logo */}
                 <div className="text-start gLogo col-6 col-md-4 ">
-                   <img className=" col-6 col-md-4" src={logo} alt="good-news-logo" /> 
+                  <Link to="/"> <img className=" col-6 col-md-4" src={logo} alt="good-news-logo" /> </Link>  
                 </div>
                 
                 {/* search */}
