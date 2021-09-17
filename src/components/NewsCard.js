@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import  './NewsCard.css';
+
+import heart from '../assets/icons/Heart.svg';
+import comments from '../assets/icons/Comment.svg';
+import share from '../assets/icons/Share.svg';
+
 // import Image from '../assets/Greater Lagos 5.jpg'
 
 function NewsCard(props) {
@@ -23,7 +28,13 @@ function NewsCard(props) {
               
            </div> 
               <p className="NewsCardExcerpt"> {description.slice(0,150)} 
-              <Link to={url} className="Readmore"> Read More </Link> </p>          
+              <Link to={url} className="Readmore"> Read More </Link> </p> 
+
+              <div className="d-flex col-6 justify-content-between"> 
+                  <div> <img className="icons" src={heart}  alt="" />  <small> 1 </small> </div>  
+                  <div> <img className="icons" src={comments}  alt="" />  <small> 1 </small> </div>  
+                  <div> <img className="icons" src={share}  alt="" />  <small> 1 </small> </div>  
+              </div>         
            
              </section>
 

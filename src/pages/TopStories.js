@@ -26,7 +26,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Deola from '../assets/Fashion and Lifestyle 1.jpeg'
 
 // import Data from '../topstories.json';
-import {Data} from '../components/test';
+import {Data} from '../components/TopstoriesData';
+// import {FashionData} from '../components/FashionLifestyleData';
 // import Headline1 from './Headline1';
 // import DTigersShockUS from './TopStories/DTigersShockUS';
 // import DTigersShockUS from './TopStories/DTigersShockUS';

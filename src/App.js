@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 
 
 
+
 // pages
 import HeadlineStories from './pages/HeadlineStories';
 import TopStories from './pages/TopStories';
@@ -23,7 +24,7 @@ import Headline1 from './pages/Headline1';
 import Headline2 from './pages/Headline2';
 import Headline3 from './pages/Headline3';
 import NewsReadUrl from './pages/NewsReadUrl';
-
+import Fashionlifestyleread from './pages/Fashionlifestyleread';
 
 
 // General imports
@@ -71,6 +72,8 @@ function App() {
         <Route path="/headline2" exact component={Headline2}/>
         <Route path="/headline3" exact component={Headline3}/>
         <Route path="/newsReadUrl" exact component={NewsReadUrl}/>
+        <Route path="/fashionlifestyleread" exact component={Fashionlifestyleread}/>
+
         {/* <Route path="/dtigershockus" exact component={DTigersShockUS}/>
         <Route path="/canadaAppointsNigerianbornKayceeMadu" exact component={CanadaAppointsNigerianbornKayceeMadu}/>
         <Route path="/govtboostMSMEs" exact component={GovtboostMSMEs}/>

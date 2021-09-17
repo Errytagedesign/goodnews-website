@@ -1,15 +1,13 @@
 import React from 'react';
-import NewsPage from '../components/NewsPage'
+
+import NewsPage from '../components/NewsPage';
 // import articleImg from '../assets/Greater Lagos 5.jpg';
 
 // import Data from '../topstories.json'
 
-import {Data} from '../components/TopstoriesData';
-
-// import {FashionData} from '../components/FashionLifestyleData';
 
 
-
+import {FashionData} from '../components/FashionLifestyleData';
 
 
 function getQuery() {
@@ -19,11 +17,11 @@ function getQuery() {
     return foo
 }
 
-function NewsReadUrl() {
-    // let news = Data.filter(news => news.id === getQuery())
-    let news = Data.filter(news => news.id === getQuery())
-   
-    
+
+function Fashionlifestyleread() {
+
+    let news = FashionData.filter(news => news.id === getQuery())
+
     return (
         <div>
             <NewsPage articleTitle={news[0].title}  articleImage={news[0].url} articleContents={news[0].contents} />
@@ -32,4 +30,14 @@ function NewsReadUrl() {
     )
 }
 
-export default NewsReadUrl
+export default Fashionlifestyleread
+
+
+
+
+
+
+
+
+
+

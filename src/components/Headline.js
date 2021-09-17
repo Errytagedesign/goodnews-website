@@ -19,7 +19,7 @@ function Headline(props) {
                <p className="excerpt"> {props.description} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
 
             
-
+               <div> <img className="icons" src="/src/assets/icons/Comment.svg"  alt="" /> </div>  
             </div> 
             
         </section>
