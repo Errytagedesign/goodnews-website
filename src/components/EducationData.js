@@ -86,7 +86,7 @@ she said. <br /> <br />
 
       Name: "Good News",
 
-      Description: " ",
+      Description: "    Adeola Austin Oyinlade, an alumnus of the University of Lagos has become the first Nigerian to win the American Bar Association International Human Rights Award 2021.      In a post on its website, UNILAG commended Oyinlade for the award, noting that its alumnus is the first Nigerian to bag the award.",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_6_hgxkrt.jpg",
   
@@ -110,16 +110,38 @@ she said. <br /> <br />
     {
       id: 5,
 
-      title: "",
+      title: "Nigeria’s Yekemi Otaru was Appointed Chancellor of Scotland varsity",
 
       Name: "Good News",
 
-      Description: " ",
+      Description: "Nigerian-born serial entrepreneur Yekemi Otaru recently achieved the rare feat of being appointed Chancellor of a European university.      The mentor of business owners in developing countries with experience in engineering and marketing was recently named the chancellor-elect of the University of the West of Scotland (UWS).       ",
 
-      url: "",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_5_oag4n3.jpg",
   
       contents: [<div>
            
+           Nigerian-born serial entrepreneur Yekemi Otaru recently achieved the rare feat of being appointed Chancellor of a European university.  <br /> <br />
+The mentor of business owners in developing countries with experience in engineering and marketing was recently named the chancellor-elect of the University of the West of Scotland (UWS). <br /> <br />
+An author and social media expert, Otaru seats on the board of Interface, a company that connects organizations to Scotland’s universities, research institutes, and colleges. She matches them with world-leading academic expertise to help them grow. <br /> <br />
+ 
+Otaru, a recipient of four university degrees, hails from Oke-Ero Local Government of Kwara state and received education in Nigeria and overseas. <br /> <br />
+ 
+She attended Auntie Rose Primary School at Ugborikoko in Warri, Delta state. She then proceeded to the Federal Government College, Warri, where she spent a year before moving to Oman with her parents in 1990. <br /> <br />
+ 
+She continued her education at the American British Academy (ABA), a multi-racial high school in Muscat. Otaru spent four years there and returned to Nigeria in 1994 to complete her secondary education at Greater Tomorrow Secondary School (GTSS), Benin City. <br /> <br />
+ 
+Otaru obtained a bachelor’s degree in chemical engineering in 2002 from the University of Benin. After completing her National Youth Service Corps (NYSC) in 2003, she was selected by TotalFinaElf in Nigeria as one of the 20 pioneer intakes into the collaborative MSc petroleum engineering programme of France’s Institute Français du Pétrole (IFP) and University of Port Harcourt. <br /> <br />
+ 
+At the end of the programme, she was one of the six pioneer members set to be offered permanent employment by TotalFinaElf.
+<br /> <br />
+The author of ‘Smart Skeptics Guide to Social Media in Organisations’, aimed at helping organizations leverage social media to promote enterprise, is married with children.
+<br /> <br />
+Otaru, who will assume the Chancellor’s role on September 1, 2021, will hold formal powers to confer degrees, diplomas, and other academic distinctions and represent the university at key events.
+<br /> <br />
+Commenting on her appointment as Chancellor, Craig Mahoney, principal and vice-chancellor of UWS, said it is a remarkable milestone in its history.
+<br /> <br />
+“This is a new journey for us, a young woman who comes with a great background in engineering commitment. A woman in the business who would be an example for our students and our commitment to diversity and inclusion,” he said.<br /> <br />
+“I am delighted with Yekemi’s appointment as the University’s Chancellor-elect. Yekemi’s values very much align with those of UWS, from her passion for advancing equality, diversity, and inclusion (EDI) to her commitment to enterprise. Her appointment is reflective of our strategic mission to make a positive difference to wider society.”<br /> <br />
 
 
       </div>]
@@ -128,16 +150,30 @@ she said. <br /> <br />
     {
       id: 6,
 
-      title: "",
+      title: "Sarki Abba, Prince of Medicine from the Sahel",
 
       Name: "Good News",
 
-      Description: " ",
+      Description: "   In 1984, Sarki Abba Abdulkadir, currently professor of Urology and Pathology at Northwestern University, hit the limelight.       The Kano indigene had just finished from Science Secondary School, Dawakin Tofa, and scored nine distinctions (8 A1 and 1 A2) in the West African Senior School Certificate (WASC) Exams.  ",
 
-      url: "",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_3_whvaq3.jpg",
   
       contents: [<div>
            
+           In 1984, Sarki Abba Abdulkadir, currently professor of Urology and Pathology at Northwestern University, hit the limelight.  <br /> <br />
+The Kano indigene had just finished from Science Secondary School, Dawakin Tofa, and scored nine distinctions (8 A1 and 1 A2) in the West African Senior School Certificate (WASC) Exams.   <br /> <br />
+ 
+This achievement appeared unrealistic, and because it had never happened before, the West African Examination Council assumed the young schoolboy must have cheated.  <br /> <br />
+ 
+To ascertain the actual situation, the examination body made him resit the papers in three days.   <br /> <br />
+ 
+After reassessing the scripts, Sarki still scored nine A1s. He previously scored 'A2' in English Language but scored A1 when he retook the examination. His brilliance made WAEC institute a National Merit Award, with Sarki the first recipient.  <br /> <br />
+ 
+Some six years later, in the 1989/90 session at Ahmadu Bello University, Sarki Abba repeated the feat. He graduated as the Overall Best Medical Student and Overall Best Graduating student of the university-aged 21.
+<br /> <br />
+ Sarki Abba is presently a Professor of Urology and Pathology at Northwestern University Feinberg School of Medicine, Chicago, USA. He is also MD, Ph.D., at the John T. Grayhack Professor of Urological Research. 
+ <br /> <br />
+Professor Sarki Abba's research program focuses on understanding the molecular mechanisms that drive cancer initiation, progression, and recurrence with the ultimate goal of developing therapies that interfere with these processes.  <br /> <br />
 
 
       </div>]
@@ -146,16 +182,29 @@ she said. <br /> <br />
     {
       id: 7,
 
-      title: "",
+      title: "53 Nigerian Students Shine at Cambridge Learner Awards",
 
       Name: "Good News",
 
-      Description: " ",
+      Description: "     Fifty-three Nigerian students have received the Outstanding Cambridge Learner Awards for their excellent performance in the November 2020 international Examination series.     The awards recognize exceptional learner achievement in Cambridge examinations around the world in over 40 countries for various subjects at Cambridge IGCSE, Cambridge O Level, and Cambridge International AS and A level. It is designed to celebrate and recognize the success of high-performing learners. ",
 
-      url: "",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_4_hl4clh.jpg",
   
       contents: [<div>
            
+           Fifty-three Nigerian students have received the Outstanding Cambridge Learner Awards for their excellent performance in the November 2020 international Examination series. <br /> <br />
+The awards recognize exceptional learner achievement in Cambridge examinations around the world in over 40 countries for various subjects at Cambridge IGCSE, Cambridge O Level, and Cambridge International AS and A level. It is designed to celebrate and recognize the success of high-performing learners. <br /> <br />
+The winners included three students who excelled in Sociology, Agriculture, and Law. They received the ‘Top in the World’ honor. Cambridge International also granted 39 ‘Top in Nigeria’ awards to learners who achieved the highest standard mark in their country for a single subject, 19 ‘High Achievement awards, and three ‘Best Across’ awards to students who attained the highest cumulative total standard marks over a set number of subjects. <br /> <br />
+The top-performing students will also receive certificates from Cambridge International in recognition of their achievements. <br /> <br />
+
+Cambridge International’s Regional Director for sub-Saharan Africa, Juan Visser, expressed delight about the students’ performance, considering the challenges they went through in taking the exams. <br /> <br />
+“Students around the world faced one of the most challenging years ever, with the COVID-19 pandemic disrupting teaching and learning. Despite this, we are delighted to see that students in Nigeria still excelled at their examinations and managed to produce these outstanding results. <br /> <br />
+“This points not only to the dedication of learners and their teachers but also to the quality of the schools in Nigeria registered to offer Cambridge programmes.” <br /> <br />
+Visser commended the schools for organizing the resources for learners to prepare, noting that it also helped with the information that the schools needed to support their study. <br /> <br />
+“The ability to keep up to date with their studies was evident in their results. I am very proud of the learners and the schools,” he said, adding that Cambridge works with the British Council to deliver curriculum to schools offering Cambridge. <br /> <br />
+Country Director, British Council Nigeria, Lucy Pearson, said it creates international opportunities through arts, English Language, education, administering exams, and building stronger societies. <br /> <br />
+“The exams we administer continue to help people all over the world gain educational and professional development, so they are better positioned for success in life and their careers,” she noted. <br /> <br />
+“Education is a key enabler for these opportunities, and we believe in ensuring young learners have access to world-class education and assessments, which we have achieved through our partners Cambridge Assessment International Education and the British Council Partner School.” <br /> <br />
 
 
       </div>]
