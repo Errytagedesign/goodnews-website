@@ -33,9 +33,9 @@ function Navbar() {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 6,
-            initialSlide: 3
+            initialSlide: 2
           }
         },
         {
