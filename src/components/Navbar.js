@@ -17,7 +17,7 @@ function Navbar() {
         className: "center",
       infinite: true,
       centerPadding: "60px",
-      slidesToShow: 5,
+      slidesToShow: 3,
       swipeToSlide: true,
      
       responsive: [
