@@ -54,12 +54,10 @@ h2 {
 .slick-prev {
   left: -15px !important;
   z-index: 1;
-  visibility: hidden;
 }
 
 .slick-next {
   right: -10px !important;
-  visibility: hidden;
 }
 
 @media screen and (min-width: 767px) {
