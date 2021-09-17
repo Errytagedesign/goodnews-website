@@ -34,7 +34,7 @@ function Navbar() {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 3,
+            slidesToScroll: 2,
             initialSlide: 2
           }
         },
@@ -42,7 +42,7 @@ function Navbar() {
           breakpoint: 400,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         }
@@ -80,7 +80,7 @@ function Navbar() {
                     <Link className="newsCat  " to="/education"> Education </Link>
                     <Link className="newsCat " to="/entertainments"> Entertainments </Link>
                     <Link className="newsCat " to="/fashionLifestyle"> Fashion and Lifestyle </Link>
-                    <Link className="newsCat " to="/fashionLifestyle"> Polictics </Link>
+                    <Link className="newsCat " to="/politics"> Polictics </Link>
                     <Link className="newsCat " to="/technology"> Technology </Link>
                     <Link className="newsCat " to="/sport"> Sport </Link>
                     <Link className="newsCat " to="/greaterLagos"> Greater Lagos</Link>
