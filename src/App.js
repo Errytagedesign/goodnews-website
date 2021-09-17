@@ -25,6 +25,8 @@ import Headline2 from './pages/Headline2';
 import Headline3 from './pages/Headline3';
 import NewsReadUrl from './pages/NewsReadUrl';
 import Fashionlifestyleread from './pages/Fashionlifestyleread';
+import Businessread from './pages/Businessread';
+import Educationread from './pages/Educationread';
 
 
 // General imports
@@ -73,6 +75,8 @@ function App() {
         <Route path="/headline3" exact component={Headline3}/>
         <Route path="/newsReadUrl" exact component={NewsReadUrl}/>
         <Route path="/fashionlifestyleread" exact component={Fashionlifestyleread}/>
+        <Route path="/businessread" exact component={Businessread}/>
+        <Route path="/educationread" exact component={Educationread}/>
 
         {/* <Route path="/dtigershockus" exact component={DTigersShockUS}/>
         <Route path="/canadaAppointsNigerianbornKayceeMadu" exact component={CanadaAppointsNigerianbornKayceeMadu}/>
