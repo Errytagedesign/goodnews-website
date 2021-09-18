@@ -30,6 +30,8 @@ import Educationread from './pages/Educationread';
 import Politicsread from './pages/Politicsread';
 import Entertainmentsread from './pages/Entertainmentsread';
 import Technologyread from './pages/Technologyread';
+import Sportread from './pages/Sportread';
+import Greaterlagosread from './pages/Greaterlagosread';
 
 
 // General imports
@@ -83,6 +85,8 @@ function App() {
         <Route path="/politicsread" exact component={Politicsread}/>
         <Route path="/entertainmentsread" exact component={Entertainmentsread}/>
         <Route path="/technologyread" exact component={Technologyread}/>
+        <Route path="/sportread" exact component={Sportread}/>
+        <Route path="/greaterlagosread" exact component={Greaterlagosread}/>
 
         {/* <Route path="/dtigershockus" exact component={DTigersShockUS}/>
         <Route path="/canadaAppointsNigerianbornKayceeMadu" exact component={CanadaAppointsNigerianbornKayceeMadu}/>

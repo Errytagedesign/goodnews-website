@@ -25,8 +25,7 @@ const settings = {
   slidesToShow: 1,
     swipeToSlide: true,
     autoplay: true,
-      speed: 9000,
-      autoplaySpeed: 9000,
+    autoplaySpeed: 5000,
       cssEase: "linear",
  
   responsive: [
@@ -36,8 +35,7 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 2,
         autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
+        autoplaySpeed: 2000,
       cssEase: "linear",
         
         
