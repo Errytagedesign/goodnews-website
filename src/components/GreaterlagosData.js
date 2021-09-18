@@ -9,7 +9,7 @@ export  const GreaterlagosData = [
 
     Description: "The Lagos State Government has announced the setting up of a business hub and e-commerce digital platform as part of the initiatives to enhance the growth of Micro, Small, and Medium Enterprises (MSMEs) and showcase their products. ",
 
-    url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_3_klx3yf.jpg",
+    url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574369/News%20Article%20Images/Greater_Lagos_1_hi4g4p.jpg",
 
     contents: [ <div> 
       The Lagos State Government has announced the setting up of a business hub and e-commerce digital platform as part of the initiatives to enhance the growth of Micro, Small, and Medium Enterprises (MSMEs) and showcase their products. <br /> <br />
@@ -39,27 +39,26 @@ export  const GreaterlagosData = [
     {
       id: 2,
 
-      title: "Nigerian boys set Aston Villa agog",
+      title: "Lekki deep seaport commences operations in 2023, Sanwo-Olu declares",
 
       Name: "Good News",
 
-      Description: "   Two siblings of Nigerian parentage, Caleb and Carney Chukwuemeka, are currently setting premier league club Aston Villa alight.    Younger brother, Carney, was the first on the club's books before Caleb joined him in August. ",
+      Description: " Lagos State Governor, Mr. Babajide Sanwo-Olu has announced that the Lekki deep seaport would commence commercial operations in 2023. While on a working tour of the three free trade zones in the Ibeju Lekki area of the state, the Governor said that the deep seaport and other investments in the corridor have the potential to increase the state’s GDP in multiple folds.  ",
 
-      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Sports_6_zpuzcy.jpg",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632006327/News%20Article%20Images/Greater_Lagos_3_ygt5do.jpg",
   
       contents: [<div>
-           
-            
-            Two siblings of Nigerian parentage, Caleb and Carney Chukwuemeka, are currently setting premier league club Aston Villa alight. <br /> <br />
-            
-            Younger brother, Carney, was the first on the club's books before Caleb joined him in August. The highly-rated Carney is an England under-17 midfielder, and Aston Villa was keen to reunite the pair. <br /> <br />
-            The club fended interest from Norwich and Belgian side Club Brugges for the speedy 6ft 3in Chukwuemeka.
-            "Aston Villa is pleased to announce the signing of Caleb Chukwuemeka," the club's announcement began. <br /> <br />
-            "Caleb joins younger brother Carney in Villa's ranks after completing a move from Northampton Town for an undisclosed fee. <br /> <br />
-            "The 19-year-old enjoyed a breakthrough season for the Cobblers during 2020/21, making 28 appearances across all competitions." <br /> <br />
-            Academy manager Mark Harrison said: "We are delighted that Caleb has joined us. He has been a player we have been monitoring for a while now and has continued to develop well at Northampton, making some appearances last season. <br /> <br />
-            "He is an exciting attacking player with an eye for goal, and we feel he has a lot of potentials. We are looking forward to working with him. <br /> <br />
-            "I would like to thank Northampton for how they've handled this transfer." <br /> <br />
+          <strong> Lagos State Governor, Mr. Babajide Sanwo-Olu has announced that the Lekki deep seaport would commence commercial operations in 2023. </strong>   <br /> <br />
+ While on a working tour of the three free trade zones in the Ibeju Lekki area of the state, the Governor said that the deep seaport and other investments in the corridor have the potential to increase the state’s GDP in multiple folds.  <br /> <br />
+ “Given the report I got and what I have seen here, I can say that Lagos Free Zone has made tremendous improvement. We have seen the level of partnership Tolaram Group is bringing in terms of international investment and local brands on this corridor”, he said.  <br /> <br />
+ “I commend all stakeholders that are with us on this journey we have found ourselves. With the level of work we have seen, I’m truly excited. It is more gratifying that we are taking up this assignment with all energies required and we all can see what we can achieve when we work together.  <br /> <br />
+ “Since we signed a loan agreement less than 18 months ago, we have demonstrated strong capability in bringing the project to reality.”
+ According to the Governor, the first phase of the seaport project, which is being financed by US$629 million facilities from China Development Bank, is at 48 per cent completion.  <br /> <br />
+ The port, which is being constructed by China Harbour Engineering Company Limited, occupies 90 hectares out of the entire 830 hectares of land reserved for the Lagos Free Zone.  <br /> <br />
+ Sanwo-Olu explained that the size of the deep seaport will allow 18,000 20-foot equivalent unit (TEU) capacity vessels, which are four times bigger than the ones berthing at Apapa seaports, thereby reducing the cost of container transportation from any part of the world.
+ He added that the Lekki deep seaport is expected to generate more than 170,000 direct and indirect job opportunities for Lagos residents.
+
+ <br /> <br />
  
 
 
@@ -69,42 +68,20 @@ export  const GreaterlagosData = [
 
     {
         id: 3,
-        title: "Olympics: History-making Uche Eke represents Nigeria in gymnastics ",
+        title: "Lagos partners BoI on the provision of N20b for entrepreneurs ",
         
         Name: "Good News",
 
-        Description: "On Saturday, July 24, 2021, Uche Eke made history as the first gymnast to compete for Nigeria at the Olympics. Nigeria, Africa's most populous nation, is blessed with many sportspeople but had never qualified a gymnast to the Olympics before.",
+        Description: "Lagos State Government said that it has entered into a partnership with the Bank of Industry (BoI) to provide N20 billion to support entrepreneurs in the state.         The state’s Commissioner for Economic Planning and Budget, Mr. Sam Egube, who stated this at the",
 
-        url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_4_it8xzk.jpg",
+        url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Greater_Lagos_6_koq0vv.jpg",
     
         contents: [ <div>
 
-        <strong> On Saturday, July 24, 2021, Uche Eke made history as the first gymnast to compete for Nigeria at the Olympics. <br />  <br />
-        
-        Nigeria, Africa's most populous nation, is blessed with many sportspeople but</strong> had never qualified a gymnast to the Olympics before.
-
-        <br />  <br />
-        In May, Eke made history when he became the first to do so -- and then competed in his first Olympic Games.
-
-        <br />  <br />
-        Eke, 23, was raised in the US, but he's been traveling to Nigeria every year since he was three to visit his father's village. Inspired by the sense of community he felt during his visits, he knew he wanted to give back -- the only question was how.
-
-        <br />  <br />
-        Like many kids, Eke grew up doing flips on the trampoline in his babysitter's backyard. Still, he wouldn't stop when trampoline time was over. He started doing backflips off his couch, landing on his head each time, until his mom decided to put him in a gymnastics class. Eke excelled and was eventually recruited to the University of Michigan, one of the top collegiate programs for men's gymnastics.
-
-        <br />  <br />
-        When Eke arrived at Michigan, he told his head coach, Kurt Golder, that he wanted to compete in the Olympics. Since Eke has dual citizenship, Golder suggested that he represent Nigeria in what would become a historic moment for the country. 
-
-        <br />  <br />
-       <strong> Eke's first major international competition for Nigeria was at the 2019 African Games in Morocco, where he emerged the best.</strong>
-
-        <br />  <br />
-        <strong> Recalling how that went, he said:</strong> "When we got there, I knew what my goal was, which was to win a gold medal for Nigeria because it hasn't been done before. And I went in there, treated it like a regular competition, try to avoid all pressures, and just went out there and had fun. And I came out first place on pommel horse.
-
-        <br />  <br />
-        "When I was on the ground right after I landed, I looked up at the score, and I saw my name on top, and I was just so happy.  <br />  <br />
-        
-        Even those who weren't there for Nigeria, the whole crowd was (excited), because that hasn't been done before. I just felt all the excitement and love from everyone there."  <br />  <br />
+      Lagos State Government said that it has entered into a partnership with the Bank of Industry (BoI) to provide N20 billion to support entrepreneurs in the state.  <br />  <br />
+      The state’s Commissioner for Economic Planning and Budget, Mr. Sam Egube, who stated this at the ministerial press briefing to commemorate the second anniversary of the Governor Babajide Sanwo-Olu-led administration, said the state government had identified and captured about 1.6 million residents, who are poor and vulnerable.  <br />  <br />
+      He disclosed that the state had been able to capture 10,064 poor and vulnerable households and 36,968 individuals in December 2019 and 403,976 poor as well as vulnerable households and 1,596,596 individuals as of February 2021.
+ <br />  <br />
 
  
  
@@ -117,29 +94,25 @@ export  const GreaterlagosData = [
     {
       id: 4,
 
-      title: "Flashback: Day Nigeria won Africa's first soccer gold",
+      title: "When BOS Meets Business",
 
       Name: "Good News",
 
-      Description: "On August 4, 1996, Nigeria became the first African nation to win a major international soccer competition. The country came from behind twice to defeat Argentina, 3-2, on a goal in the second-to-last minute to claim the Olympic men's soccer gold medal...  ",
+      Description: " Governor Babajide Sanwo-Owu puts his personal touch to it. He leads the charge at the Corporate Assembly, a Public-Private regular interaction between the state government and the business community, which provides an avenue to receive feedback from the Organised Private Sector (OPS) on the implementation of policies, regulations, and projects as they impact on the business prosperity of the state for integration into the state policy formulation and regulatory review.  ",
 
-      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632004473/News%20Article%20Images/Sports_1_dxg6oo.jpg",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632006598/News%20Article%20Images/Greater_Lagos_2_nslaaj.jpg",
   
       contents: [<div>
-           
-           
-          On August 4, 1996, Nigeria became the first African nation to win a major international soccer competition. The country came from behind twice to defeat Argentina, 3-2, on a goal in the second-to-last minute to claim the Olympic men's soccer gold medal. <br /> <br />
-          It was Nigeria's second comeback victory in as many matches against a South American soccer power. In the semifinals, the country upset gold medal favourite Brazil, 4-3, in overtime after trailing, 3-1, in the second half. <br /> <br />
-          Nigeria won the final as they had throughout the competition -- with an exciting, fast-paced attacking style that appealed to American crowds, which turned out in tremendous numbers for the tournament. <br /> <br />
-          A sellout of 86,116 saw the game at the University of Georgia's Sanford Stadium. <br /> <br />
-          "This is not only important for Nigerian football, but for all of football as well," Nigeria Coach Jo Bonfrere said.  <br /> <br />
-          "Attacking football brings the best results, and it's also a great spectacle for the fans." <br /> <br />
-          Midfielder Emmanuel Amunike, a second-half substitute, gave Nigeria the victory by scoring in the 89th minute. The goal came off a free-kick and a mistake by the Argentine defence that left Amunike all alone to shoot from 12 yards as the Argentines appealed to referee Pierluigi Collina for an offside call that would have nullified the goal. <br /> <br />
-          "I think it's the greatest achievement for Nigerian soccer," Amunike said. "We have been working very hard the past few years to make this possible. And it was possible today, and we are pleased about it." <br /> <br />
-          "Argentina is good," Nigerian forward Nwankwo Kanu said. "Nigeria is gold." <br /> <br />
-          The victory represented another step forward on the world soccer scene for Nigeria. The nation has fielded some of the sport's best youth teams in recent years. And in the 1994 World Cup -- soccer's quadrennial world championship -- Nigeria advanced to the second round before losing to eventual tournament runner-up Italy in overtime. <br /> <br />
-          Several players from that team, known as the "Super Green Eagles," were chosen for the Olympic side. On Wednesday, they helped eliminate Brazil, a four-time World Cup champion seeking its first Olympic title. Amunike and Daniel Amokachi, who scored the tying goal in the 74th minute, were among Nigeria's 1994 World Cup veterans. <br /> <br />
-          After their victory, the Nigerians took a victory lap around the stadium, stopping in front of fans who had played instruments, danced, and sung during the game. As they trotted around the field, the players carried a banner that read: "Thank you for your support. We love you all. Nigerian Eagles 1996." <br /> <br />
+           Governor Babajide Sanwo-Owu puts his personal touch to it. He leads the charge at the Corporate Assembly, a Public-Private regular interaction between the state government and the business community, which provides an avenue to receive feedback from the Organised Private Sector (OPS) on the implementation of policies, regulations, and projects as they impact on the business prosperity of the state for integration into the state policy formulation and regulatory review. <br /> <br />
+          The forum has become an effective platform for gauging the pulse of the business community. <br /> <br />
+          The last edition was attended by 13 business membership organizations and 130 participants. <br /> <br />
+          Representatives of the Organised Private Sector (OPS) who attended the interactive meeting, commended the Sanwo-Olu administration for continuing the meeting. <br /> <br />
+          Members of the OPS present included the Manufacturers Association of Nigeria, Lagos Chamber of Commerce and Industry, the Nigerian Association of Chambers of Commerce, Industry, Mines, and Agriculture (NACCIMA), the Small and Medium Enterprises Development Agency of Nigeria (SMEDAN), and Nigeria Employers Consultative Association. <br /> <br />
+          The meeting was also attended by the Deputy Governor, Dr. Obafemi Hamzat, and other top government officials. <br /> <br />
+          The OPS commended the state government for the various measures already implemented and solicited more to ensure a robust environment for businesses to thrive. <br /> <br />
+          In her welcome address, the Commissioner for Commerce, Industry, and Cooperatives, Mrs. Lola Akande said that all the issues raised during previous meetings had been resolved by the relevant government ministries and agencies. <br /> <br />
+          She added that the issues, contributions, and feedback helped immeasurably to improve on government’s service delivery towards making Lagos a 21st Century Economy.
+<br /> <br />
 
 
  
@@ -151,24 +124,28 @@ export  const GreaterlagosData = [
     {
       id: 5,
 
-      title: "Tennis star, Funke Oshonaike joins ITTF’s ‘Club 7’",
+      title: "Sanwo-Olu’s wife presents vehicles to rev up the fight against rape, defilement, others",
 
       Name: "Good News",
 
-      Description: "The International Table Tennis Federation (ITTF) has inducted Nigerian table tennis star and former African champion Olufunke Oshonaike into the exclusive Club of seven-time Olympians known as 'Club 7'.",
+      Description: " Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of government as part of efforts to ramp up their capacities to adequately fight the menace of Sexual and Gender-Based Violence (SGBV) in the state.",
 
-      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_2_yl4zxp.jpg",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632006288/News%20Article%20Images/Greater_Lagos_5_fwtsty.jpg",
   
       contents: [<div>
            
-           The International Table Tennis Federation (ITTF) has inducted Nigerian table tennis star and former African champion Olufunke Oshonaike into the exclusive Club of seven-time Olympians known as 'Club 7'. <br /> <br />
-Oshonaike was inducted into the 7th Club because of her feat as the first female table tennis player in the world and the first female athlete in Africa ever to participate in seven Olympic Games. <br /> <br />
-ITTF President Thomas Weikert and former inductees attended a brief induction ceremony held in Tokyo on Monday, July 26. The former inductees were Jörgen Persson of Sweden (1988 to 2012), Zoran Primorac of Croatia and the former Yugoslavia (1988 to 2012), Belgium's Jean-Michel Saive (1988 to 2012), and Segun Toriola (1992 – 2016). <br /> <br />
-Only four male table tennis players have been inducted worldwide since table tennis became an Olympic sport at the Seoul '88 Olympic Games in South Korea. Oshonaike increased the number to five, being the first female player in the world. <br /> <br />
-Toriola made his Olympic debut at the Barcelona '92 Olympic Games. In contrast, Oshonaike made her Olympic Games debut at the Atlanta '96 Games in the United States. <br /> <br />
-Commenting, Oshonaike expressed hope that the honor would make young Nigerians believe that dreams come true. <br /> <br />
-She said, "I hope this award for me and my country, as the only female in the seventh club in the world, and the only woman in Africa to have achieved the dream of representing her country at the Olympics seven times, will brighten the hearts of Nigerians especially for young girls that dreams can come through regardless of the challenges in life." <br /> <br />
-Oshonaike added:" Though I might not have won gold, silver, or bronze, I have won what no woman in the world of table tennis has ever won. Thank God for the award – the 7 Club award. I'm a proud Nigerian, and I hope more women will join me."
+           Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of government as part of efforts to ramp up their capacities to adequately fight the menace of Sexual and Gender-Based Violence (SGBV) in the state. <br /> <br />
+ The affected agencies are the Domestic and Sexual Violence Response Team (DSVRT) of the Lagos State Ministry of Justice, the Child Protection Unit of the Ministry of Youth and Social Development, and the Gender Unit of the State Criminal Investigation and Intelligence Department (SCIID), Panti, Lagos. <br /> <br />
+ Speaking at the event held at Lagos House, Alausa, Ikeja, Dr. Sanwo-Olu, who is coordinating the state’s multi-sectoral stakeholders’ committee against SGBV, said the donation commemorates the reward of several months of brainstorming and collaborative action among various agencies. <br /> <br />
+ According to her: “In the course of our numerous meetings, we realized that some critical Stakeholders amongst us require additional utility vehicles to scale up awareness and as well galvanize action to combat the menace of violence against our women and children in the state. <br /> <br />
+“We reached out to well-meaning individuals, corporate organizations, and government establishments for support and it was at this point that the Lagos State Lotteries Board graciously honored our request and supported us with these three utility vehicles,” she said. <br /> <br />
+ While assuring that other agencies would equally be supported, the First Lady urged the beneficiaries to put the vehicles to good use to frontally combat all forms of SGBV in their various capacities, especially rape, defilement, among others. <br /> <br />
+ She also appealed to well-meaning Nigerians, Civil Society groups, Corporate Organizations, and government at all levels to support the cause to significantly minimize the menace of Sexual and Gender-Based Violence in Lagos State in particular and Nigeria as a whole. <br /> <br />
+ Responding, Permanent Secretary, Ministry of Justice, Ms. Titilayo Shitta-Bay commended the First Lady for the gesture, saying that the vehicles would greatly give the needed impetus to the fight against SGBV, especially in reaching all nooks and crannies of the state. <br /> <br />
+ On his part, Permanent Secretary, Ministry of Youth and Social Development, Dr. Aina Olugbemiga Ayoola, said the donation would go a long way to investigate cases of child abuse and promptly rescue victims to protective custody, pending the outcome of the investigation to prevent stigmatization. <br /> <br />
+ For the Deputy Commissioner of Police in Charge of State CID, Panti, Adegoke Fayoade, the First Lady deserved to be deeply commended for her passion and commitment to the fight against SGBV, adding that the vehicle would be judiciously utilized to improve service delivery and ensure justice is not only done but transparently served. <br /> <br />
+ Also speaking, Chief Executive Officer of Lagos State Gaming and Lotteries Authority, Mr. Bashir Are said the donation of the vehicles was in furtherance of the vision of the agency to support good causes to make the state safe and comfortable place for all residents. <br /> <br />
+ “Part of the reason why we are established is to take care of good causes in the society and domestic and gender-based violence is something that we should not take lightly. This is why we have decided to support this cause so that there will be logistics to manage, to trace, and to find a resolution to these vices in our society”, he said.
 
 <br /> <br />
 
@@ -181,42 +158,28 @@ Oshonaike added:" Though I might not have won gold, silver, or bronze, I have wo
     {
       id: 6,
 
-      title: "A Nigerian Chess prodigy, Tani Adewumi, emerges US Chess Master",
+      title: "N11b voted for the school feeding scheme",
 
       Name: "Good News",
 
-      Description: " 10-year-old Nigerian, Tani Adewumi has become a US American Chess National Master with a rating of 2223.      New York Times journalist Nicholas Kristof, who had reported Tani's earlier achievements, updated the prodigy on FaceBook.",
+      Description: "  Lagos State Government has said the “Snacks for Thought School Feeding,” programme for primary pupils in the state will cost N11 billion for the implementation, scheduled to commence in September 2021.      Special Adviser Office of Civic Engagement, Princess Aderemi Adebowale disclosed this during the 2021 Ministerial press briefing to mark the second anniversary of Governor Babajide Sanwo-Olu-led administration in the state, held in Alausa, Ikeja",
 
-      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632005228/News%20Article%20Images/Sports_5_xyjpxb.jpg",
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Greater_Lagos_4_uxmye5.webp",
   
       contents: [<div>
-           10-year-old Nigerian, Tani Adewumi has become a US American Chess National Master with a rating of 2223.  <br /> <br />
- 
- New York Times journalist Nicholas Kristof, who had reported Tani's earlier achievements, updated the prodigy on FaceBook.
- <br /> <br />
- He wrote "Remember Tani Adewumi, the Nigerian refugee boy I wrote about a couple of years ago when he won the NY State chess championship for his age group — while living in a homeless shelter?
- <br /> <br />
- "Readers then stepped up and helped the family get housing and helped the parents get jobs.
- <br /> <br />
- "Here's a joyful update: Tani just won another championship in Fairfield, CT, and is now (as a 10-year-old fifth-grader) a Chess National Master with a rating of 2223.
- <br /> <br />
- "In "Tightrope," we wrote that Tani exemplifies the principle that "talent is universal, but opportunity is not." <br /> <br />
- 
- "He was able to soar because his homeless shelter was in a school district with a chess program, and the teacher realized that his family didn't have resources and waived the chess club fees. We need more of that!" <br /> <br />
- 
- Tani and his family arrived in the US in 2017, saying they fled from Boko Haram terrorists. <br /> <br />
- 
- The family obtained asylum and lived in a homeless shelter in Manhattan. During that time, the boy learned how to play chess at school.
- <br /> <br />
- The school chess coach saw the child's potential and approached his family about joining the chess program. <br /> <br />
- 
- Fees were waived for Tani to join the Club. <br /> <br />
- 
- The young chess player went on to win several trophies. His story in The New York Times attracted attention globally. <br /> <br />
- 
- A GoFundMe page was set up to move the family out of the homeless shelter. Since its launch, the site has raised $250,000. <br /> <br />
- 
- The family now has a home and has settled in New York City.
+           Lagos State Government has said the “Snacks for Thought School Feeding,” programme for primary pupils in the state will cost N11 billion for the implementation, scheduled to commence in September 2021. <br /> <br />
+ Special Adviser Office of Civic Engagement, Princess Aderemi Adebowale disclosed this during the 2021 Ministerial press briefing to mark the second anniversary of Governor Babajide Sanwo-Olu-led administration in the state, held in Alausa, Ikeja. The snacks-for-thought deals with children’s physical and cognitive development by focusing on enhancing their learning experience, which primarily starts with the child's mental disposition. <br /> <br />
+ The Snacks for Thought School Feeding, Adebowale said, is a programme by the state government to complement the Home-Grown School Feeding Programme of the Federal Government that covers only pupils in primary 1-3, while the Snacks for Thought feeding is expected to take care of the pupils at the crèche and primary 4 to 6 level to ensure that all pupils partake in the school feeding programme in Lagos State when the programme is eventually adopted by the State Government. “This school feeding programme also has the tendency to serve as the socio-economic blueprint of government and in the long run prevent this generation from bequeathing a sustainable development legacy to the next generation as it does this by keeping students in school. <br /> <br />
+ “When children stay in school and learn, they not only take charge of their own learning experience but also stand a greater chance of making something out of their lives while also becoming productive citizens capable of contributing to the development of the State as their formative years have been positively ensured. <br /> <br />
+ “There are additional dimensions to the project other than just snacks giving such as food and nutritional security, safety and human development”, she said. <br /> <br />
+ The state government, she added, is partnering with the private sector.
+“We already have volunteers that would work with us, over 400 volunteers are to partake. That is why we are appealing for more Public-Private Partnerships, PPP with the government for effective implementation of the programme. <br /> <br />
+ “The outbreak and effects of the Covid-19 in the state stalled the continuation of the feeding programme. <br /> <br />
+ “The pilot scheme held in Lagos-Island Area covered 33 public primary schools with a total of 11,965 pupils participating in the one-week pilot school feeding exercise. The exercise is billed to recommence in September this year”, she disclosed. <br /> <br />
+ Adebowale explained that Multiple Indices Indicators published by UNICEF in 2018, showed an estimated 229, 264 pupils out of school in Lagos State. <br /> <br />
+ “In order to curb these rising numbers, we need more than statutory allocations. Interventions such as these will not only increase the rate of enrolment but will impact positively on gender parity and equality while also serving as a preventive security measure in reducing crime and hooliganism that may, later on, disrupt the socio-economic life of the State”, she said. <br /> <br />
+ “It is also a preparedness preventive security programme that is far more than snacks-giving. It is an investment of the administration of Mr. Babajide Sanwo-Olu in the common future and stability of Lagos State and an important step in building a thriving 21st century Lagos, where her citizens are not only safe but productive and also understand their Civic Rights and Responsibilities. She added, “The Sanwo-Olu administration, in order to accelerate our children access to world-class educational learning, has aggressively embarked on the provision of blocks of classrooms, administrative offices, school furniture, modern toilet facilities, security in our schools and has continued to build teachers capacity with a high level of motivation for the teachers. <br /> <br />
+ “These activities are to complement the womb to school initiative and ensure the public learn another conducive environment”, she further said.
 
 
 
