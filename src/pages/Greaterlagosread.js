@@ -19,10 +19,11 @@ function getQuery() {
 
 function Greaterlagosread() {
     let news = GreaterlagosData.filter(news => news.id === getQuery())
+    // let readUrl = <a href="/greaterlagosread?id="> read </a>   
 
     return (
         <div>
-            <NewsPage articleTitle={news[0].title}  articleImage={news[0].url} articleContents={news[0].contents} />
+            <NewsPage articleTitle={news[0].title}  articleImage={news[0].url} articleContents={news[0].contents} shareUrl={news[0].id + "/greaterlagosread?id=" } />
         </div>
     )
 }

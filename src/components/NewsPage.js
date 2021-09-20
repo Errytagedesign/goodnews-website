@@ -1,5 +1,7 @@
 import React from 'react'
 import  './NewsPage.css'
+import { FacebookShareButton, TwitterShareButton, LinkedinShareButton, WhatsappShareButton } from 'react-share'
+import { FacebookIcon, TwitterIcon, LinkedinIcon, WhatsappIcon  } from 'react-share'
 
 function NewsPage(props) {
     
@@ -14,6 +16,25 @@ function NewsPage(props) {
            
             
             <p className="p-5"> {props.articleContents} </p>
+
+            <div>
+
+                <FacebookShareButton 
+                url={props.shareUrl}
+                title={props.articleTitle}
+                description={props.articleContents.slice(0,150)}>
+
+               <section className="d-flex flex-row justify-content-between" > 
+               <div> 
+                   <p>Share</p> 
+               </div> 
+               <div>
+                   <FacebookIcon logoFillColor="White" round="true"> </FacebookIcon> 
+                </div> 
+               </section>
+
+                </FacebookShareButton>
+            </div>
         </div>
     )
 }
