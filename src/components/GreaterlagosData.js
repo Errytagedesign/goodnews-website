@@ -9,6 +9,8 @@ export  const GreaterlagosData = [
 
     Description: "The Lagos State Government has announced the setting up of a business hub and e-commerce digital platform as part of the initiatives to enhance the growth of Micro, Small, and Medium Enterprises (MSMEs) and showcase their products. ",
 
+    thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223157/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURES_GreaterLagos_1_fn4l5o.jpg",
+
     url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574369/News%20Article%20Images/Greater_Lagos_1_hi4g4p.jpg",
 
     contents: [ <div> 
@@ -45,6 +47,8 @@ export  const GreaterlagosData = [
 
       Description: " Lagos State Governor, Mr. Babajide Sanwo-Olu has announced that the Lekki deep seaport would commence commercial operations in 2023. While on a working tour of the three free trade zones in the Ibeju Lekki area of the state, the Governor said that the deep seaport and other investments in the corridor have the potential to increase the state’s GDP in multiple folds.  ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223152/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESGreaterLagos_3_wdttym.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632006327/News%20Article%20Images/Greater_Lagos_3_ygt5do.jpg",
   
       contents: [<div>
@@ -74,6 +78,8 @@ export  const GreaterlagosData = [
 
         Description: "Lagos State Government said that it has entered into a partnership with the Bank of Industry (BoI) to provide N20 billion to support entrepreneurs in the state.         The state’s Commissioner for Economic Planning and Budget, Mr. Sam Egube, who stated this at the",
 
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223150/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESGreaterLagos_6_kzg1tk.jpg",
+
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Greater_Lagos_6_koq0vv.jpg",
     
         contents: [ <div>
@@ -99,6 +105,8 @@ export  const GreaterlagosData = [
       Name: "Good News",
 
       Description: " Governor Babajide Sanwo-Owu puts his personal touch to it. He leads the charge at the Corporate Assembly, a Public-Private regular interaction between the state government and the business community, which provides an avenue to receive feedback from the Organised Private Sector (OPS) on the implementation of policies, regulations, and projects as they impact on the business prosperity of the state for integration into the state policy formulation and regulatory review.  ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223152/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESGreaterLagos_2_je8d7l.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632006598/News%20Article%20Images/Greater_Lagos_2_nslaaj.jpg",
   
@@ -129,6 +137,8 @@ export  const GreaterlagosData = [
       Name: "Good News",
 
       Description: " Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of government as part of efforts to ramp up their capacities to adequately fight the menace of Sexual and Gender-Based Violence (SGBV) in the state.",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223150/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESGreaterLagos_5_uskf0t.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632006288/News%20Article%20Images/Greater_Lagos_5_fwtsty.jpg",
   
@@ -163,6 +173,8 @@ export  const GreaterlagosData = [
       Name: "Good News",
 
       Description: "  Lagos State Government has said the “Snacks for Thought School Feeding,” programme for primary pupils in the state will cost N11 billion for the implementation, scheduled to commence in September 2021.      Special Adviser Office of Civic Engagement, Princess Aderemi Adebowale disclosed this during the 2021 Ministerial press briefing to mark the second anniversary of Governor Babajide Sanwo-Olu-led administration in the state, held in Alausa, Ikeja",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESGreaterLagos_4_wpfb6q.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Greater_Lagos_4_uxmye5.webp",
   

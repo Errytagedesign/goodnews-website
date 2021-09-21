@@ -13,6 +13,8 @@ export  const BusinessData = [
 
       Description: "China and GAC Motors recently demonstrated their commitment to developing Nigeria’s automobile industry when the Chinese Embassy in Nigeria and GAC held a diplomatic fleet delivery ceremony in Abuja.      The ceremony was witnessed by Mr. Cui Jianchun, Chinese Ambassador to Nigeria; Mr. Guo Zhiqiang, Counselor of the Chinese Embassy; Mr. Jubril Arogundade, General Manager, Commercial and Head of Communication of GAC Motor Nigeria, as well as Mr. Qian Jin, Business Director of GAC Motor Nigeria.       ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223147/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESBusiness-Finance_2_tkztbg.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Business_and_Finance_2_drrf4q.jpg",
   
       contents: [<div>
@@ -35,6 +37,10 @@ export  const BusinessData = [
         title: "Mikano Geely Assembly Plant Comes Alive in Ogun",
         Name: "Good News",
         Description: "In a move that would further boost local manufacturing and grow the economy, Mikano International, in collaboration with leading automobile maker Geely, has established an assembly plant in Nigeria. ",
+
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223147/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESBusiness-Finance_1_ypuqfo.jpg",
+
+
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574366/News%20Article%20Images/Business_and_Finance_1_h4q7ky.jpg",
     
         contents: [`In a move that would further boost local manufacturing and grow the economy, Mikano International, in collaboration         with        leading automobile maker Geely, has established an assembly plant in Nigeria.`, <br />, <br />,

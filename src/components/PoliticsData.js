@@ -10,6 +10,8 @@ export  const PoliticsData = [
 
       Description: " Nigerian-born Kaycee Madu has been appointed as Canada’s new minister of justice.       Madu is also the first Black Man to occupy either Provincial or Federal Justice positions of the Justice Minister, Attorney General, or Solicitor General in the country.   ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESPolitics_1_asqi4u.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Politics_1_l96jyz.jpg",
   
       contents: [<div> 
@@ -33,6 +35,8 @@ Madu, who has practiced law in both Nigeria and Alberta, was first elected as a 
       Name: "Good News",
 
       Description: " Not many people bag doctorate degrees at age 71, but Ifeyinwa Felicia Marinze did recently.    On Thursday, July 8, 2021, Marinze was formally awarded her Ph.D. in French/Linguistics in the Faculty of Arts at the 51st convocation of the University of Lagos (UNILAG)    With that feat, the native of Ukpor, Nnewi South Local Government, Anambra State, born on March 6, 1950, became the oldest Ph.D. graduate in the Nigerian university system.     ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223150/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESPolitics_2_cvdwgr.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Politics_2_yrminz.jpg",
   

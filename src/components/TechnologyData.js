@@ -10,6 +10,8 @@ export  const TechnologyData = [
 
       Description: "   26-year-old Emeka Nelson recently invented a generator that runs on water.      Surprised that he was able to develop such an innovation, the non-certified young man has been attracting a lot of attention following this feat, especially since he has no background in engineering.  He shared the good news on his 1kva (1000 watts) portable hydroelectric generator on Twitter.  ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223153/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_3_klpqsa.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_5_nshefn.jpg",
   
       contents: [<div> 
@@ -49,6 +51,8 @@ export  const TechnologyData = [
 
       Description: " Not many people bag doctorate degrees at age 71, but Ifeyinwa Felicia Marinze did recently.    On Thursday, July 8, 2021, Marinze was formally awarded her Ph.D. in French/Linguistics in the Faculty of Arts at the 51st convocation of the University of Lagos (UNILAG)    With that feat, the native of Ukpor, Nnewi South Local Government, Anambra State, born on March 6, 1950, became the oldest Ph.D. graduate in the Nigerian university system.     ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223153/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_5_kunuyo.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_2_m8zpoo.jpg",
   
       contents: [<div>
@@ -76,6 +80,8 @@ He has taught several courses in biology, agricultural and medical biochemistry,
         Name: "Good News",
 
         Description: "Leading global e-commerce platform, WooCommerce has selected Nigeria’s Paystack as its preferred payment partner in Africa.  With the selection,..",
+
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_4_ejacfr.jpg",
 
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_1_mtlqmx.png",
     
@@ -111,6 +117,8 @@ Leading global e-commerce platform, WooCommerce has selected Nigeria’s Paystac
 
       Description: "    Nigeria is blessed with many talented kids and Muhammed Sagir is on that exclusive list. He is among the young people putting their abilities to good use and coming up with mind-blowing inventions. ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223153/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_3_klpqsa.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_4_cfvv7x.jpg",
   
       contents: [<div>
@@ -138,6 +146,8 @@ Below is part of his work, an excavator made from local materials like cartons, 
       Name: "Good News",
 
       Description: "In celebration of the upcoming 30th anniversary of their album 'Metallica' AKA 'The Black Album, The Metallica Blacklist, a compilation of 53 artists each covering their favorite Black Album tracks, will be released September 10.      Pre-orders of The Metallica Blacklist feature instant gratification tracks, including the Nigerian fast-rising singer Tomi Owó's newly available version of 'Through  the Never.' ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223152/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_2_war0d8.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_6_tcvr3x.webp",
   
@@ -167,6 +177,8 @@ Kehinde added that he had built four radio-controlled (RC) planes, including Fix
       Name: "Good News",
 
       Description: "Nigeria’s first domestically launched music streaming service, uduX, has developed a new product called PopRev in partnership with PiggyVest. PopRev will allow music lovers to invest in their favorite musician’s project and make profits based on the project’s digital streaming performance. The solution will see fans become more instrumental to the financial success of their favorite artists.  Fans can track their investment through the uduX platform, available as both web and mobile apps. The apps will give them real-time insights into the streaming performance of the music they ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_6_icki2e.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631812347/News%20Article%20Images/piggyvest_qzcul7.jpg",
   

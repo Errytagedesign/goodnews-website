@@ -10,6 +10,8 @@ export  const EntertainmentsData = [
 
       Description: "Nigerian music sensation, Burna Boy, bagged a Grammy at the 63rd Annual Awards held in Los Angeles, California, on March 14, 2021.      Real name Damini Ebunoluwa Ogulu, he had been nominated twice previously but won the Best Global Music Album award for his 2020 album 'Twice as Tall' this time around.     With his feat, he became the first Nigerian solo artist to win a Grammy Award. ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223148/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEntertainments_1_zwmbqz.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Entertainment_1_s3deaj.jpg",
   
       contents: [<div> 
@@ -44,7 +46,9 @@ African Giant also brought Burna Boy his first Best World Music Album Grammy nom
 
       Description: " Not many people bag doctorate degrees at age 71, but Ifeyinwa Felicia Marinze did recently.    On Thursday, July 8, 2021, Marinze was formally awarded her Ph.D. in French/Linguistics in the Faculty of Arts at the 51st convocation of the University of Lagos (UNILAG)    With that feat, the native of Ukpor, Nnewi South Local Government, Anambra State, born on March 6, 1950, became the oldest Ph.D. graduate in the Nigerian university system.     ",
 
-      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574366/News%20Article%20Images/Education_1_lcdoco.jpg",
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223157/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEntertainments_2_ejxad7.jpg",
+
+      url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Entertainment_2_djzv8q.jpg",
   
       contents: [<div>
            
@@ -72,7 +76,11 @@ Wizkid’s third chart entry followed the success of “One Dance”, which peak
         id: 3,
         title: "Ikorodu Bois appear on Times Square’s Billboard  ",
         Name: "Good News",
-        Description: "The Ikorodu Bois have featured on a Netflix advert displayed on Broadway Times Square, New York City.  ",
+        Description: "The Ikorodu Bois have featured on a Netflix advert displayed on Broadway Times Square, New York City....  ",
+
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223149/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEntertainments_3_u6biei.jpg",
+
+
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Entertainment_3_ejhq84.jpg",
     
         contents: [`The Ikorodu Bois have featured on a Netflix advert displayed on Broadway Times Square, New York City.`, <br />,  <br />,
@@ -98,6 +106,8 @@ Wizkid’s third chart entry followed the success of “One Dance”, which peak
       Name: "Good News",
 
       Description: "  Superstar, Wizkid has won his second NAACP Image Award for his part on Beyonce’s ‘Brown Skin Girl’ alongside Saint John and Blue-Ivy Carter.  The award was announced via a tweet by the organizers on March 26, 2021. ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223159/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEntertainments_4_tele90.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Entertainment_4_u13jmm.jpg",
   
@@ -125,6 +135,8 @@ Wizkid, also known as Starboy and Beyonce, previously won the ‘Outstanding duo
       Name: "Good News",
 
       Description: "In celebration of the upcoming 30th anniversary of their album 'Metallica' AKA 'The Black Album, The Metallica Blacklist, a compilation of 53 artists each covering their favorite Black Album tracks, will be released September 10.      Pre-orders of The Metallica Blacklist feature instant gratification tracks, including the Nigerian fast-rising singer Tomi Owó's newly available version of 'Through  the Never.' ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223148/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEntertainments_5_jdnq08.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Entertainment_5_uulzdq.jpg",
   

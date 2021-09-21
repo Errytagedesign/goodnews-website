@@ -1,0 +1,17 @@
+.Menu {
+  width: 50vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.Menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-bottom: -1em;
+}
+
+.Menu a:hover {
+  color: var(--sec-color);
+  transform: scale(1.2);
+}

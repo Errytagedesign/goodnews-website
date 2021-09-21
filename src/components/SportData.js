@@ -6,6 +6,9 @@ export  const SportData = [
     title: "D'Tigers Shock US in Pre-Olympics Warm-Up",
     Name: "Good News",
     Description: "Nigeria's male basketball team, popularly known as D'Tigers, began preparations for the Tokyo 2020 Olympics by pulling off a shock 90-87 win over the United States of America. What made the victory remarkable was that All-NBA, All-Star, and max-contract performers filled the US team. ",
+
+    thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_3_nvtgdy.jpg",
+
     url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_3_klx3yf.jpg",
 
     contents: [`Nigeria's male basketball team, popularly known as D'Tigers, began preparations for the Tokyo 2020 Olympics by pulling off a shock 90-87 win over the United States of America. 
@@ -39,6 +42,8 @@ export  const SportData = [
 
       Description: "   Two siblings of Nigerian parentage, Caleb and Carney Chukwuemeka, are currently setting premier league club Aston Villa alight.    Younger brother, Carney, was the first on the club's books before Caleb joined him in August. ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223153/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_6_etf1n7.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Sports_6_zpuzcy.jpg",
   
       contents: [<div>
@@ -68,6 +73,8 @@ export  const SportData = [
         Name: "Good News",
 
         Description: "On Saturday, July 24, 2021, Uche Eke made history as the first gymnast to compete for Nigeria at the Olympics. Nigeria, Africa's most populous nation, is blessed with many sportspeople but had never qualified a gymnast to the Olympics before.",
+
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223151/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_4_w843nh.jpg",
 
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_4_it8xzk.jpg",
     
@@ -117,6 +124,8 @@ export  const SportData = [
 
       Description: "On August 4, 1996, Nigeria became the first African nation to win a major international soccer competition. The country came from behind twice to defeat Argentina, 3-2, on a goal in the second-to-last minute to claim the Olympic men's soccer gold medal...  ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223150/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_1_xiprqe.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632004473/News%20Article%20Images/Sports_1_dxg6oo.jpg",
   
       contents: [<div>
@@ -151,6 +160,8 @@ export  const SportData = [
 
       Description: "The International Table Tennis Federation (ITTF) has inducted Nigerian table tennis star and former African champion Olufunke Oshonaike into the exclusive Club of seven-time Olympians known as 'Club 7'.",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223156/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_2_hiwmwb.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_2_yl4zxp.jpg",
   
       contents: [<div>
@@ -180,6 +191,8 @@ Oshonaike added:" Though I might not have won gold, silver, or bronze, I have wo
       Name: "Good News",
 
       Description: " 10-year-old Nigerian, Tani Adewumi has become a US American Chess National Master with a rating of 2223.      New York Times journalist Nicholas Kristof, who had reported Tani's earlier achievements, updated the prodigy on FaceBook.",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223151/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_5_kafqzu.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632005228/News%20Article%20Images/Sports_5_xyjpxb.jpg",
   

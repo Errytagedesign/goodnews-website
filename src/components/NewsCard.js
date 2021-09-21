@@ -27,7 +27,7 @@ function NewsCard(props) {
               <p className="NewsCardTitle"> {name} </p>
               
            </div> 
-              <p className="NewsCardExcerpt"> {description.slice(0,150)} 
+              <p className="NewsCardExcerpt"> {description.slice(0,120)} 
               <Link to={url} className="Readmore"> Read More </Link> </p> 
 
               <div className="d-flex col-6 justify-content-between"> 

@@ -13,6 +13,8 @@ export  const FashionData = [
 
       Description: " Lisa Folawiyo trained as a lawyer before catching the fashion bug. She had no formal training but founded her line, Jewel by Lisa (now Lisa Folawiyo), in 2005.Her collections are exclusively crafted from Ankara textiles, vibrant wax-resistant dyed fabrics characteristic of West Africa. “Our mothers, grandmothers, ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223146/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_2_zigehl.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631859399/News%20Article%20Images/Fashion_and_Lifestyle_2_syrnqc.jpg",
   
       contents: [<div>
@@ -40,6 +42,8 @@ export  const FashionData = [
         Name: "Good News",
   
         Description: "Entrepreneurship runs in the blood of Deola Sagoe, founder of Haute fashion, House of Deola.    Her father, Chief Michael Ade-Ojo, owns the hugely successful Elizade Group now run by her brother. Her deceased mother, who started the business with the Ilara-Mokin, Ondo State High Chief, also grew a small tailoring business into a significant fashion label, producing predominantly traditional embroidered menswear.  ",
+
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223157/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_1_lte4sv.jpg",
   
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Fashion_and_Lifestyle_1_nusxaf.jpg",
     
@@ -67,6 +71,8 @@ export  const FashionData = [
       Name: "Good News",
 
       Description: " Folashade Thomas-Fahm is among the names being celebrated by London's Victoria and Albert (V&A) Museum. Next year, its Africa Fashion exhibition will commemorate past and contemporary African designers, including Mali's Chris Seydou and Ghana's Kofi Ansah. Often described as the country's first modern designer, Thomas-Fahm is a former president of the Fashion Designers Association of Nigeria. She received a Lifetime Achievement Award at Arise Magazine's Fashion Week in Lagos in 2011.  ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223156/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_3_vqeybt.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Fashion_and_Lifestyle_3_nfgzwq.jpg",
   
@@ -104,6 +110,8 @@ export  const FashionData = [
 
       Description: "Lagos-born and based designer Kenneth Ize is reinterpreting traditional West African fabrics and Nigerian craft with his namesake label he founded in 2013. Ize is an LVMH Prize 2019 finalist.      Ize grew up in Austria and studied fashion and design at the University of Applied Arts Vienna. Upon graduation in 2013, he launched his eponymous label at Lagos Fashion Week but took a two-year hiatus while doing an MA at the University of Applied Arts Vienna. The designer relaunched his brand for Spring/Summer 2016.       ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223149/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_4_oeqbsn.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574369/News%20Article%20Images/Fashion_and_Lifestyle_4_dldxkn.jpg",
   
       contents: [<div>
@@ -129,6 +137,8 @@ export  const FashionData = [
 
       Description: " Nigerian children and youth are talented, and seven-year-old June Alaare Wisse is a perfect example.      Her mum discovered her modeling talent at age three, and she has been in front of a camera ever since then. June has posed for prominent photographers, including Mofe Bamuyiwa, and modeled for designers like Sleek Clothes and Jewellery, Heiress Couture Nigeria, and children’s apparel brand, ‘Ruff ‘n’ Tumble.      June has also walked the runway for several brands while her pictures have been published in magazines and websites.       ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223149/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_7_ogkzqx.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631860198/News%20Article%20Images/Fashion_and_Lifestyle_7_mppxqg.jpg",
   
       contents: [<div>
@@ -149,6 +159,8 @@ export  const FashionData = [
       Name: "Good News",
 
       Description: "Twenty emerging, mid-career Nigerian fashion designers have been selected to participate in the International Visitors Leadership Program (IVLP), the premier professional exchange program of the U.S. Department of State.   ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223149/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_6_vx5fhf.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574369/News%20Article%20Images/Fashion_and_Lifestyle_6_vvramo.jpg",
   
@@ -178,6 +190,8 @@ export  const FashionData = [
       Name: "Good News",
 
       Description: " Fashion tech business, Catwalk Creatives Limited, a sister company of Lassod Consulting, has launched Oyoyo, a game-changing app to revolutionize the Nigerian fashion industry.      The Oyoyo app will connect designers, tailors, and weavers in Nigeria with a nationwide customer base.        The technologically advanced app is a digital ecosystem and marketplace that allows artisan tailors, weavers, and fashion designers to create online profiles enabling them to connect with customers nationwide and worldwide.      ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223148/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_5_yosxrm.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631860645/News%20Article%20Images/Fashion_and_Lifestyle_5_szklog.jpg",
   

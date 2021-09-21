@@ -10,6 +10,9 @@ export  const EducationData = [
 
       Description: "Oluwatuyi Olowoyeye, a Nigerian student, has gained a master’s degree from the University of Debrecen in Hungary with a perfect GPA of 5.0.    Mr. Olowoyeye announced the feat on his LinkedIn profile.    He disclosed that though he aspired for a first-class as an undergraduate, he didn’t obtain it until the tide turned with his Masters.       ",
 
+
+      thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223147/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_1_obh6ay.jpg",
+  
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_7_uk06id.jpg",
   
       contents: [<div> 
@@ -39,6 +42,8 @@ export  const EducationData = [
       Name: "Good News",
 
       Description: " Not many people bag doctorate degrees at age 71, but Ifeyinwa Felicia Marinze did recently.    On Thursday, July 8, 2021, Marinze was formally awarded her Ph.D. in French/Linguistics in the Faculty of Arts at the 51st convocation of the University of Lagos (UNILAG)    With that feat, the native of Ukpor, Nnewi South Local Government, Anambra State, born on March 6, 1950, became the oldest Ph.D. graduate in the Nigerian university system.     ",
+
+      thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223153/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_2_ygg20g.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574366/News%20Article%20Images/Education_1_lcdoco.jpg",
   
@@ -73,6 +78,9 @@ she said. <br /> <br />
         title: "Nigerian maths prodigy, Faith Odunsi, shines on the global stage",
         Name: "Good News",
         Description: "Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australia. ",
+
+        thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223159/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_6_hredcf.jpg",
+
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Education_2_ns7tlh.png",
     
         contents: [`Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australian`, <br />, <br />, `Odunsi, an SS3 student from Ijebu in Ogun state, shared her experience winning the global competition in an interview with The Punch.`, `She disclosed that winning the 'tough competition' made her happy and honored. Odunsi also narrated how she excelled in different stages of the contest to emerge the overall winner.`, <br />, <br />,  `Her words: In the first stage, there was a computer-based test, and we had to answer many questions in one hour. My score in the test was 66. The second stage took the same format, and I also scored 66.`, 'The quarter and semi-finals were on Microsoft Teams. We were asked questions, and we put in our answers; the first to put in the correct answers got 10 points.', <br />, <br />,  `Revealing how she prepared for the contest, Odunsi said she made sure the competition did not affect her academic activities. She had after-school lessons and also studied at night from 11 pm to 12 am. As the winner of the contest, Faith was presented with a cash prize of $1,000.`, <br />, <br />, 
@@ -87,6 +95,8 @@ she said. <br /> <br />
       Name: "Good News",
 
       Description: "    Adeola Austin Oyinlade, an alumnus of the University of Lagos has become the first Nigerian to win the American Bar Association International Human Rights Award 2021.      In a post on its website, UNILAG commended Oyinlade for the award, noting that its alumnus is the first Nigerian to bag the award.",
+
+      thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223148/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_7_f5as9i.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_6_hgxkrt.jpg",
   
@@ -115,6 +125,8 @@ she said. <br /> <br />
       Name: "Good News",
 
       Description: "Nigerian-born serial entrepreneur Yekemi Otaru recently achieved the rare feat of being appointed Chancellor of a European university.      The mentor of business owners in developing countries with experience in engineering and marketing was recently named the chancellor-elect of the University of the West of Scotland (UWS).       ",
+
+      thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223147/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_3_gbm0fi.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_5_oag4n3.jpg",
   
@@ -156,6 +168,8 @@ Commenting on her appointment as Chancellor, Craig Mahoney, principal and vice-c
 
       Description: "   In 1984, Sarki Abba Abdulkadir, currently professor of Urology and Pathology at Northwestern University, hit the limelight.       The Kano indigene had just finished from Science Secondary School, Dawakin Tofa, and scored nine distinctions (8 A1 and 1 A2) in the West African Senior School Certificate (WASC) Exams.  ",
 
+      thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223147/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_5_zksamc.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_3_whvaq3.jpg",
   
       contents: [<div>
@@ -187,6 +201,8 @@ Professor Sarki Abba's research program focuses on understanding the molecular m
       Name: "Good News",
 
       Description: "     Fifty-three Nigerian students have received the Outstanding Cambridge Learner Awards for their excellent performance in the November 2020 international Examination series.     The awards recognize exceptional learner achievement in Cambridge examinations around the world in over 40 countries for various subjects at Cambridge IGCSE, Cambridge O Level, and Cambridge International AS and A level. It is designed to celebrate and recognize the success of high-performing learners. ",
+
+      thubmnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223156/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_4_l8vrzp.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574367/News%20Article%20Images/Education_4_hl4clh.jpg",
   

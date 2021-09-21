@@ -16,7 +16,7 @@ function FashionLifestyle() {
 
             {FashionData.map(news=> (
             <div className="col-12 col-md-6 col-lg-4 p-1"> 
-            <Newscard  title={news.title} name={news.Name} imagesrc={news.url} description={news.Description} url={"/fashionlifestyleread?id=" + news.id} />
+            <Newscard  title={news.title} name={news.Name} imagesrc={news.thumbnail} description={news.Description} url={"/fashionlifestyleread?id=" + news.id} />
             </div> 
             ))}
         
