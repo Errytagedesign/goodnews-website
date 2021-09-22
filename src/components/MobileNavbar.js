@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuButton, Youtube, Envelope, CalendarEvent } from 'react-bootstrap-icons';
-import './MobileNavbar.css'
+import './MobileNavbar.css';
 import { Link } from 'react-router-dom';
 
 
