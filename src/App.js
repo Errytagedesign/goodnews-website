@@ -63,7 +63,7 @@ function App() {
 
       <Router>
       <Navbar />
-      <MobileNavbar />
+      {/* <MobileNavbar /> */}
       {/* <Menu /> */}
       
       
