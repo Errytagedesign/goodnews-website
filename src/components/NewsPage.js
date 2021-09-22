@@ -34,6 +34,59 @@ function NewsPage(props) {
                </section>
 
                 </FacebookShareButton>
+
+
+                <TwitterShareButton 
+                url={props.shareUrl}
+                title={props.articleTitle}
+                description={props.articleContents.slice(0,150)}>
+
+               <section className="d-flex flex-row justify-content-between" > 
+               <div> 
+                   <p>Share</p> 
+               </div> 
+               <div>
+                   <TwitterIcon logoFillColor="White" round="true"> </TwitterIcon> 
+                </div> 
+               </section>
+
+                </TwitterShareButton>
+
+
+                <LinkedinShareButton 
+                url={props.shareUrl}
+                title={props.articleTitle}
+                description={props.articleContents.slice(0,150)}>
+
+               <section className="d-flex flex-row justify-content-between" > 
+               <div> 
+                   <p>Share</p> 
+               </div> 
+               <div>
+                   <LinkedinIcon logoFillColor="White" round="true"> </LinkedinIcon> 
+                </div> 
+               </section>
+
+                </LinkedinShareButton>
+
+
+                <WhatsappShareButton 
+                url={props.shareUrl}
+                title={props.articleTitle}
+                description={props.articleContents.slice(0,150)}>
+
+               <section className="d-flex flex-row justify-content-between" > 
+               <div> 
+                   <p>Share</p> 
+               </div> 
+               <div>
+                   <WhatsappIcon logoFillColor="White" round="true"> </WhatsappIcon> 
+                </div> 
+               </section>
+
+                </WhatsappShareButton>
+
+
             </div>
         </div>
     )
