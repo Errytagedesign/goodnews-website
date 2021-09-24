@@ -1,11 +1,14 @@
 import React from 'react';
 import logo from '../assets/GOOD-NEWS-NG-LOGO-WHITE.png';
 import { Link } from 'react-router-dom';
+// import { List } from 'react-bootstrap-icons';
 // import Carousel from 'react-elastic-carousel'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
+import Menu from './Menu';
+// import Hamburger from './Hamburger';
 
 
 
@@ -54,17 +57,23 @@ function Navbar() {
         <div className="Navbar">
 
             <header className="LogoSearch">
-              <div className="container d-flex flex-row justify-content-between">
+              <div className=" align-items-center  d-flex flex-row justify-content-between">
                 
                 {/* logo */}
-                <div className="text-start gLogo col-6 col-md-4 ">
-                  <Link to="/"> <img className=" col-6 col-md-4" src={logo} alt="good-news-logo" /> </Link>  
+                <div className="text-start gLogo col-3 col-md-4 ">
+                  <Link to="/"> <img className=" col-12 col-md-4" src={logo} alt="good-news-logo" /> </Link>  
                 </div>
                 
                 {/* search */}
                <div className="col-6 col-md-6"> 
                    <input className="form-control" type="text" placeholder="search"/> 
                </div>
+
+                {/* Hamburger */}
+               <div className="col-2 col-md-2 text-end"> 
+                  <Menu />
+               </div>
+
            </div>  
             </header>
                 
@@ -89,6 +98,8 @@ function Navbar() {
                 </div>
 
            </div>
+
+           <Menu />
 
         </div>
     )

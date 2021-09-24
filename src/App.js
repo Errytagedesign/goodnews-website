@@ -2,7 +2,7 @@
 // components
 import Navbar from './components/Navbar';
 import MobileNavbar from './components/MobileNavbar';
-// import Menu from './components/Menu';
+
 
 
 
@@ -64,7 +64,7 @@ function App() {
       <Router>
       <Navbar />
       <MobileNavbar />
-      {/* <Menu /> */}
+     
       
       
       <Switch>
