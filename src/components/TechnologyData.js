@@ -81,7 +81,7 @@ He has taught several courses in biology, agricultural and medical biochemistry,
 
         Description: "Leading global e-commerce platform, WooCommerce has selected Nigeria’s Paystack as its preferred payment partner in Africa.  With the selection,..",
 
-        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_4_ejacfr.jpg",
+        thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223150/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_1_m1ltak.jpg",
 
         url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_1_mtlqmx.png",
     
@@ -117,7 +117,7 @@ Leading global e-commerce platform, WooCommerce has selected Nigeria’s Paystac
 
       Description: "    Nigeria is blessed with many talented kids and Muhammed Sagir is on that exclusive list. He is among the young people putting their abilities to good use and coming up with mind-blowing inventions. ",
 
-      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223153/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_3_klpqsa.jpg",
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_4_ejacfr.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574371/News%20Article%20Images/Technology_4_cfvv7x.jpg",
   

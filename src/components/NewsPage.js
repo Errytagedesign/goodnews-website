@@ -3,6 +3,23 @@ import  './NewsPage.css'
 import { FacebookShareButton, TwitterShareButton, LinkedinShareButton, WhatsappShareButton } from 'react-share'
 import { FacebookIcon, TwitterIcon, LinkedinIcon, WhatsappIcon  } from 'react-share'
 
+import styled from 'styled-components';
+import Technology from '../pages/Technology';
+
+
+
+const ReadAlso = styled.div `
+
+background: var(--main-color);
+border-top: 4px solid grey;
+margin-top: 3em;
+margin-bottom: 6em;
+
+
+
+
+`;
+
 function NewsPage(props) {
     
         
@@ -17,21 +34,25 @@ function NewsPage(props) {
             
             <p className="p-5"> {props.articleContents} </p>
 
-            <div>
+            {/* Social share start */}
+
+            <div className="d-flex flex-row justify-content-around  col-10 col-md-7 ps-4">
+                
+                
+                   <p className="share" >Share</p> 
+               
 
                 <FacebookShareButton 
                 url={props.shareUrl}
                 title={props.articleTitle}
                >
 
-               <section className="d-flex flex-row justify-content-between" > 
-               <div> 
-                   <p>Share</p> 
-               </div> 
+               
+               
                <div>
-                   <FacebookIcon logoFillColor="White" round="true"> </FacebookIcon> 
+                   <FacebookIcon logoFillColor="White" round="true" size={35}> </FacebookIcon> 
                 </div> 
-               </section>
+               
 
                 </FacebookShareButton>
 
@@ -41,14 +62,11 @@ function NewsPage(props) {
                 title={props.articleTitle}
                 >
 
-               <section className="d-flex flex-row justify-content-between" > 
-               <div> 
-                   <p>Share</p> 
-               </div> 
+              
                <div>
-                   <TwitterIcon logoFillColor="White" round="true"> </TwitterIcon> 
+                   <TwitterIcon logoFillColor="White" round="true" size={35}> </TwitterIcon> 
                 </div> 
-               </section>
+             
 
                 </TwitterShareButton>
 
@@ -58,14 +76,11 @@ function NewsPage(props) {
                 title={props.articleTitle}
                >
 
-               <section className="d-flex flex-row justify-content-between" > 
-               <div> 
-                   <p>Share</p> 
-               </div> 
+              
                <div>
-                   <LinkedinIcon logoFillColor="White" round="true"> </LinkedinIcon> 
+                   <LinkedinIcon logoFillColor="White" round="true" size={35}> </LinkedinIcon> 
                 </div> 
-               </section>
+               
 
                 </LinkedinShareButton>
 
@@ -75,20 +90,28 @@ function NewsPage(props) {
                 title={props.articleTitle}
                >
 
-               <section className="d-flex flex-row justify-content-between" > 
-               <div> 
-                   <p>Share</p> 
-               </div> 
+              
                <div>
-                   <WhatsappIcon logoFillColor="White" round="true"> </WhatsappIcon> 
+                   <WhatsappIcon logoFillColor="White" round="true" size={35}> </WhatsappIcon> 
                 </div> 
-               </section>
+             
 
                 </WhatsappShareButton>
 
 
             </div>
+           {/* Social share end */}
+        
+        <ReadAlso>
+
+        <p className="share" > Read Also </p> 
+          <Technology  />
+        </ReadAlso>
+
+
         </div>
+
+        
     )
 }
 
