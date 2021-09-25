@@ -9,10 +9,10 @@ export const  MenuData = [
         title: 'Categories',
         path: '/',
         icon: <MenuButton size={20} />,
-        iconClosed: <CaretDownFill />,
-        iconOpen: <CaretUpFill />,
+        iconClosed: <CaretDownFill className="ms-3" />,
+        iconOpen: <CaretUpFill className="ms-3" />,
 
-        SubCat: [
+        subCat: [
 
             {
                 title: 'Technology',
@@ -40,7 +40,7 @@ export const  MenuData = [
 
             {
                 title: 'Fashion and Lifestyle',
-                path: '/ashionLifestyle',
+                path: '/fashionLifestyle',
                 icon: <CpuFill size={20} />, 
         },
 

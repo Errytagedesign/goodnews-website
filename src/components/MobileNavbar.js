@@ -1,7 +1,8 @@
 import React from 'react';
-import { MenuButton, Youtube, Envelope, CalendarEvent } from 'react-bootstrap-icons';
+import {  Youtube, Envelope, CalendarEvent } from 'react-bootstrap-icons';
 import './MobileNavbar.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Menu from './Menu';
 
 
 
@@ -15,41 +16,41 @@ function MobileNavbar() {
         <section className="MobileNavbar container d-flex flex-row justify-content-around align-items-center">
           
           {/* Menu */}
-          <div className="d-flex align-self-center">
+          <div className="d-flex flex-column menuitem  align-self-center">
 
-          <Link to="" className="" >           
-             <MenuButton color="white" size={20}  />  <p >Menu</p>           
-          </Link>
+                 
+             <Menu />  <p >Menu</p>           
+        
 
           </div>
 
         
         {/* Video */}
-          <div className="d-flex align-self-center">
+          <div className="d-flex flex-column menuitem align-self-center">
 
-          <Link to="" className="" >           
+                   
              <Youtube color="white" size={20}  />  <p >Video</p>           
-          </Link>
+        
 
           </div>
 
 
           {/* NewsLetter */}
-          <div className="d-flex align-self-center">
+          <div className="d-flex flex-column menuitem align-self-center">
 
-          <Link to="" className="" >           
+                    
              <Envelope color="white" size={20}  />  <p >Newsletter</p>           
-          </Link>
+       
 
           </div>
 
 
         {/* Events */}
-          <div className="d-flex align-self-center">
+          <div className="d-flex flex-column menuitem align-self-center">
 
-          <Link to="" className="" >           
+                    
              <CalendarEvent color="white" size={20}  />  <p >Events</p>           
-          </Link>
+       
 
           </div>
 

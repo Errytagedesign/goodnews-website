@@ -70,7 +70,7 @@ function Navbar() {
                </div>
 
                 {/* Hamburger */}
-               <div className="col-2 col-md-2 text-end"> 
+               <div className="col-2 col-md-2 text-end d-md-block d-none"> 
                   <Menu />
                </div>
 
@@ -99,7 +99,7 @@ function Navbar() {
 
            </div>
 
-           <Menu />
+        
 
         </div>
     )

@@ -22,7 +22,7 @@ function NewsPage(props) {
                 <FacebookShareButton 
                 url={props.shareUrl}
                 title={props.articleTitle}
-                description={props.articleContents.slice(0,150)}>
+               >
 
                <section className="d-flex flex-row justify-content-between" > 
                <div> 
@@ -39,7 +39,7 @@ function NewsPage(props) {
                 <TwitterShareButton 
                 url={props.shareUrl}
                 title={props.articleTitle}
-                description={props.articleContents.slice(0,150)}>
+                >
 
                <section className="d-flex flex-row justify-content-between" > 
                <div> 
@@ -56,7 +56,7 @@ function NewsPage(props) {
                 <LinkedinShareButton 
                 url={props.shareUrl}
                 title={props.articleTitle}
-                description={props.articleContents.slice(0,150)}>
+               >
 
                <section className="d-flex flex-row justify-content-between" > 
                <div> 
@@ -73,7 +73,7 @@ function NewsPage(props) {
                 <WhatsappShareButton 
                 url={props.shareUrl}
                 title={props.articleTitle}
-                description={props.articleContents.slice(0,150)}>
+               >
 
                <section className="d-flex flex-row justify-content-between" > 
                <div> 
