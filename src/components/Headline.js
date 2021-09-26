@@ -8,6 +8,8 @@ function Headline(props) {
         <section className="m-1">
            
             <div className="wrapper card">
+
+            <h4 className="p-5">{props.title}</h4>
               
                <div className="overflow-hidden">
                 <img className="card-img-top" src={props.imgsrc} alt="" />
@@ -16,7 +18,9 @@ function Headline(props) {
                 
                 <p className="NewsName" > {props.name} </p>
                
-               <p className="excerpt"> {props.description} <Link to={props.pageurl} className="Readmore"> Read More </Link> </p>
+               <p className="excerpt"> {props.description} 
+               <Link to={props.pageurl} className="Readmore"> Read More </Link> 
+               </p>
 
             
                <div> <img className="icons" src="/src/assets/icons/Comment.svg"  alt="" /> </div>  

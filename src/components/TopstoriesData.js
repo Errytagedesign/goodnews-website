@@ -6,8 +6,15 @@ export  const Data = [
     {
       id: 1,
       title: "Nigerian maths prodigy, Faith Odunsi, shines on the global stage",
+
       Name: "Good News",
+
       Description: "Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australia. ",
+
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223159/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEducation_6_hredcf.jpg",
+
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Education_2_ns7tlh.png",
   
       contents: [`Fifteen-year-old Faith Odunsi recently made Nigeria proud as she emerged the Global Open Mathematics Tournament winner, an international competition with participants from Europe, Africa, America, Asia, and Australian`, <br />, <br />, `Odunsi, an SS3 student from Ijebu in Ogun state, shared her experience winning the global competition in an interview with The Punch.`, `She disclosed that winning the 'tough competition' made her happy and honored. Odunsi also narrated how she excelled in different stages of the contest to emerge the overall winner.`, <br />, <br />,  `Her words: In the first stage, there was a computer-based test, and we had to answer many questions in one hour. My score in the test was 66. The second stage took the same format, and I also scored 66.`, 'The quarter and semi-finals were on Microsoft Teams. We were asked questions, and we put in our answers; the first to put in the correct answers got 10 points.', <br />, <br />,  `Revealing how she prepared for the contest, Odunsi said she made sure the competition did not affect her academic activities. She had after-school lessons and also studied at night from 11 pm to 12 am. As the winner of the contest, Faith was presented with a cash prize of $1,000.`, <br />, <br />, 
@@ -17,8 +24,14 @@ export  const Data = [
     {
       id: 2,
       title: "Mikano Geely Assembly Plant Comes Alive in Ogun",
+
       Name: "Good News",
+
       Description: "In a move that would further boost local manufacturing and grow the economy, Mikano International, in collaboration with leading automobile maker Geely, has established an assembly plant in Nigeria. ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223147/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESBusiness-Finance_1_ypuqfo.jpg",
+
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574366/News%20Article%20Images/Business_and_Finance_1_h4q7ky.jpg",
   
       contents: [`In a move that would further boost local manufacturing and grow the economy, Mikano International, in collaboration         with        leading automobile maker Geely, has established an assembly plant in Nigeria.`, <br />, <br />,
@@ -44,8 +57,13 @@ export  const Data = [
     {
       id: 3,
       title: "Ikorodu Bois appear on Times Square’s Billboard  ",
+
       Name: "Good News",
+
       Description: "The Ikorodu Bois have featured on a Netflix advert displayed on Broadway Times Square, New York City.  ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223149/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESEntertainments_3_u6biei.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Entertainment_3_ejhq84.jpg",
   
       contents: [`The Ikorodu Bois have featured on a Netflix advert displayed on Broadway Times Square, New York City.`, <br />,  <br />,
@@ -65,8 +83,14 @@ export  const Data = [
     {
       id: 4,
       title: "D'Tigers Shock US in Pre-Olympics Warm-Up",
+
       Name: "Good News",
+
       Description: "Nigeria's male basketball team, popularly known as D'Tigers, began preparations for the Tokyo 2020 Olympics by pulling off a shock 90-87 win over the United States of America. What made the victory remarkable was that All-NBA, All-Star, and max-contract performers filled the US team. ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESSport_3_nvtgdy.jpg",
+
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Sports_3_klx3yf.jpg",
   
       contents: [`Nigeria's male basketball team, popularly known as D'Tigers, began preparations for the Tokyo 2020 Olympics by pulling off a shock 90-87 win over the United States of America. 
@@ -100,6 +124,8 @@ export  const Data = [
 
       Description: "Nigerian-born Kaycee Madu has been appointed as Canada’s new minister of justice. Madu is also the first Black Man to occupy either Provincial or Federal Justice positions of the Justice Minister, Attorney General, or Solicitor General in the country. The appointee was born and raised in southeastern Nigeria. He graduated from the University of Lagos with a law degree in 2001 and relocated to Canada with his family in 2005. ",
 
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESPolitics_1_asqi4u.jpg",
+
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574370/News%20Article%20Images/Politics_1_l96jyz.jpg",
   
       contents: [`Nigerian-born Kaycee Madu has been appointed as Canada’s new minister of justice.` , <br />, <br />,
@@ -120,6 +146,8 @@ export  const Data = [
       Name: "Good News",
 
       Description: "Nigeria’s first domestically launched music streaming service, uduX, has developed a new product called PopRev in partnership with PiggyVest. PopRev will allow music lovers to invest in their favorite musician’s project and make profits based on the project’s digital streaming performance. The solution will see fans become more instrumental to the financial success of their favorite artists.  Fans can track their investment through the uduX platform, available as both web and mobile apps. The apps will give them real-time insights into the streaming performance of the music they ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223154/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESTechnology_6_icki2e.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631812347/News%20Article%20Images/piggyvest_qzcul7.jpg",
   
@@ -152,6 +180,8 @@ export  const Data = [
       Name: "Good News",
 
       Description: "The Lagos State Government has announced the setting up of a business hub and e-commerce digital platform as part of the initiatives to enhance the growth of Micro, Small, and Medium Enterprises (MSMEs) and showcase their products. ",
+
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223157/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURES_GreaterLagos_1_fn4l5o.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574369/News%20Article%20Images/Greater_Lagos_1_hi4g4p.jpg",
   
@@ -186,6 +216,8 @@ export  const Data = [
       Name: "Good News",
 
       Description: "Entrepreneurship runs in the blood of Deola Sagoe, founder of Haute fashion, House of Deola.    Her father, Chief Michael Ade-Ojo, owns the hugely successful Elizade Group now run by her brother. Her deceased mother, who started the business with the Ilara-Mokin, Ondo State High Chief, also grew a small tailoring business into a significant fashion label, producing predominantly traditional embroidered menswear.  ",
+      
+      thumbnail: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1632223157/News%20Article%20Images/Thumbnail/GOOD-NEWS-PICTURESFashionLifestyle_1_lte4sv.jpg",
 
       url: "https://res.cloudinary.com/dmsyfdo0y/image/upload/v1631574368/News%20Article%20Images/Fashion_and_Lifestyle_1_nusxaf.jpg",
   
