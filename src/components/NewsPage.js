@@ -16,6 +16,8 @@ import {
 import styled from "styled-components";
 import Technology from "../pages/Technology";
 
+// import Comments from "./Comments";
+
 const ReadAlso = styled.div`
   background: var(--main-color);
   border-top: 4px solid grey;
@@ -75,6 +77,7 @@ function NewsPage(props) {
       </div>
       {/* Social share end */}
 
+      {/* <Comments /> */}
       <ReadAlso>
         <p className="share"> Read Also </p>
         <Technology />
