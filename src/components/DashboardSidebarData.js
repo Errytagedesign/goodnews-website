@@ -11,66 +11,31 @@ import {
 } from "react-bootstrap-icons";
 // import axios from "axios";
 
-export const MenuData = [
+export const DashboardSidebarData = [
   {
-    title: "Categories",
-    path: "/",
+    title: "Newsfeeds",
+    path: "/dashboard",
+    icon: <MenuButton size={20} />,
+    iconClosed: <CaretDownFill className="ms-3" />,
+    iconOpen: <CaretUpFill className="ms-3" />,
+  },
+  {
+    title: "News",
+    path: "/dashboard",
     icon: <MenuButton size={20} />,
     iconClosed: <CaretDownFill className="ms-3" />,
     iconOpen: <CaretUpFill className="ms-3" />,
 
     subCat: [
       {
-        title: "Technology",
-        path: "/technology",
+        title: "Publish News",
+        path: "/dashboard",
         icon: <CpuFill size={20} />,
       },
 
       {
-        title: "Sport",
-        path: "/sport",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Politics",
-        path: "/politics",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Greater Lagos",
-        path: "/greaterlagos",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Fashion and Lifestyle",
-        path: "/fashionLifestyle",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Entertainments",
-        path: "/entertainments",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Education",
-        path: "/education",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Business and Finance",
-        path: "/businessFinance",
-        icon: <CpuFill size={20} />,
-      },
-
-      {
-        title: "Opinion",
-        path: "/opinion",
+        title: "My Post",
+        path: "/dashboard",
         icon: <CpuFill size={20} />,
       },
     ],
@@ -78,15 +43,29 @@ export const MenuData = [
 
   {
     title: "Videos",
-    path: "/",
+    path: "/dashboard",
     icon: <Youtube size={20} />,
     iconClosed: <CaretDownFill />,
     iconOpen: <CaretUpFill />,
+
+    subCat: [
+      {
+        title: "Videos",
+        path: "/dashboard",
+        icon: <CpuFill size={20} />,
+      },
+
+      {
+        title: "My Videos",
+        path: "/dashboard",
+        icon: <CpuFill size={20} />,
+      },
+    ],
   },
 
   {
     title: "Newsletter",
-    path: "/",
+    path: "/dashboard",
     icon: <Envelope size={20} />,
     iconClosed: <CaretDownFill />,
     iconOpen: <CaretUpFill />,
@@ -94,7 +73,7 @@ export const MenuData = [
 
   {
     title: "Events",
-    path: "/",
+    path: "/dashboard",
     icon: <CalendarEvent size={20} />,
     iconClosed: <CaretDownFill />,
     iconOpen: <CaretUpFill />,

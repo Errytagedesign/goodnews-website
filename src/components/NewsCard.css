@@ -56,6 +56,6 @@ img {
 }
 
 .icons {
-  color: #000;
-  width: 15px;
+  color: grey;
+  cursor: pointer;
 }

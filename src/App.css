@@ -63,6 +63,12 @@ h2 {
   width: 100%;
 }
 
+.link a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
 .slick-prev {
   left: -15px !important;
   z-index: 1;
