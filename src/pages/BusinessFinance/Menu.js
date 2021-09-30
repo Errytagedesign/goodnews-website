@@ -1,16 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import { List, XLg } from "react-bootstrap-icons";
 import styled from "styled-components";
-// import { CpuFill } from "react-bootstrap-icons";
 // import Hamburger from './Hamburger';
 // import Navbar from './Navbar';
 // import axios from "axios";
 
 // import './Menu.css'
 import { Link } from "react-router-dom";
-// import { MenuData } from "./MenuData";
-// import SubMenu from "./SubMenu";
-import SidebarCat from "./SidebarCat";
+import { MenuData } from "./MenuData";
+import SubMenu from "./SubMenu";
 
 let useClickOutside = (handler) => {
   let domNode = useRef();
@@ -53,6 +51,11 @@ const NavWrap = styled.div`
   width: 100%;
 `;
 
+const SubMenuLabel = styled.span`
+  color: #fff;
+  margin-left: 1em;
+`;
+
 function Menu() {
   const [navbar, setNavbar] = useState(false);
 
@@ -79,10 +82,10 @@ function Menu() {
           </Link>
         </NavWrap>
 
-        {/* {MenuData.map((item, index) => {
+        <SubMenuLabel>categories</SubMenuLabel>
+        {MenuData.map((item, index) => {
           return <SubMenu item={item} key={index} onClick={showNavbar} />;
-        })} */}
-        <SidebarCat />
+        })}
       </Nav>
     </div>
   );

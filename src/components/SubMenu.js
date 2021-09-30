@@ -52,14 +52,18 @@ function SubMenu({ item }) {
 
   return (
     <div className="d-flex flex-column">
-      <SubMenuLink to={item.path} onClick={showSubCat}>
+      <SubMenuLink to={item.path} onClick={item.subCat && showSubCat}>
         <div>
           {item.icon}
           <SubMenuLabel> {item.title} </SubMenuLabel>
         </div>
 
         <div>
-          {showSubCat ? item.iconOpen : item.subCat ? item.iconClosed : null}
+          {item.subCat && subCat
+            ? item.iconOpen
+            : item.subCat
+            ? item.iconClosed
+            : null}
         </div>
       </SubMenuLink>
 
