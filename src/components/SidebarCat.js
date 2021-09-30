@@ -32,6 +32,11 @@ const DropdownLink = styled(Link)`
 const SubMenuLabel = styled.span`
   color: #fff;
   margin-left: 1em;
+  position: relative;
+  top: 0;
+  // right: ${({ navbar }) => (navbar ? "0" : "-100%")};
+  transition: 350ms;
+  z-index: 200;
 `;
 const SubMenuLink = styled(Link)`
   display: flex;

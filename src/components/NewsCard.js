@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./NewsCard.css";
 import axios from "axios";
@@ -12,7 +12,19 @@ import { ChatFill, HeartFill } from "react-bootstrap-icons";
 import { Eye } from "react-bootstrap-icons";
 // import Image from '../assets/Greater Lagos 5.jpg'
 
+const baseURL = "https://api-good-news.herokuapp.com/api";
+
 function NewsCard(props) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`${baseURL}/admin-users/aUser/614f4d55d35c933f145fa99a`)
+      .then((response) => {
+        setUser(response.data);
+      });
+  }, []);
+
   const {
     title,
     imagesrc,
@@ -23,7 +35,6 @@ function NewsCard(props) {
     comment,
     views,
     postId,
-    baseURL,
   } = props;
 
   const addLike = async (e) => {
@@ -48,17 +59,24 @@ function NewsCard(props) {
   };
   const Like = async (e) => {
     e.preventDefault();
-    const user = await axios.get(
-      `${baseURL}/admin-users/aUser/614f4d55d35c933f145fa99a`
-    );
+
     // console.log(user.data.data.userLikedPost);
-    if (!user.data.data.userLikedPost.includes(postId)) {
+    if (!user.data.userLikedPost.includes(postId)) {
       addLike();
     }
-    if (user.data.data.userLikedPost.includes(postId)) {
+    if (user.data.userLikedPost.includes(postId)) {
       removeLike();
     }
   };
+  // console.log(user.data);
+  var liked = "";
+  if (!user) {
+    liked += "icons";
+  } else if (!user.data.userLikedPost.includes(postId)) {
+    liked += "icons";
+  } else {
+    liked += "heart";
+  }
 
   return (
     <div>
@@ -84,7 +102,7 @@ function NewsCard(props) {
 
         <div className="d-flex col-6 justify-content-between">
           <div onClick={Like}>
-            <HeartFill className="icons" /> <small> {likes} </small>{" "}
+            <HeartFill className={liked} /> <small> {likes} </small>{" "}
           </div>
           <div>
             <ChatFill className="icons" />
