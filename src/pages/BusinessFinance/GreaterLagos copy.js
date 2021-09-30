@@ -1,53 +1,40 @@
 import React from "react";
 
-// News Components
-import Headlines from "../components/Headlines";
 import Newscard from "../components/NewsCard";
 
-import axios from "axios";
-
-import vector from "../assets/icons/Vector.svg";
-import { Link } from "react-router-dom";
+// import { Link } from 'react-router-dom';
 
 // bootsrapt css
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// import {GreaterlagosData} from '../components/GreaterlagosData'
+import axios from "axios";
 const baseURL = "https://api-good-news.herokuapp.com/api";
 
-function TopNews() {
+function getQuery() {
+  let search = window.location.search;
+  let params = new URLSearchParams(search);
+  // let foo = parseInt(params.get('id'))
+  let foo = params.get("id");
+  return foo;
+}
+
+function Greaterlagos() {
   const [post, setPost] = React.useState(null);
 
   React.useEffect(() => {
-    axios.get(`${baseURL}/posts/top-posts`).then((response) => {
+    axios.get(`${baseURL}/posts/cat/${getQuery()}`).then((response) => {
       setPost(response.data);
     });
-  }, []);
+  }, [post]);
 
   if (!post) return null;
 
-  console.log(post);
-
   let data = post.data;
+  console.log(data);
 
   return (
-    <div className=" container mt-5">
-      <div className=" d-flex flex-row justify-content-between">
-        <div className="d-flex flex-row justify-content-between">
-          <div>
-            <img className="headicon" src={vector} alt="" />
-          </div>{" "}
-          <h2> HEADLINES </h2>{" "}
-        </div>
-        <div>
-          {" "}
-          <Link to="/HeadlineStories"> See All </Link>{" "}
-        </div>
-      </div>
-
-      <Headlines />
-
-      {/* News Cards Thumbnails */}
-
+    <div>
       <section className="container d-flex flex-wrap">
         {data.map((news) => (
           <div className="col-12 col-md-6 col-lg-4 p-1">
@@ -56,7 +43,7 @@ function TopNews() {
               name={news.nameOfAuthor}
               imagesrc={news.imageUrl}
               description={news.description.slice(0, 150)}
-              url={"/newsreadurl?id=" + news._id}
+              url={"/post?id=" + news._id}
               likes={news.numberOfLikes}
               views={news.numberOfViews}
               comment={news.comments.length}
@@ -70,4 +57,4 @@ function TopNews() {
   );
 }
 
-export default TopNews;
+export default Greaterlagos;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styled from "styled-components";
 // import Hamburger from './Hamburger';
@@ -18,20 +18,15 @@ const Nav = styled.section`
 `;
 
 function Menu() {
-  const [navbar, setNavbar] = useState(false);
+  // const [navbar, setNavbar] = useState(false);
 
-  const showNavbar = () => setNavbar(!navbar);
+  // const showNavbar = () => setNavbar(!navbar);
 
   return (
     <div>
-      <Nav
-        className="d-flex flex-column justify-content-start text-start"
-        navbar={navbar}
-      >
+      <Nav className="d-flex flex-column justify-content-start text-start">
         {DashboardSidebarData.map((item, index) => {
-          return (
-            <SubDashSidebar item={item} key={index} onClick={showNavbar} />
-          );
+          return <SubDashSidebar item={item} key={index} />;
         })}
       </Nav>
     </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import DashboardSidebar from "./DashboardSidebar";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Switch,
+//   Redirect,
+// } from "react-router-dom";
 
-import News from "./News";
+// import News from "./News";
 
 // pages
 
@@ -24,7 +24,7 @@ function Dashboard() {
     <div className="d-flex flex-row">
       <DashboardSidebar className="w-25" />
 
-      <Router className="w-50">
+      {/* <Router className="w-50">
         <Switch>
           <Route path="/dashboard/news" exact>
             <News />
@@ -32,11 +32,11 @@ function Dashboard() {
 
           <Redirect from="/dashboard" to="/dashboard/news" />
 
-          {/* <Route path="/dashboard/video" exact>
+          <Route path="/dashboard/video" exact>
             <video />
-          </Route> */}
+          </Route>
         </Switch>
-      </Router>
+      </Router> */}
     </div>
   );
 }

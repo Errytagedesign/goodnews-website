@@ -4,7 +4,7 @@ import React from "react";
 import Headlines from "../components/Headlines";
 import Newscard from "../components/NewsCard";
 
-import axios from "axios";
+// import axios from 'axios';
 
 import vector from "../assets/icons/Vector.svg";
 import { Link } from "react-router-dom";
@@ -24,7 +24,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import Deola from '../assets/Fashion and Lifestyle 1.jpeg'
 
 // import Data from '../topstories.json';
-// import { Data } from '../components/TopstoriesData';
+import { Data } from "../components/TopstoriesData";
 // import {FashionData} from '../components/FashionLifestyleData';
 // import Headline1 from './Headline1';
 // import DTigersShockUS from './TopStories/DTigersShockUS';
@@ -32,22 +32,22 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import DTigersShockUS from './TopStories/DTigersShockUS';
 // import DTigersShockUS from './TopStories/DTigersShockUS';
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+// const baseURL = "https://api-good-news.herokuapp.com/api";
 
 function TopNews() {
-  const [post, setPost] = React.useState(null);
+  //     const [post, setPost] = React.useState(null);
 
-  React.useEffect(() => {
-    axios.get(`${baseURL}/posts/top-posts`).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
+  //   React.useEffect(() => {
+  //     axios.get(`${baseURL}/posts/top-posts`).then((response) => {
+  //       setPost(response.data);
+  //     });
+  //   }, []);
 
-  if (!post) return null;
+  //   if (!post) return null;
 
-  console.log(post);
+  //   console.log(post)
 
-  let data = post.data;
+  //   let data = post.data;
 
   return (
     <div className=" container mt-5">
@@ -69,19 +69,14 @@ function TopNews() {
       {/* News Cards Thumbnails */}
 
       <section className="container d-flex flex-wrap">
-        {data.map((news) => (
+        {Data.map((news) => (
           <div className="col-12 col-md-6 col-lg-4 p-1">
             <Newscard
               title={news.title}
               name={news.Name}
-              imagesrc={news.imageUrl}
-              description={news.description}
-              url={"/newsreadurl?id=" + news._id}
-              likes={news.numberOfLikes}
-              views={news.numberOfViews}
-              comment={news.comments.length}
-              postId={news._id}
-              baseURL={baseURL}
+              imagesrc={news.url}
+              description={news.Description}
+              url={"/newsreadurl?id=" + news.id}
             />
           </div>
         ))}

@@ -1,6 +1,6 @@
 // components
 
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/dashboards/Dashboard";
 
 // General imports
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import MasterLayout from "./layout/MasterLayout";
+import { News, NewsPub } from "./components/dashboards/News";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
       <Router>
         <Switch>
           <Route path="/dashboard" exact component={Dashboard} />
+
+          <Route path="/news/news1" exact component={NewsPub} />
+
+          <Route path="/news" exact component={News} />
 
           <Route
             path="/"

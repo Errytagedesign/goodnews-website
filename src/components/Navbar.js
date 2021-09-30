@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import logo from "../assets/GOOD-NEWS-NG-LOGO-WHITE.png";
 import { Link } from "react-router-dom";
 // import { List } from 'react-bootstrap-icons';
@@ -10,7 +11,21 @@ import Slider from "react-slick";
 import Menu from "./Menu";
 // import Hamburger from './Hamburger';
 
+const baseURL = "https://api-good-news.herokuapp.com/api";
+
 function Navbar() {
+  const [categories, setCategories] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${baseURL}/categories/all`).then((response) => {
+      setCategories(response.data);
+    });
+  }, []);
+
+  if (!categories) return null;
+
+  let data = categories.data;
+
   const settings = {
     className: "center",
     infinite: true,
@@ -78,73 +93,15 @@ function Navbar() {
       <div className="NewsCategory">
         <div className="">
           <Slider {...settings}>
-            <Link className="newsCat " to="/">
-              {" "}
-              Top Stories{" "}
-            </Link>
-            <Link
-              className="newsCat  "
-              to="/categories?id=6152fd2728fac7000447a2e4"
-            >
-              {" "}
-              Business and Finance{" "}
-            </Link>
-            <Link
-              className="newsCat  "
-              to="/categories?id=6152fce528fac7000447a2d3"
-            >
-              {" "}
-              Education{" "}
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=6152fae728fac7000447a2cd"
-            >
-              {" "}
-              Entertainments{" "}
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=6152fd3928fac7000447a2e8"
-            >
-              {" "}
-              Fashion and Lifestyle{" "}
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=6152fd1228fac7000447a2dc"
-            >
-              {" "}
-              Polictics{" "}
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=614b96bf6cc414700cda9ad9"
-            >
-              {" "}
-              Technology{" "}
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=614f4753d35c933f145fa98c"
-            >
-              {" "}
-              Sport{" "}
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=6152fd0628fac7000447a2d8"
-            >
-              {" "}
-              Greater Lagos
-            </Link>
-            <Link
-              className="newsCat "
-              to="/categories?id=6152fd1c28fac7000447a2e0"
-            >
-              {" "}
-              Opinion
-            </Link>
+            {data.map((category) => (
+              <Link
+                className="newsCat  "
+                to={`/categories?catId=${category._id}`}
+              >
+                {" "}
+                {category.title}{" "}
+              </Link>
+            ))}
           </Slider>
         </div>
       </div>

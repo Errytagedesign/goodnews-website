@@ -2,12 +2,9 @@ import React from "react";
 
 import Newscard from "../components/NewsCard";
 
-// import { Link } from 'react-router-dom';
-
 // bootsrapt css
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// import {GreaterlagosData} from '../components/GreaterlagosData'
 import axios from "axios";
 const baseURL = "https://api-good-news.herokuapp.com/api";
 
@@ -15,23 +12,23 @@ function getQuery() {
   let search = window.location.search;
   let params = new URLSearchParams(search);
   // let foo = parseInt(params.get('id'))
-  let foo = params.get("id");
+  let foo = params.get("catId");
   return foo;
 }
 
-function Greaterlagos() {
+function Categories() {
   const [post, setPost] = React.useState(null);
 
   React.useEffect(() => {
     axios.get(`${baseURL}/posts/cat/${getQuery()}`).then((response) => {
       setPost(response.data);
     });
-  }, []);
+  }, [post]);
 
   if (!post) return null;
 
   let data = post.data;
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>
@@ -57,4 +54,4 @@ function Greaterlagos() {
   );
 }
 
-export default Greaterlagos;
+export default Categories;

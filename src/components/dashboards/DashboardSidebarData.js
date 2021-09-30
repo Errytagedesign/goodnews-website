@@ -14,14 +14,14 @@ import {
 export const DashboardSidebarData = [
   {
     title: "Newsfeeds",
-    path: "/dashboard",
+    path: "/newsfeed",
     icon: <MenuButton size={20} />,
     iconClosed: <CaretDownFill className="ms-3" />,
     iconOpen: <CaretUpFill className="ms-3" />,
   },
   {
     title: "News",
-    path: "/dashboard",
+    path: "#",
     icon: <MenuButton size={20} />,
     iconClosed: <CaretDownFill className="ms-3" />,
     iconOpen: <CaretUpFill className="ms-3" />,
@@ -29,7 +29,7 @@ export const DashboardSidebarData = [
     subCat: [
       {
         title: "Publish News",
-        path: "/dashboard",
+        path: "/news/news1",
         icon: <CpuFill size={20} />,
       },
 
