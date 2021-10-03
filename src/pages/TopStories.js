@@ -56,7 +56,7 @@ function TopNews() {
               name={news.nameOfAuthor}
               imagesrc={news.imageUrl}
               description={news.description.slice(0, 150)}
-              url={"/newsreadurl?id=" + news._id}
+              url={"/post?id=" + news._id}
               likes={news.numberOfLikes}
               views={news.numberOfViews}
               comment={news.comments.length}

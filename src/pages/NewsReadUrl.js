@@ -55,6 +55,9 @@ function NewsReadUrl() {
         }
         postId={data._id}
         url={`http://localhost:3000/post?id=${data._id}`}
+        comments={data.comments}
+        likes={data.numberOfLikes}
+        catId={data.category._id}
       />
     </div>
   );
