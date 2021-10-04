@@ -52,7 +52,7 @@ function NewsPage(props) {
     axios.get(`${baseURL}/posts/cat/${props.catId}`).then((response) => {
       setReadmore(response.data);
     });
-  }, [readMore]);
+  });
 
   if (!readMore) return null;
 
