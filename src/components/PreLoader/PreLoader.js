@@ -37,7 +37,7 @@ function PreLoader() {
         </>
       ) : (
         <>
-          <h1>Your Data</h1>
+          <h1>{data}</h1>
         </>
       )}
     </>

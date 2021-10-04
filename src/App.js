@@ -13,13 +13,13 @@ import "./App.css";
 
 import MasterLayout from "./layout/MasterLayout";
 import { News, NewsPub } from "./components/dashboards/News";
-import PreLoader from "./components/PreLoader/PreLoader";
+// import PreLoader from "./components/PreLoader/PreLoader";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <PreLoader />
+        {/* <PreLoader /> */}
 
         <Switch>
           <Route path="/dashboard" exact component={Dashboard} />
