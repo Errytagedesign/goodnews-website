@@ -29,7 +29,7 @@ function NewsReadUrl() {
     axios.get(`${baseURL}/posts/${getQuery()}`).then((response) => {
       setPost(response.data);
     });
-  }, []);
+  }, [setPost]);
 
   if (!post) return null;
 
@@ -54,7 +54,7 @@ function NewsReadUrl() {
           <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
         }
         postId={data._id}
-        url={`http://localhost:3000/post?id=${data._id}`}
+        url={`${window.location.protocol}//${window.location.hostname}/post?id=${data._id}`}
         comments={data.comments}
         likes={data.numberOfLikes}
         catId={data.category._id}

@@ -7,6 +7,8 @@ import {
   CalendarEvent,
   Envelope,
   CaretDownFill,
+  PersonLinesFill,
+  FilePersonFill,
 } from "react-bootstrap-icons";
 
 import styled from "styled-components";
@@ -91,17 +93,27 @@ function SidebarCat() {
           ))}
         </div>
       ) : null}
-      <SubMenuLink to="">
+      <SubMenuLink to="videos">
         {" "}
         <Youtube size={30} className="pe-2" /> Videos{" "}
       </SubMenuLink>
-      <SubMenuLink to="">
+      <SubMenuLink to="newsletter">
         {" "}
         <Envelope size={30} className="pe-2" /> Newsletter
       </SubMenuLink>
-      <SubMenuLink to="">
+      <SubMenuLink to="/events">
         {" "}
         <CalendarEvent size={30} className="pe-2" /> Event{" "}
+      </SubMenuLink>
+
+      <SubMenuLink to="/contactus">
+        {" "}
+        <PersonLinesFill size={30} className="pe-2" /> Contact us{" "}
+      </SubMenuLink>
+
+      <SubMenuLink to="aboutus">
+        {" "}
+        <FilePersonFill size={30} className="pe-2" /> About us{" "}
       </SubMenuLink>
     </div>
   );

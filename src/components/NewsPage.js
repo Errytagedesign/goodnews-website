@@ -37,13 +37,8 @@ const ReadAlso = styled.div`
 function NewsPage(props) {
   const [user, setUser] = useState(null);
   const [comment, setComment] = useState({});
-  const [readmore, setReadmore] = useState(null);
+  const [readMore, setReadmore] = useState(null);
   const baseURL = "https://api-good-news.herokuapp.com/api";
-  useEffect(() => {
-    axios.get(`${baseURL}/posts/cat/${props.catId}`).then((response) => {
-      setReadmore(response.data);
-    });
-  }, [props.catId, readmore]);
 
   useEffect(() => {
     axios
@@ -53,9 +48,15 @@ function NewsPage(props) {
       });
   }, []);
 
-  if (!readmore) return null;
+  useEffect(() => {
+    axios.get(`${baseURL}/posts/cat/${props.catId}`).then((response) => {
+      setReadmore(response.data);
+    });
+  }, [readMore]);
 
-  let readmoredata = readmore.data;
+  if (!readMore) return null;
+
+  let readmoredata = readMore.data;
 
   const addLike = async (e) => {
     await axios
@@ -100,8 +101,8 @@ function NewsPage(props) {
     };
     await axios.post(`${baseURL}/comments`, option).then((response) => {
       // console.log(response);
-
-      window.location.reload();
+      // eslint-disable-next-line no-restricted-globals
+      location.reload();
     });
   };
 
