@@ -1,0 +1,65 @@
+/* .formBtn button:hover {
+    background-color: var(--pry-color);
+    color: #fff;
+    padding: 1em;
+    font-weight: 600;
+    font-size: 1rem;
+    outline: none;
+    transform: scale(1.1);
+  } */
+
+body {
+  background-color: #fff !important;
+}
+
+.contact {
+  background-color: var(--main-color);
+  padding: 3em;
+
+  border-top: 15px solid var(--sec-color);
+}
+
+.form-contact {
+  background-color: rgb(224, 224, 224);
+  padding: 3em;
+
+  border-top: 15px solid var(--sec-color);
+}
+
+.Header {
+  background-color: var(--pry-color);
+  background-image: url("../../assets/Goodnewsng-contactus.jpg");
+  background-blend-mode: overlay;
+  padding: 1.5em;
+  align-items: center;
+}
+
+.Header h2 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.formBtn {
+  background-color: var(--pry-color);
+  color: #fff;
+  padding: 1em;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+}
+
+.socialicons {
+  color: var(--sec-color);
+}
+
+.socialicons:hover {
+  transform: scale(1.5);
+  color: #fff !important;
+}
+
+.headers {
+  background-color: var(--sec-color);
+  padding: 1.1em;
+  margin-bottom: 2em;
+  color: #fff;
+}

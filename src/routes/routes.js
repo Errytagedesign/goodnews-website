@@ -4,7 +4,7 @@ import TopStories from "../pages/TopStories";
 import Events from "../pages/Event";
 import Newsletter from "../pages/Newsletter";
 import Videos from "../pages/Videos";
-import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/contactus/ContactUs";
 import AboutUs from "../pages/AboutUs";
 
 export const routes = [
@@ -14,6 +14,13 @@ export const routes = [
     name: "Top Stories",
     component: TopStories,
   },
+  {
+    path: "/readalso",
+    exact: true,
+    name: "ReadAlso",
+    component: NewsReadurl,
+  },
+
   {
     path: "/post",
     exact: true,

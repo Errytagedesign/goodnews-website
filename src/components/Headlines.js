@@ -1,15 +1,14 @@
 import React from "react";
-import Headline from "./Headline";
-import "./Headline.css";
+// import "./Headline.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
+import axios from "axios";
 
-import Image1 from "../assets/Headline 1.jpg";
-import Image2 from "../assets/Headline 2.webp";
-import Image3 from "../assets/Greater Lagos 5.jpg";
+import NewsCard from "./NewsCard";
+const baseURL = "https://api-good-news.herokuapp.com/api";
 
 const settings = {
   className: "center",
@@ -52,38 +51,41 @@ const settings = {
 };
 
 function Headlines() {
+  const [category, setCategory] = React.useState(null);
+
+  React.useEffect(() => {
+    axios
+      .get(`${baseURL}/posts/cat/615d60765b9e9d000424fa62`)
+      .then((response) => {
+        setCategory(response.data);
+      });
+  }, []);
+
+  if (!category) return null;
+
+  console.log(category);
+
+  let data = category.data;
   return (
     <div className=" mt-5 col-12">
       <Slider {...settings}>
-        <div className="col-12 col-md-6">
-          <Headline
-            title="NCDC's Chikwe Ihekweazu Appointed WHO Assistant DG"
-            imgsrc={Image1}
-            name="Good News"
-            description="Director-General of the Nigeria Centre for Disease Control (NCDC), Dr. Chikwe Ihekweazu, has been appointed Assistant.."
-            pageurl="/Headline1"
-          />
-        </div>
-
-        <div className="col-12 col-md-6">
-          <Headline
-            title="NRC Builds N320m, 40-bed Hotel for Travellers"
-            imgsrc={Image2}
-            name="Good News"
-            description="The Nigerian Railway Corporation (NRC) has constructed a 40-bed hotel worth N320 million at its Ebute-Meta station in Lagos.."
-            pageurl="/Headline2"
-          />
-        </div>
-
-        <div className="col-12 col-md-6">
-          <Headline
-            title="Sanwo-Olu’s wife presents vehicles to rev up the fight against rape, defilement, others"
-            imgsrc={Image3}
-            name="Good News"
-            description="Wife of Lagos State Governor, Dr. Ibijoke Sanwo-Olu has presented three utility vehicles to critical agencies of .."
-            pageurl="/Headline3"
-          />
-        </div>
+        {data.map((newsheadlines) => (
+          <div>
+            <NewsCard
+              // key={index}
+              title={newsheadlines.title}
+              name={newsheadlines.nameOfAuthor}
+              imagesrc={newsheadlines.imageUrl}
+              description={newsheadlines.description.slice(0, 150)}
+              url={"/post?id=" + newsheadlines._id}
+              likes={newsheadlines.numberOfLikes}
+              views={newsheadlines.numberOfViews}
+              comment={newsheadlines.comments.length}
+              postId={newsheadlines._id}
+              baseURL={baseURL}
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

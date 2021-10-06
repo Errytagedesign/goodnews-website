@@ -23,7 +23,7 @@ function Footer() {
           <Link className="text-center" to="/">
             {" "}
             <img
-              className=" mx-auto d-flex col-12 "
+              className=" mx-auto d-flex text-center col-12 col-md-6 "
               src={logo}
               alt="good-news-logo"
             />{" "}

@@ -1,0 +1,66 @@
+.newscard {
+  background-color: white;
+  box-shadow: 1px 1px 1px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.newscard:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253);
+}
+
+.card-img-top {
+  transform: scale(1);
+}
+
+.card-img-top:hover {
+  transform: scale(1.8);
+}
+
+.NewsCardWrapper {
+  position: relative;
+}
+
+.NewsCardExcerpt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: -1em;
+  background-color: white;
+  text-align: left;
+}
+
+.NewsCardTitle {
+  position: inherit;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: -25px;
+  color: #fff;
+}
+
+.Readmore {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2em;
+  color: var(--main-color);
+}
+
+img {
+  width: 100%;
+}
+
+.newscard h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.icons {
+  color: grey;
+  cursor: pointer;
+}
+
+.heart {
+  color: red;
+  cursor: pointer;
+}

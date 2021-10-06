@@ -29,7 +29,7 @@ function NewsReadUrl() {
     axios.get(`${baseURL}/posts/${getQuery()}`).then((response) => {
       setPost(response.data);
     });
-  }, [setPost]);
+  }, []);
 
   if (!post) return null;
 

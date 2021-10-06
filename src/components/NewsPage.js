@@ -17,13 +17,14 @@ import { HeartFill } from "react-bootstrap-icons";
 
 import axios from "axios";
 
-import { TextField, Button } from "@material-ui/core";
+// import { TextField, Button } from "@material-ui/core";
 
 import styled from "styled-components";
 // import Technology from "../pages/Technology";
 // import Comments from "./Comments/Comments";
 import Comments from "./Comments/Comments";
-import Newscard from "./NewsCard";
+// import Newscard from "./NewsCard";
+import ReadAlsoNewsCard from "./ReadAlso/ReadAlsoNewsCard";
 
 import SendIcon from "@mui/icons-material/Send";
 
@@ -37,7 +38,7 @@ const ReadAlso = styled.div`
 function NewsPage(props) {
   const [user, setUser] = useState(null);
   const [comment, setComment] = useState({});
-  const [readMore, setReadmore] = useState(null);
+  const [readAlso, setReadAlso] = useState(null);
   const baseURL = "https://api-good-news.herokuapp.com/api";
 
   useEffect(() => {
@@ -50,13 +51,13 @@ function NewsPage(props) {
 
   useEffect(() => {
     axios.get(`${baseURL}/posts/cat/${props.catId}`).then((response) => {
-      setReadmore(response.data);
+      setReadAlso(response.data);
     });
   });
 
-  if (!readMore) return null;
+  if (!readAlso) return null;
 
-  let readmoredata = readMore.data;
+  let readAlsodata = readAlso.data;
 
   const addLike = async (e) => {
     await axios
@@ -100,7 +101,7 @@ function NewsPage(props) {
       post: props.postId,
     };
     await axios.post(`${baseURL}/comments`, option).then((response) => {
-      // console.log(response);
+      console.log(response);
       // eslint-disable-next-line no-restricted-globals
       location.reload();
     });
@@ -130,17 +131,24 @@ function NewsPage(props) {
       <p className="p-5"> {props.articleContents} </p>
 
       {/* Social share start */}
-      <section className="d-flex flex-column flex-md-row justify-content-around">
-        <div>
-          <div onClick={Like} className="mb-5 d-flex flex-row ">
-            <p className="share me-3">Leave a like</p>
-            <HeartFill size={30} className={liked} />
-            <small> {props.likes} </small>
+      <section className="d-flex text-center flex-column flex-md-row justify-content-around align-items-center likeIcon mb-5">
+        <div onClick={Like} className="d-flex">
+          <div>
+            <h6 className=" share me-3 align-items-center mb-4 mb-md-0">
+              Leave a like
+            </h6>
+          </div>
+
+          <div>
+            <HeartFill size={25} className={liked} />
+          </div>
+          <div>
+            <small className="ms-2"> {props.likes} </small>
           </div>
         </div>
 
-        <div className="d-flex flex-row justify-content-around  col-10 col-md-7 ps-4">
-          <p className="share">Share</p>
+        <div className="d-flex flex-row justify-content-around  col-10 col-md-7 ps-4 likeIcon">
+          <h6 className="share">Share</h6>
 
           <FacebookShareButton url={props.url} title={props.articleTitle}>
             <div>
@@ -178,55 +186,55 @@ function NewsPage(props) {
       </section>
       {/* Comments start */}
 
-      <div>
-        <h3> Comments </h3>
+      <div className="commentsection">
+        <h6> Comments </h6>
         {props.comments.map((comment) => (
           <Comments name={comment.name} description={comment.description} />
         ))}
 
         <form className="comment__form">
-          <TextField
-            id="outlined"
-            label="Add a comment"
-            size="small"
-            variant="outlined"
-            className="comment__input"
+          <textarea
+            placeholder="Add a comment"
+            className="form-control"
             onChange={(e) => {
               let value = { comment: e.target.value };
               setComment(value);
             }}
             value={comment.comment}
           />
-          <Button
-            variant="contained"
-            size="small"
+          <button
             endIcon={<SendIcon />}
             type="submit"
+            className="form-control"
             onClick={postComment}
           >
             Send
-          </Button>
+          </button>
         </form>
       </div>
       {/* <Comments /> */}
 
       <ReadAlso>
-        <p className="share"> Read Also </p>
+        <h6 className=""> Read Also </h6>
         <section className="container d-flex flex-wrap">
-          {readmoredata.slice(0, 3).map((news) => (
+          {readAlsodata.slice(0, 3).map((news) => (
             <div className="col-12 col-md-6 col-lg-4 p-1">
-              <Newscard
+              <ReadAlsoNewsCard
                 title={news.title}
                 name={news.nameOfAuthor}
                 imagesrc={news.imageUrl}
                 description={news.description.slice(0, 150)}
-                url={"/post?id=" + news._id}
+                url={"/readalso?id=" + news._id}
                 likes={news.numberOfLikes}
                 views={news.numberOfViews}
                 comment={news.comments.length}
                 postId={news._id}
                 baseURL={baseURL}
               />
+
+              {/* <Newscard
+               
+              /> */}
             </div>
           ))}
         </section>

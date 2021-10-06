@@ -1,6 +1,7 @@
 .share {
-  font-size: 1.5rem !important;
-  font-weight: 500 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  border-bottom: 4px solid var(--pry-color);
 }
 
 .newsPage p {
@@ -19,4 +20,38 @@
 .newstime p {
   font-size: 0.9rem;
   color: rgb(170, 170, 170);
+}
+
+.commentsection {
+  background-color: rgb(231, 231, 231);
+}
+
+.commentsection > h6 {
+  background-color: var(--pry-color);
+  color: #fff;
+  padding: 2em;
+  margin-top: 1em;
+}
+
+.commentsection button {
+  background-color: var(--pry-color);
+  color: #fff;
+  padding: 1em;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+}
+
+.commentsection button:hover {
+  background-color: var(--pry-color);
+  color: #fff;
+  padding: 1em;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  transform: scale(1.1);
+}
+
+.likeIcon {
+  align-items: center;
 }
