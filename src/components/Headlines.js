@@ -69,10 +69,10 @@ function Headlines() {
   return (
     <div className=" mt-5 col-12">
       <Slider {...settings}>
-        {data.map((newsheadlines) => (
+        {data.map((newsheadlines, index) => (
           <div>
             <NewsCard
-              // key={index}
+              key={index}
               title={newsheadlines.title}
               name={newsheadlines.nameOfAuthor}
               imagesrc={newsheadlines.imageUrl}

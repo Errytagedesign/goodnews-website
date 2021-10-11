@@ -49,9 +49,10 @@ function TopNews() {
       {/* News Cards Thumbnails */}
 
       <section className="container d-flex flex-wrap">
-        {data.map((news) => (
+        {data.map((news, index) => (
           <div className="col-12 col-md-6 col-lg-4 p-1">
             <Newscard
+              key={index}
               title={news.title}
               name={news.nameOfAuthor}
               imagesrc={news.imageUrl}

@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/goodnews1/public_html/
+    - /bin/cp -R * $DEPLOYPATH

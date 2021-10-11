@@ -93,9 +93,10 @@ function Navbar() {
       <div className="NewsCategory">
         <div className="">
           <Slider {...settings}>
-            {data.map((category) => (
+            {data.map((category, index) => (
               <Link
                 className="newsCat  "
+                key={index}
                 to={`/categories?catId=${category._id}`}
               >
                 {" "}

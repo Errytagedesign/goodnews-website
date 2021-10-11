@@ -19,11 +19,11 @@ function Footer() {
     <div className="LogoSearch mt-5 mb-5 pb-5 mb-md-0">
       <div className=" d-flex flex-column flex-md-row justify-content-between">
         {/* logo */}
-        <div className=" gLogo col-6 col-md-3 mb-5 mb-md-0 ">
-          <Link className="text-center" to="/">
+        <div className=" text-center text-md-start ">
+          <Link className="" to="/">
             {" "}
             <img
-              className=" mx-auto d-flex text-center col-12 col-md-6 "
+              className=" mx-auto  col-6 col-md-6 "
               src={logo}
               alt="good-news-logo"
             />{" "}
@@ -31,8 +31,8 @@ function Footer() {
         </div>
 
         {/* search */}
-        <div className="col-12 col-md-4 d-flex flex-column mb-5 mb-md-0 ">
-          <h6> Contact us</h6>
+        <div className="col-12 col-md-5 d-flex flex-column mb-5 mb-md-0 ">
+          <h6 className="footerheaders"> Contact us</h6>
 
           <div className="link mb-1">
             <TelephoneFill color="grey" />{" "}
@@ -55,7 +55,7 @@ function Footer() {
 
         {/* Follow us */}
         <div className="col-12 col-md-3 mb-5 mb-md-0  ">
-          <h6> Follow us</h6>
+          <h6 className="footerheaders"> Follow us</h6>
           <div className="d-flex justify-content-around">
             <Link to="https://www.facebook.com/errytage13" target="_blank">
               <Facebook color="white" size={25} />

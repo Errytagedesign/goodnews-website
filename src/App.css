@@ -78,6 +78,14 @@ h2 {
   right: -10px !important;
 }
 
+.footerheaders {
+  color: var(--sec-color);
+}
+
+.titles {
+  font-size: 2rem !important;
+}
+
 @media screen and (min-width: 767px) {
   .slick-next,
   .slick-prev {
