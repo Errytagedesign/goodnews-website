@@ -34,7 +34,7 @@ function Categories() {
   const dispatch = useDispatch();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(3);
+  const [postPerPage] = useState(10);
 
   // Get current Posts
   const indexOfLastCatPost = currentPage * postPerPage;

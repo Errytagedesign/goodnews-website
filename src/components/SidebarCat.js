@@ -69,6 +69,14 @@ const SubMenuLink = styled(Link)`
   }
 `;
 
+// const ButtonSignIn = styled.div`
+//   color: white;
+//   background-color: red;
+// `;
+// const ButtonSignOut = styled.div`
+//   text-decoration: none;
+// `;
+
 const baseURL = "https://api-good-news.herokuapp.com/api";
 // const baseURL = "http://localhost:3001/api";
 
@@ -123,7 +131,7 @@ function SidebarCat() {
 
   return (
     <>
-      <div className="col-2 col-md-4 text-end d-md-block d-none">
+      <div className="col-8 text-end ">
         {user ? (
           <>
             <Avatar
@@ -146,24 +154,14 @@ function SidebarCat() {
             </Button>
           </>
         ) : (
-          <>
-            <Button
-              className="Btn btn-primary col-12"
-              component={Link}
-              to="/authsignin"
-              variant="contained"
-            >
+          <div className="d-flex flex-row col-12 justify-content-between">
+            <Button component={Link} to="/authsignin" variant="contained">
               Sign In
             </Button>
-            <Button
-              className="Btn btn-primary col-12"
-              component={Link}
-              to="/authsignup"
-              variant="contained"
-            >
+            <Button component={Link} to="/authsignup" variant="contained">
               Sign up
             </Button>
-          </>
+          </div>
         )}
       </div>
       <div>
