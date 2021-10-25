@@ -1,4 +1,5 @@
 import Categories from "../pages/Categories";
+import Search from "../pages/Search";
 import NewsReadurl from "../pages/NewsReadUrl";
 import TopStories from "../pages/TopStories";
 import Events from "../pages/Event";
@@ -6,6 +7,8 @@ import Newsletter from "../pages/Newsletter";
 import Videos from "../pages/Videos";
 import ContactUs from "../components/contactus/ContactUs";
 import AboutUs from "../pages/AboutUs";
+import AuthSignIn from "../components/Auth/AuthSignIn";
+import AuthSignUp from "../components/Auth/AuthSignUp";
 
 export const routes = [
   {
@@ -15,10 +18,16 @@ export const routes = [
     component: TopStories,
   },
   {
-    path: "/readalso",
+    path: "/authsignin",
     exact: true,
-    name: "ReadAlso",
-    component: NewsReadurl,
+    name: "Authentication",
+    component: AuthSignIn,
+  },
+  {
+    path: "/authsignup",
+    exact: true,
+    name: "Authentication",
+    component: AuthSignUp,
   },
 
   {
@@ -26,6 +35,13 @@ export const routes = [
     exact: true,
     name: "Post",
     component: NewsReadurl,
+  },
+
+  {
+    path: "/search",
+    exact: true,
+    name: "Search",
+    component: Search,
   },
 
   {

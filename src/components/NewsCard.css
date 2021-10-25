@@ -1,6 +1,6 @@
 .newscard {
   background-color: white;
-  box-shadow: 1px 1px 1px grey;
+  /* box-shadow: 1px 1px 1px grey; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,9 +50,19 @@ img {
   width: 100%;
 }
 
-.newscard h4 {
-  font-size: 1rem;
-  font-weight: 600;
+.newscard h2 {
+  font-weight: 700;
+  color: var(--main-color);
+  margin: 0.8em 0;
+}
+
+.newscard a {
+  text-decoration: none;
+}
+
+.topBorder {
+  border-top: solid grey 1px;
+  margin-top: 1em;
 }
 
 .icons {
@@ -63,4 +73,9 @@ img {
 .heart {
   color: red;
   cursor: pointer;
+}
+
+.slick-next,
+.slick-prev {
+  visibility: hidden !important;
 }

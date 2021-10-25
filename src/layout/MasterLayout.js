@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import MobileNavbar from "../components/MobileNavbar";
-
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer";
+// import MobileNavbar from "../components/MobileNavbar";
+
 import { routes } from "../routes/routes";
 
 function MasterLayout() {
@@ -11,7 +11,8 @@ function MasterLayout() {
     <>
       <Router>
         <Navbar />
-        <MobileNavbar />
+
+        {/* <MobileNavbar /> */}
 
         <Switch>
           {routes.map((route, idx) => {

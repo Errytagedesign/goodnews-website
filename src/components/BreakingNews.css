@@ -1,0 +1,45 @@
+.NewsCardWrapper {
+  position: relative;
+}
+
+.Readmore {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.2em;
+  color: var(--main-color);
+}
+
+img {
+  width: 100%;
+}
+
+.BreakingTitle {
+  position: inherit;
+  top: -55px;
+  background-color: var(--main-color);
+  padding: 1em;
+}
+
+.BreakingTitle a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.slick-next,
+.slick-prev {
+  visibility: hidden !important;
+}
+
+@media screen and (max-width: 500px) {
+  .BreakingTitle {
+    position: inherit;
+    top: -15px;
+  }
+
+  .BreakingTitle h2 {
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding: 0.7em;
+    font-size: 1rem;
+  }
+}

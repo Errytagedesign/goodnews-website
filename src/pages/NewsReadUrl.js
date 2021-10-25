@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchOnePost } from "../actions/posts";
 import NewsPage from "../components/NewsPage";
-import axios from "axios";
+import { CircularProgress } from "@material-ui/core";
+
+// import axios from "axios";
 
 // import articleImg from '../assets/Greater Lagos 5.jpg';
 
@@ -10,7 +14,7 @@ import axios from "axios";
 
 // import {FashionData} from '../components/FashionLifestyleData';
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+// const baseURL = "https://api-good-news.herokuapp.com/api";
 
 function getQuery() {
   let search = window.location.search;
@@ -23,42 +27,47 @@ function getQuery() {
 console.log(getQuery());
 
 function NewsReadUrl() {
-  const [post, setPost] = useState(null);
+  const post = useSelector((state) => state.posts);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios.get(`${baseURL}/posts/${getQuery()}`).then((response) => {
-      setPost(response.data);
-    });
-  }, []);
+    dispatch(fetchOnePost(getQuery()));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [getQuery(), dispatch]);
 
-  if (!post) return null;
+  // const [post, setPost] = useState(null);
 
-  console.log(post);
+  // useEffect(() => {
+  //   axios.get(`${baseURL}/posts/${getQuery()}`).then((response) => {
+  //     setPost(response.data);
+  //   });
+  // }, []);
 
+  // if (!post) return null;
+  console.log(post.post);
   let data = post.post;
-
-  // let news = Data.filter(news => news.id === getQuery())
-  // let news = Data.filter(news => news.id === getQuery())
-  var date = new Date(data.updatedAt); // dateStr you get from mongodb
-
-  var d = date.getDate();
-  // var m = date.getMonth()+1;
 
   return (
     <div>
-      <NewsPage
-        time={`${d} days`}
-        articleTitle={data.title}
-        articleImage={data.imageUrl}
-        articleContents={
-          <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
-        }
-        postId={data._id}
-        url={`${window.location.protocol}//${window.location.hostname}/post?id=${data._id}`}
-        comments={data.comments}
-        likes={data.numberOfLikes}
-        catId={data.category._id}
-      />
+      {!data ? (
+        <CircularProgress />
+      ) : (
+        <NewsPage
+          articleTitle={data.title}
+          articleImage={data.imageUrl}
+          articleContents={
+            <div dangerouslySetInnerHTML={{ __html: data.content }}></div>
+          }
+          postId={data._id}
+          url={`${window.location.protocol}//${window.location.hostname}/post?id=${data._id}`}
+          comments={data.comments}
+          // likes={data.likes.length}
+          likeArray={data.likes}
+          createdAt={data.createdAt}
+          categoryName={data.category.title}
+          catId={data.category._id}
+        />
+      )}
     </div>
   );
 }

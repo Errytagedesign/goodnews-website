@@ -32,7 +32,7 @@ function ContactUs(props) {
       <section className="Header d-flex flex-column flex-md-row justify-content-between">
         <div>
           {" "}
-          <h2 className="titles"> Advertise with us </h2>{" "}
+          <h2> Advertise with us </h2>{" "}
         </div>
         <div>
           {" "}
@@ -80,7 +80,7 @@ function ContactUs(props) {
 
             {/* Follow us start */}
             <div className="col-12 mb-5 mb-md-0  ">
-              <h6 className="headers mt-4"> Follow us</h6>
+              <h6 className="headers"> Follow us</h6>
               <div className="d-flex justify-content-around">
                 <Link to="https://www.facebook.com/errytage13" target="_blank">
                   <Facebook className="socialicons" size={25} />
@@ -127,7 +127,7 @@ function ContactUs(props) {
                     let value = { formValue: e.target.value };
                     setFormValue(value);
                   }}
-                  // value={setFormValue}
+                  valeu={setFormValue}
                 />
                 <input
                   className="form-control mt-2"
@@ -139,7 +139,7 @@ function ContactUs(props) {
                     let value = { formValue: e.target.value };
                     setFormValue(value);
                   }}
-                  // value={setFormValue}
+                  valeu={setFormValue}
                 />
                 <input
                   className="form-control mt-2"
@@ -151,7 +151,7 @@ function ContactUs(props) {
                     let value = { formValue: e.target.value };
                     setFormValue(value);
                   }}
-                  // value={setFormValue}
+                  valeu={setFormValue}
                 />
                 <textarea
                   className="form-control mt-2"
@@ -164,7 +164,7 @@ function ContactUs(props) {
                     let value = { formValue: e.target.value };
                     setFormValue(value);
                   }}
-                  // value={setFormValue}
+                  valeu={setFormValue}
                 ></textarea>
                 <input
                   type="submit"

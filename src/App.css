@@ -46,7 +46,7 @@ h2 {
 .LogoSearch {
   align-items: center;
   background-color: var(--main-color);
-  padding: 1.5em;
+  padding: 1em;
 }
 
 .NewsCategory {
@@ -56,6 +56,24 @@ h2 {
 
 .newsCat {
   background-color: var(--sec-color);
+  padding: 0.5em 0.3em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.newsCat:hover {
+  background-color: var(--main-color);
+  padding: 0.5em 0.3em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.newsCat2 {
+  background-color: var(--pry-color);
   padding: 0.5em 0.3em;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -78,17 +96,22 @@ h2 {
   right: -10px !important;
 }
 
-.footerheaders {
-  color: var(--sec-color);
-}
-
-.titles {
-  font-size: 2rem !important;
+.goodnews h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  font-weight: Black;
+  color: var(--main-color);
 }
 
 @media screen and (min-width: 767px) {
   .slick-next,
   .slick-prev {
     visibility: visible;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .goodnews h2 {
+    font-size: 3rem;
   }
 }
