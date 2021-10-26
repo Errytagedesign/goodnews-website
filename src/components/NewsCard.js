@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import "./NewsCard.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 // import DeleteIcon from '@material-ui/icons/Delete';
@@ -12,10 +13,6 @@ import { likePost } from "../actions/posts";
 import { searchLikePost } from "../actions/search";
 
 import { ChatFill, HeartFill } from "react-bootstrap-icons";
-
-// import heart from "../assets/icons/Heart.svg";
-// import comments from "../assets/icons/Comment.svg";
-// import share from '../assets/icons/Share.svg';
 
 import { Eye } from "react-bootstrap-icons";
 import { Button } from "@material-ui/core";
@@ -176,7 +173,7 @@ function NewsCard(props) {
           }
           to={url}
         >
-          <h2>{title}</h2>
+          <h2>{title.slice(0, 40) + "..."}</h2>
         </Link>
 
         <div className="d-flex  justify-content-around topBorder">
