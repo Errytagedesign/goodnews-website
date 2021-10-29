@@ -6,7 +6,6 @@ import Advert from "../../assets/Goodnewsng-advertise-with-us main.png";
 import {
   Envelope,
   Facebook,
-  GeoAltFill,
   Instagram,
   Linkedin,
   TelephoneFill,
@@ -62,11 +61,14 @@ function ContactUs(props) {
               <div className="link mb-4">
                 <h3>
                   <Envelope color="grey" />{" "}
-                  <a href="mailto:info@goodnewsng.com"> info@goodnewsng.com </a>{" "}
+                  <a href="mailto:hello@goodnewsnigeria.ng">
+                    {" "}
+                    hello@goodnewsnigeria.ng{" "}
+                  </a>{" "}
                 </h3>
               </div>
 
-              <div className="link">
+              {/* <div className="link">
                 <h3>
                   <GeoAltFill color="grey" />{" "}
                   <a href="#iframe">
@@ -74,13 +76,13 @@ function ContactUs(props) {
                     No 2, ESO close, off Oduduwa Crescent, Ikeja GRA
                   </a>{" "}
                 </h3>
-              </div>
+              </div> */}
             </div>
             {/* Contact us end */}
 
             {/* Follow us start */}
             <div className="col-12 mb-5 mb-md-0  ">
-              <h6 className="headers"> Follow us</h6>
+              {/* <h6 className="headers"> Follow us</h6> */}
               <div className="d-flex justify-content-around">
                 <Link to="https://www.facebook.com/errytage13" target="_blank">
                   <Facebook className="socialicons" size={25} />

@@ -39,12 +39,15 @@ function Footer() {
 
           <div className="link mb-1">
             <Envelope color="grey" />{" "}
-            <a href="mailto:info@goodnewsng.com"> info@goodnewsng.com </a>
+            <a href="mailto:hello@goodnewsnigeria.ng">
+              {" "}
+              hello@goodnewsnigeria.ng{" "}
+            </a>
           </div>
 
           {/* <div className="link">
             <GeoAltFill color="grey" />{" "}
-            <a href="mailto:info@goodnewsng.com">
+            <a href="mailto:hello@goodnewsnigeria.ng">
               {" "}
               No 2, ESO close, off Oduduwa Crescent, Ikeja GRA{" "}
             </a>
@@ -53,7 +56,7 @@ function Footer() {
 
         {/* Follow us */}
         <div className="col-12 col-md-3 mb-5 mb-md-0  ">
-          <h6> Follow us</h6>
+          {/* <h6> Follow us</h6> */}
           <div className="d-flex justify-content-around">
             <Link to="https://www.facebook.com/errytage13" target="_blank">
               <Facebook color="white" size={25} />
