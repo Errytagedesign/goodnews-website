@@ -36,7 +36,7 @@ function HomepagePost(props) {
 
       <section className="d-flex flex-wrap">
         {data.posts.slice(0, 3).map((news) => (
-          <div className="col-12 col-md-6 col-lg-4 ">
+          <div className="col-6 col-md-4 ">
             <NewsCard
               key={news._id}
               title={news.title}
