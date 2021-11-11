@@ -4,6 +4,7 @@ import { useState } from "react";
 // import { useDispatch } from "react-redux";
 // import { fetchPosts } from "./actions/posts"
 import Dashboard from "./components/dashboards/Dashboard";
+import UpdatePublishedNews from "./components/dashboards/UpdatePublishedNews";
 
 // General imports
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -15,7 +16,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import MasterLayout from "./layout/MasterLayout";
-import { News, NewsPub } from "./components/dashboards/News";
+// import { NewsPub } from "./components/dashboards/News";
+
+import Newsfeed from "./components/dashboards/Newsfeed";
+import MyPost from "./components/dashboards/MyPost";
+import Publishnews from "./components/dashboards/Publishnews";
 // import PreLoader from "./components/PreLoader/PreLoader";
 
 function App() {
@@ -39,10 +44,30 @@ function App() {
               />
             )}
           />
+          <Route
+            exact
+            path="/mypost"
+            render={(props) => (
+              <MyPost
+                currentId={currentId}
+                setCurrentId={setCurrentId}
+                {...props}
+              />
+            )}
+          />
 
-          <Route path="/news/news1" exact component={NewsPub} />
+          {/* <Route path="/news/news1" exact component={NewsPub} /> */}
+          <Route
+            path="/updatepublishednews"
+            exact
+            component={UpdatePublishedNews}
+          />
 
-          <Route path="/news" exact component={News} />
+          <Route path="/publishnews" exact component={Publishnews} />
+
+          {/* <Route path="/news" exact component={News} /> */}
+
+          <Route path="/newsfeed" exact component={Newsfeed} />
 
           <Route
             path="/"

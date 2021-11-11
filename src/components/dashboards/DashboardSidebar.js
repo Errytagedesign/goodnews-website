@@ -12,9 +12,11 @@ import SubDashSidebar from "./SubDashSidebar";
 
 const Nav = styled.section`
   background: var(--main-color);
+  height: 100%;
+  min-height: 85vh;
 
   overflow: scroll;
-  padding: 2em;
+  padding: 1.5em;
 `;
 
 function Menu() {

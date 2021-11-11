@@ -1,77 +1,101 @@
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { styled } from "@mui/material/styles";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import { CircularProgress } from '@material-ui/core';
-import { Button } from '@material-ui/core'
+
+import { CircularProgress } from "@material-ui/core";
+import { Button, Table } from "react-bootstrap";
 import { deletePost } from "../../actions/posts";
+import Swal from "sweetalert2";
+// import Styled from "styled-components";
 
+export default function Tables({ setCurrentId }) {
+  const posts = useSelector((state) => state.posts);
+  const dispatch = useDispatch();
 
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
+  // console.log(posts)
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
+  async function delPost(id) {
+    // dispatch(deletePost(id));
+    Swal.fire({
+      title: "Are you sure you want to delete this Post?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+      preConfirm: () => {
+        return dispatch(deletePost(id));
+      },
+      allowOutsideClick: () => !Swal.isLoading(),
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    });
+  }
 
-export default function Tables({setCurrentId}) {
-    const posts = useSelector((state) => state.posts);
-    const dispatch = useDispatch()
+  return !posts.length ? (
+    <CircularProgress />
+  ) : (
+    <div>
+      <Table striped bordered hover className="mt-4">
+        <thead bgcolor="#034203" style={{ color: "#fff" }}>
+          <tr className="mt-3 ">
+            <th align="center">Title</th>
+            <th align="center">Category</th>
+            <th align="center">Name Of Author</th>
+            <th align="center">Last Published</th>
+            <th align="center">Edit</th>
+            <th align="center">Delete</th>
+          </tr>
+        </thead>
 
-    // console.log(posts)
-
-    async function delPost(id) {
-        dispatch(deletePost(id))
-    }
-
-  return (
-    !posts.length ? <CircularProgress /> : (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell align="center">Title</StyledTableCell>
-            <StyledTableCell align="center">Category</StyledTableCell>
-            <StyledTableCell align="center">Name Of Author</StyledTableCell>
-            <StyledTableCell align="center">Last Published</StyledTableCell>
-            <StyledTableCell align="center" >Edit</StyledTableCell>
-            <StyledTableCell align="center">Delete</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
+        <tbody>
           {posts.map((row) => (
-            <StyledTableRow key={row._id}>
-              <StyledTableCell align="center">{row.title}</StyledTableCell>
-              <StyledTableCell align="center">{row.category.title}</StyledTableCell>
-              <StyledTableCell align="center">{row.nameOfAuthor}</StyledTableCell>
-              <StyledTableCell align="center">{row.updatedAt}</StyledTableCell>
-              <StyledTableCell align="center"><Button onClick={() => setCurrentId(row._id)}> Edit </Button></StyledTableCell>
-              <StyledTableCell align="center"><Button onClick={() => delPost(row._id)}> Delete </Button></StyledTableCell>
-             
-            </StyledTableRow>
+            <tr key={row._id}>
+              <td align="center">{row.title}</td>
+              <td align="center">{row.category.title}</td>
+              <td align="center">{row.nameOfAuthor}</td>
+              <td align="center">{row.updatedAt}</td>
+              <td align="center">
+                <Button
+                  onClick={() => {
+                    setCurrentId(row._id);
+                    // window.scrollTo({
+                    //   top: 2000,
+                    //   behavior: "smooth",
+                    // });
+                    setTimeout(() => {
+                      window.location.href = "#id";
+                    }, 2000);
+                  }}
+                  variant="success"
+                >
+                  {" "}
+                  Edit{" "}
+                </Button>
+
+                {/* <Link
+                  to={`/updatepublishednews?id=${row._id}`}
+                  onClick={() => setCurrentId(row._id)}
+                >
+                  {" "}
+                  Edit{" "}
+                </Link> */}
+              </td>
+              <td align="center">
+                <Button onClick={() => delPost(row._id)} variant="danger">
+                  {" "}
+                  Delete{" "}
+                </Button>
+              </td>
+            </tr>
           ))}
-        </TableBody>
+        </tbody>
       </Table>
-    </TableContainer>
-    )
+    </div>
   );
 }

@@ -1,90 +1,101 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchPosts } from "../../actions/posts"
+import React, { useEffect, useState } from "react";
 import DashboardSidebar from "./DashboardSidebar";
-import DashboardNavbar from '../../components/DashboardNavbar/DashboardNavbar'
-import Tables from "../Table/Table";
-import Form from "../Form/Form";
-import { Button } from "@material-ui/core";
-// import { Redirect } from "react-router";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch,
-//   Redirect,
-// } from "react-router-dom";
+import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
+import styled from "styled-components";
+import axios from "axios";
+import { CircularProgress } from "@material-ui/core";
 
-// import News from "./News";
+const CardWrapp = styled.div`
+  background-color: var(--main-color);
+  padding: 5em;
+  border-radius: 10px;
+  box-shadow: 2px 5px 7px 2px #c2c2c2;
+  margin: 1em auto;
 
-// pages
-
-// import Publishnews from "./Publishnews";
-
-// General imports
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-// bootsrapt css
-// import "bootstrap/dist/css/bootstrap.min.css";
-
-function Dashboard(props) {
-
-  const user = JSON.parse(localStorage.getItem("profile"));
-
- 
-
-  // const [currentId, setCurrentId] = useState(0);
-  const { currentId, setCurrentId } = props
-  const dispatch = useDispatch();
-  
-  useEffect(() => {
-    dispatch(fetchPosts());
-  }, [currentId, dispatch]);
-
-
-  const redirect = () => {
-    window.location.replace("/auth")
+  &:hover {
+    background-color: var(--pry-color);
   }
 
-  if(!user) {
-    return(
-      <><DashboardNavbar /><div>
-        <br /> <br/>
-        <h2>Login as an Admin to acess this Page</h2>
-        <h2>Click this <Button onClick={redirect}>Link </Button> to go to Login Page</h2>
-      </div></>
-      
-    )
+  color: #fff;
+`;
+
+function Dashboard(props) {
+  const user = JSON.parse(localStorage.getItem("profile"));
+  const [dashboardData, setDashboardData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://api-good-news.herokuapp.com/api/admin-users/admin/dashboard"
+      )
+      .then((response) => {
+        setDashboardData(response.data.data);
+        console.log(response.data.data);
+      });
+  }, []);
+
+  const redirect = () => {
+    window.location.replace("/authsignin");
+  };
+
+  if (!user) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>Login as an Admin to acess this Page</h2>
+          <h2>
+            Click this{" "}
+            <button className="btn btn-success" onClick={redirect}>
+              Link{" "}
+            </button>{" "}
+            to go to Login Page
+          </h2>
+        </div>
+      </>
+    );
   } else {
     return (
       <>
-      <DashboardNavbar />
-      <div className="d-flex flex-row">
-        <DashboardSidebar className="w-25" />
-  
-        {/* <Router className="w-50">
-          <Switch>
-            <Route path="/dashboard/news" exact>
-              <News />
-            </Route>
-  
-            <Redirect from="/dashboard" to="/dashboard/news" />
-  
-            <Route path="/dashboard/video" exact>
-              <video />
-            </Route>
-          </Switch>
-        </Router> */}
-        {/* </div> */}
-        <div className="w-75">
-          <Tables setCurrentId={setCurrentId} />
-          <Form currentId={currentId} setCurrentId={setCurrentId} />
+        <DashboardNavbar />
+        <div className="d-flex flex-row">
+          <DashboardSidebar className="w-25" />
+          <div className="w-75 container ">
+            <div className="d-flex flex-wrap  mt-5 ">
+              {!dashboardData ? (
+                <CircularProgress />
+              ) : (
+                <>
+                  <CardWrapp className="col-5">
+                    {" "}
+                    <h2> User </h2> <h3> {dashboardData.totalNumberOfUser} </h3>{" "}
+                  </CardWrapp>
+                  <CardWrapp className="col-5 ">
+                    {" "}
+                    <h2>Post</h2> <h3> {dashboardData.totalNumberOfPost} </h3>{" "}
+                  </CardWrapp>
+                  <CardWrapp className="col-5 ">
+                    {" "}
+                    <h2>Categories</h2>{" "}
+                    <h3> {dashboardData.totalNumberOfCategories} </h3>{" "}
+                  </CardWrapp>
+                  <CardWrapp className="col-5">
+                    {" "}
+                    <h2>Videos</h2>{" "}
+                    <h3 style={{ color: "white" }}>
+                      {" "}
+                      {dashboardData.toatalNumberOfVideos}{" "}
+                    </h3>{" "}
+                  </CardWrapp>
+                </>
+              )}
+            </div>
+          </div>
         </div>
-        </div>
-        </>
+      </>
     );
   }
-
-  
 }
 
 export default Dashboard;

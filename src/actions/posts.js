@@ -10,6 +10,8 @@ import {
   FETCH_ONE_POST,
 } from "../constants/actionTypes";
 
+import Swal from "sweetalert2";
+
 export const fetchTopPosts = () => async (dispatch) => {
   try {
     const response = await api.fetchTopPosts();
@@ -54,9 +56,24 @@ export const searchPost = (searchBody) => async (dispatch) => {
 export const createPost = (post) => async (dispatch) => {
   try {
     const { data } = await api.createPost(post);
+
+    if (data) {
+      Swal.fire("Article Created Succesfully");
+      setTimeout(() => {
+        window.location.replace("/dashboard");
+      }, 3000);
+    }
+
     // console.log(data)
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
+    if (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `${error.response.data.title}, ${error.response.data.nameOfAuthor}, ${error.response.data.content}, ${error.response.data.category}, ${error.response.data.message}`,
+      });
+    }
     console.log(error);
   }
 };
@@ -66,6 +83,7 @@ export function updatePost(id, post) {
     try {
       const { title, category, description, content, imageUrl, nameOfAuthor } =
         post;
+
       let updateData = {
         title,
         category,
@@ -76,9 +94,20 @@ export function updatePost(id, post) {
       };
 
       const { data } = await api.updatePost(id, updateData);
-      // console.log(data)
+
+      if (data) {
+        Swal.fire("Article Updated Succesfully");
+      }
+      console.log(data);
       dispatch({ type: UPDATE, payload: data });
     } catch (error) {
+      if (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${error.response.data.title}, ${error.response.data.nameOfAuthor}, ${error.response.data.content}, ${error.response.data.category}, ${error.response.data.message}`,
+        });
+      }
       console.log(error);
     }
   };
@@ -95,8 +124,8 @@ export const deletePost = (id) => async (dispatch) => {
 
 export const likePost = (id, userId) => async (dispatch) => {
   try {
-      const { data } = await api.likePost(id, userId);
-    console.log(data.post)
+    const { data } = await api.likePost(id, userId);
+    console.log(data.post);
     dispatch({ type: LIKE, payload: data.post });
   } catch (error) {
     console.log(error);

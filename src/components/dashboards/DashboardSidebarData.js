@@ -3,8 +3,6 @@ import React from "react";
 import {
   MenuButton,
   Youtube,
-  Envelope,
-  CalendarEvent,
   CaretDownFill,
   CaretUpFill,
   CpuFill,
@@ -28,14 +26,14 @@ export const DashboardSidebarData = [
 
     subCat: [
       {
-        title: "Publish News",
-        path: "/news/news1",
+        title: "New Post",
+        path: "/publishnews",
         icon: <CpuFill size={20} />,
       },
 
       {
-        title: "My Post",
-        path: "/dashboard",
+        title: "My Posts",
+        path: "/mypost",
         icon: <CpuFill size={20} />,
       },
     ],
@@ -43,7 +41,7 @@ export const DashboardSidebarData = [
 
   {
     title: "Videos",
-    path: "/dashboard",
+    path: "/vidoes",
     icon: <Youtube size={20} />,
     iconClosed: <CaretDownFill />,
     iconOpen: <CaretUpFill />,
@@ -61,22 +59,6 @@ export const DashboardSidebarData = [
         icon: <CpuFill size={20} />,
       },
     ],
-  },
-
-  {
-    title: "Newsletter",
-    path: "/dashboard",
-    icon: <Envelope size={20} />,
-    iconClosed: <CaretDownFill />,
-    iconOpen: <CaretUpFill />,
-  },
-
-  {
-    title: "Events",
-    path: "/dashboard",
-    icon: <CalendarEvent size={20} />,
-    iconClosed: <CaretDownFill />,
-    iconOpen: <CaretUpFill />,
   },
 ];
 

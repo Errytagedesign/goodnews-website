@@ -168,7 +168,12 @@ function NewsCard(props) {
           onClick={() =>
             setTimeout(() => {
               // window.location.reload();
-              window.history.go();
+              // window.history.go();
+              window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+              });
             }, 2000)
           }
           to={url}

@@ -8,7 +8,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  TelephoneFill,
+  // TelephoneFill,
   Twitter,
   Youtube,
 } from "react-bootstrap-icons";
@@ -50,13 +50,13 @@ function ContactUs(props) {
               <div className="headers">
                 <h4 className="headers-title text-center mb-2"> Contact us </h4>
               </div>
-
+              {/* 
               <div className="link mb-4">
                 <h3>
                   <TelephoneFill color="grey" />{" "}
                   <a href="tel:+23408099556644"> 08099556644 </a>
                 </h3>
-              </div>
+              </div> */}
 
               <div className="link mb-4">
                 <h3>

@@ -50,7 +50,7 @@ const Form = ({ currentId, setCurrentId }) => {
     } else {
       dispatch(updatePost(currentId, postData));
     }
-    clear()
+    clear();
   }
 
   return (
@@ -61,7 +61,9 @@ const Form = ({ currentId, setCurrentId }) => {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6">{currentId ? 'Editing' :'Creating'} a News</Typography>
+        <Typography variant="h6">
+          {currentId ? "Editing" : "Creating"} a News
+        </Typography>
         <TextField
           name="nameOfAuthor"
           variant="outlined"
