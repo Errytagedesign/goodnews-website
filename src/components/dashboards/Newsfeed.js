@@ -4,7 +4,7 @@ import DashboardSidebar from "./DashboardSidebar";
 import FetchNews from "./FetchNews";
 import axios from "axios";
 
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@material-ui/core";
 
 function Newsfeed() {
   const [getNews, setGetNews] = useState(null);
@@ -42,7 +42,7 @@ function Newsfeed() {
           <main className="">
             <div className="d-flex flex-wrap">
               {!loadNews ? (
-                <CircularProgress />
+                <></>
               ) : (
                 loadNews.articles.map((article, index) => (
                   <div className="col-12 col-md-4">

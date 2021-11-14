@@ -38,6 +38,27 @@ export const DashboardSidebarData = [
       },
     ],
   },
+  {
+    title: "Adverts",
+    path: "#",
+    icon: <MenuButton size={20} />,
+    iconClosed: <CaretDownFill className="ms-3" />,
+    iconOpen: <CaretUpFill className="ms-3" />,
+
+    subCat: [
+      {
+        title: "New Ads",
+        path: "/createads",
+        icon: <CpuFill size={20} />,
+      },
+
+      {
+        title: "My Ads",
+        path: "/myads",
+        icon: <CpuFill size={20} />,
+      },
+    ],
+  },
 
   {
     title: "Videos",

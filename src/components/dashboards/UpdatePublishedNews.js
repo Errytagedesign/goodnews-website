@@ -17,7 +17,7 @@ import draftToHtml from "draftjs-to-html";
 
 import styled from "styled-components";
 // import DashboardNavbar from "../DashboardNavbar/DashboardNavbar";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@material-ui/core";
 // import parse from "html-react-parser";
 
 const Editorbar = styled.div`
@@ -125,7 +125,7 @@ function UpdatePublishedNews({ currentId, setCurrentId }) {
       <div>
         <h2> Edit News </h2>
         {!post ? (
-          <CircularProgress />
+          <></>
         ) : (
           <div className="d-flex flex-column align-items-center">
             <section className="d-flex flex-row container justify-content-between mb-3 w-100">

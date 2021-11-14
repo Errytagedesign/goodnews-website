@@ -6,23 +6,6 @@ import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
 import Tables from "../Table/Table";
 // import Form from "../Form/Form";
 import UpdatePublishedNews from "./UpdatePublishedNews";
-// import { Button } from "@material-ui/core";
-// import { Redirect } from "react-router";
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch,
-//   Redirect,
-// } from "react-router-dom";
-
-// import News from "./News";
-
-// pages
-
-// import Publishnews from "./Publishnews";
-
-// General imports
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // bootsrapt css
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -66,20 +49,6 @@ function MyPost(props) {
         <div className="d-flex flex-row">
           <DashboardSidebar className="w-25" />
 
-          {/* <Router className="w-50">
-          <Switch>
-            <Route path="/dashboard/news" exact>
-              <News />
-            </Route>
-  
-            <Redirect from="/dashboard" to="/dashboard/news" />
-  
-            <Route path="/dashboard/video" exact>
-              <video />
-            </Route>
-          </Switch>
-        </Router> */}
-          {/* </div> */}
           <div className="w-75">
             <Tables setCurrentId={setCurrentId} />
             <UpdatePublishedNews

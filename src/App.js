@@ -21,10 +21,13 @@ import MasterLayout from "./layout/MasterLayout";
 import Newsfeed from "./components/dashboards/Newsfeed";
 import MyPost from "./components/dashboards/MyPost";
 import Publishnews from "./components/dashboards/Publishnews";
+import CreateAds from "./components/dashboards/Adverts/CreateAds";
+import MyAds from "./components/dashboards/Adverts/MyAds";
 // import PreLoader from "./components/PreLoader/PreLoader";
 
 function App() {
   const [currentId, setCurrentId] = useState(0);
+  const [currentAdsId, setCurrentAdsId] = useState(0);
 
   return (
     <div className="App">
@@ -56,6 +59,18 @@ function App() {
             )}
           />
 
+          <Route
+            exact
+            path="/myads"
+            render={(props) => (
+              <MyAds
+                currentAdsId={currentAdsId}
+                setCurrentAdsId={setCurrentAdsId}
+                {...props}
+              />
+            )}
+          />
+
           {/* <Route path="/news/news1" exact component={NewsPub} /> */}
           <Route
             path="/updatepublishednews"
@@ -64,6 +79,7 @@ function App() {
           />
 
           <Route path="/publishnews" exact component={Publishnews} />
+          <Route path="/createads" exact component={CreateAds} />
 
           {/* <Route path="/news" exact component={News} /> */}
 
