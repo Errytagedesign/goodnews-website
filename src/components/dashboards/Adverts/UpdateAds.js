@@ -68,6 +68,8 @@ const Box = styled.div`
 `;
 
 const CloseIcon = styled.div`
+  position: absolute;
+  right: 0;
   cursor: pointer;
 
   border-radius: 50%;
@@ -82,14 +84,15 @@ const CloseIcon = styled.div`
 `;
 
 const PopHead = styled.div`
+  position: fixed;
   background-color: rgb(211, 211, 211);
 
-  p {
-    color: rgb(0, 195, 255);
-  }
+  width: inherit;
+
+  height: 50px;
 `;
 
-function UpdateAds({ currentAdsId, setCurrentAdsId, handClose }) {
+function UpdateAds({ currentAdsId, setCurrentAdsId }) {
   const dispatch = useDispatch();
   const ads = useSelector((state) =>
     currentAdsId ? state.AdsPosts.find((ad) => ad._id === currentAdsId) : null
@@ -97,7 +100,7 @@ function UpdateAds({ currentAdsId, setCurrentAdsId, handClose }) {
 
   //   const [categories, setCategories] = useState(null);
 
-  //   const [closePop, setClosePop] = useState(false);
+  // const [closePop, setClosePop] = useState(true);
 
   const [formdata, setFormdata] = useState({
     title: "",
@@ -133,9 +136,11 @@ function UpdateAds({ currentAdsId, setCurrentAdsId, handClose }) {
       });
   };
 
-  //   const closePopup = () => {
-  //     setClosePop(!closePop);
-  //   };
+  const closePopup = () => {
+    setCurrentAdsId(0);
+    // setClosePop(!closePop);
+    // console.log(!closePop);
+  };
 
   async function handleUpdateAds(e) {
     e.preventDefault();
@@ -166,18 +171,17 @@ function UpdateAds({ currentAdsId, setCurrentAdsId, handClose }) {
       ) : (
         <PopupBox>
           <Box className="w-75">
-            <PopHead className="popheading d-flex flex-row justify-content-between p-2 mb-3">
-              <p onClick={handClose}> Back </p>
+            <PopHead className="popheading d-flex flex-row justify-content-start p-2 mb-3">
               <CloseIcon>
                 <X
                   className="close-icon"
-                  onClick={handClose}
+                  onClick={closePopup}
                   size={25}
                   color="black"
                 />
               </CloseIcon>
             </PopHead>
-            <div className="d-flex flex-row border m-3 p-3">
+            <div className="d-flex flex-row border mt-5 m-3 p-3">
               <Input
                 id="file"
                 onChange={handImageUpload}

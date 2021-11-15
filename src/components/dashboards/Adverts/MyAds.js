@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchAdsPosts } from "../../../actions/ads";
 import DashboardNavbar from "../../DashboardNavbar/DashboardNavbar";
@@ -8,7 +8,7 @@ import UpdateAds from "./UpdateAds";
 
 function MyAds(props) {
   const { currentAdsId, setCurrentAdsId } = props;
-  const [closePop, setClosePop] = useState(false);
+  // const [closePop, setClosePop] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -16,9 +16,9 @@ function MyAds(props) {
     dispatch(fetchAdsPosts());
   }, [currentAdsId, dispatch]);
 
-  const closePopup = () => {
-    setClosePop(!closePop);
-  };
+  // const closePopup = () => {
+  //   setClosePop(!closePop);
+  // };
   return (
     <div>
       <DashboardNavbar />
@@ -31,13 +31,14 @@ function MyAds(props) {
             setCurrentAdsId={setCurrentAdsId}
           />
 
-          {
+          {currentAdsId !== 0 ? (
             <UpdateAds
               currentAdsId={currentAdsId}
               setCurrentAdsId={setCurrentAdsId}
-              handClose={closePopup}
             />
-          }
+          ) : (
+            <></>
+          )}
         </section>
       </div>
     </div>

@@ -123,12 +123,12 @@ function TopNews() {
   return (
     <>
       <div className="mt-2">
-        <Slider {...settings}>
+        <Slider {...settings} className="col-12 col-lg-10 m-auto ">
           {desktopHeading.map((banner) => (
             <LandingPageLink
               href={banner.url}
               target="_blank"
-              className="col-12 col-lg-8 m-auto card"
+              className=" card"
             >
               <ImageWrapper src={banner.imageUrl} alt="goodnewsads" />
 
