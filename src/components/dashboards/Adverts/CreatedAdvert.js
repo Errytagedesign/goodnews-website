@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
+import DashboardNavbar from "../../DashboardNavbar/DashboardNavbar";
 
 import Swal from "sweetalert2";
 import { Button } from "react-bootstrap";
@@ -33,6 +34,7 @@ const LandingPageLink = styled.a`
 `;
 
 function CreatedAdvert({ setCurrentAdsId }) {
+  const user = JSON.parse(localStorage.getItem("profile"));
   const ads = useSelector((state) => state.AdsPosts);
   console.log(ads);
   const dispatch = useDispatch();
@@ -61,49 +63,103 @@ function CreatedAdvert({ setCurrentAdsId }) {
     });
   }
 
-  return !ads.length ? (
-    <> </>
-  ) : (
-    <section className="d-flex flex-wrap justify-content-between container">
-      {ads.map((ad) => (
-        <div className="col-3 p-2 card">
-          <LandingPageLink href={ad.url} target="_blank" rel="noreferrer">
-            <div className="w-100">
-              <ImageWrapper src={ad.imageUrl} />
-            </div>
-          </LandingPageLink>
-          <p className="mb-3 mt-2 card-body">{ad.title}</p>
-          <small className="border border-primary p-2 mt-2">
-            {ad.category}
-          </small>
-          <Button
-            onClick={() => {
-              setCurrentAdsId(ad._id);
-              // window.scrollTo({
-              //   top: 2000,
-              //   behavior: "smooth",
-              // });
-              setTimeout(() => {
-                window.location.href = "#id";
-              }, 2000);
-            }}
-            className="w-100 mb-1 mt-3"
-            variant="success"
-          >
-            {" "}
-            Edit{" "}
-          </Button>{" "}
-          <Button
-            onClick={() => delAdsPost(ad._id)}
-            variant="danger"
-            className="w-100 mb-1 mt-1"
-          >
-            Delete
-          </Button>
+  const redirect = () => {
+    localStorage.clear();
+    window.location.replace("/authsignin");
+  };
+
+  if (!user) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
         </div>
-      ))}
-    </section>
-  );
+      </>
+    );
+  }
+  //
+
+  if (user.token.length > 500) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+
+  if (user.result.role.toLowerCase() !== "admin") {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  } else {
+    return !ads.length ? (
+      <> </>
+    ) : (
+      <section className="d-flex flex-wrap justify-content-between container">
+        {ads.map((ad) => (
+          <div className="col-3 p-2 card">
+            <LandingPageLink href={ad.url} target="_blank" rel="noreferrer">
+              <div className="w-100">
+                <ImageWrapper src={ad.imageUrl} />
+              </div>
+            </LandingPageLink>
+            <p className="mb-3 mt-2 card-body">{ad.title}</p>
+            <small className="border border-primary p-2 mt-2">
+              {ad.category}
+            </small>
+            <Button
+              onClick={() => {
+                setCurrentAdsId(ad._id);
+                // window.scrollTo({
+                //   top: 2000,
+                //   behavior: "smooth",
+                // });
+                setTimeout(() => {
+                  window.location.href = "#id";
+                }, 2000);
+              }}
+              className="w-100 mb-1 mt-3"
+              variant="success"
+            >
+              {" "}
+              Edit{" "}
+            </Button>{" "}
+            <Button
+              onClick={() => delAdsPost(ad._id)}
+              variant="danger"
+              className="w-100 mb-1 mt-1"
+            >
+              Delete
+            </Button>
+          </div>
+        ))}
+      </section>
+    );
+  }
 }
 
 export default CreatedAdvert;

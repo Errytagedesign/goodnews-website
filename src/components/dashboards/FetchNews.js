@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
+
 // import { Link } from "react-router-dom";
 import "./FetchNews.css";
 import { Button } from "react-bootstrap";
@@ -10,6 +12,7 @@ import { createPost } from "../../actions/posts";
 import Swal from "sweetalert2";
 
 function FetchNews(props) {
+  const user = JSON.parse(localStorage.getItem("profile"));
   const [categories, setCategories] = useState(null);
   const dispatch = useDispatch();
 
@@ -85,36 +88,90 @@ function FetchNews(props) {
     });
   }
 
-  return (
-    <div>
-      <section className="p-3 mt-2 fetchnews">
-        <div className="col-12">
-          <img className="" src={props.data.media} alt="" />{" "}
-        </div>
-        <div
-        //   onClick={() =>
-        //     setTimeout(() => {
-        //       window.location.replace(props.url);
-        //       //   window.history.go(props.url);
-        //     }, 2000)
-        //   }
-        >
-          <a href={props.data.link} target="_blank" rel="noreferrer">
-            <h2>{props.data.title}</h2>{" "}
-          </a>
-        </div>
-      </section>
+  const redirect = () => {
+    localStorage.clear();
+    window.location.replace("/authsignin");
+  };
 
-      <Button
-        onClick={() => handlePublish(props)}
-        variant="success"
-        size="medium"
-      >
-        {" "}
-        Publish News{" "}
-      </Button>
-    </div>
-  );
+  if (!user) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+  //
+
+  if (user.token.length > 500) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+
+  if (user.result.role.toLowerCase() !== "admin") {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <div>
+        <section className="p-3 mt-2 fetchnews">
+          <div className="col-12">
+            <img className="" src={props.data.media} alt="" />{" "}
+          </div>
+          <div
+          //   onClick={() =>
+          //     setTimeout(() => {
+          //       window.location.replace(props.url);
+          //       //   window.history.go(props.url);
+          //     }, 2000)
+          //   }
+          >
+            <a href={props.data.link} target="_blank" rel="noreferrer">
+              <h2>{props.data.title}</h2>{" "}
+            </a>
+          </div>
+        </section>
+
+        <Button
+          onClick={() => handlePublish(props)}
+          variant="success"
+          size="medium"
+        >
+          {" "}
+          Publish News{" "}
+        </Button>
+      </div>
+    );
+  }
 }
 
 export default FetchNews;

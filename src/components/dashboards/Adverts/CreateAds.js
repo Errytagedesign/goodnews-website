@@ -39,6 +39,7 @@ const LabelHeading = styled.label`
 `;
 
 function CreateAds() {
+  const user = JSON.parse(localStorage.getItem("profile"));
   const dispatch = useDispatch();
   //   const [createAds, setCreateAds] = useState("");
   const [formdata, setFormdata] = useState({
@@ -93,73 +94,136 @@ function CreateAds() {
     // });
     // console.log(formdata);
   };
-  return (
-    <div>
-      <DashboardNavbar />
-      <div className="d-flex flex-row">
-        <DashboardSidebar className="w-25" />
-        <section className="w-75">
-          <div className="d-flex flex-row border m-3 p-3">
-            <Input
-              id="file"
-              onChange={handImageUpload}
-              type="file"
-              className="form-control w-25 me-3"
-            />
-            <Label htmlFor="file"> Upload Ads Image </Label>{" "}
-            {/* <Button className="col-25" onClick={handleSubmitImage}>
+
+  const redirect = () => {
+    localStorage.clear();
+    window.location.replace("/authsignin");
+  };
+
+  if (!user) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+  //
+
+  if (user.token.length > 500) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+
+  if (user.result.role.toLowerCase() !== "admin") {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <div>
+        <DashboardNavbar />
+        <div className="d-flex flex-row">
+          <DashboardSidebar className="w-25" />
+          <section className="w-75">
+            <div className="d-flex flex-row border m-3 p-3">
+              <Input
+                id="file"
+                onChange={handImageUpload}
+                type="file"
+                className="form-control w-25 me-3"
+              />
+              <Label htmlFor="file"> Upload Ads Image </Label>{" "}
+              {/* <Button className="col-25" onClick={handleSubmitImage}>
               Upload Image
             </Button> */}
-          </div>
-          <div className="w-75 mt-2 m-auto mb-4 p-3">
-            <img className="mx-auto col-12" src={image} alt="" />
-          </div>
-          <LabelHeading className="mt-2 mb-3"> Landing page url </LabelHeading>
-          <input
-            type="url"
-            onChange={(e) => setFormdata({ ...formdata, url: e.target.value })}
-            className="form-control mb-5 p-3 m-auto w-75 text-center"
-            placeholder="Landing page Url"
-          />
-          <LabelHeading className="mt-2 mb-3"> Ads Descriptions </LabelHeading>
-          <textarea
-            cols="40"
-            rows="5"
-            type="text"
-            onChange={(e) =>
-              setFormdata({ ...formdata, title: e.target.value })
-            }
-            className="form-control m-auto mt-2 mb-5 p-3 w-75 text-center"
-            placeholder="Ads Description"
-          />
-          <LabelHeading className="mt-2 mb-3">
-            {" "}
-            Select Ads Placement{" "}
-          </LabelHeading>
-          <select
-            onChange={(e) =>
-              setFormdata({ ...formdata, category: e.target.value })
-            }
-            className="form-control m-auto p-3 mt-2 mb-3 w-75 text-center"
-          >
-            <option> Select Category </option>
-            <option value="1"> Desktop Heading </option>
-            <option value="2"> Desktop Sidebar </option>
-            <option value="3"> Mobile </option>
-          </select>
+            </div>
+            <div className="w-75 mt-2 m-auto mb-4 p-3">
+              <img className="mx-auto col-12" src={image} alt="" />
+            </div>
+            <LabelHeading className="mt-2 mb-3">
+              {" "}
+              Landing page url{" "}
+            </LabelHeading>
+            <input
+              type="url"
+              onChange={(e) =>
+                setFormdata({ ...formdata, url: e.target.value })
+              }
+              className="form-control mb-5 p-3 m-auto w-75 text-center"
+              placeholder="Landing page Url"
+            />
+            <LabelHeading className="mt-2 mb-3">
+              {" "}
+              Ads Descriptions{" "}
+            </LabelHeading>
+            <textarea
+              cols="40"
+              rows="5"
+              type="text"
+              onChange={(e) =>
+                setFormdata({ ...formdata, title: e.target.value })
+              }
+              className="form-control m-auto mt-2 mb-5 p-3 w-75 text-center"
+              placeholder="Ads Description"
+            />
+            <LabelHeading className="mt-2 mb-3">
+              {" "}
+              Select Ads Placement{" "}
+            </LabelHeading>
+            <select
+              onChange={(e) =>
+                setFormdata({ ...formdata, category: e.target.value })
+              }
+              className="form-control m-auto p-3 mt-2 mb-3 w-75 text-center"
+            >
+              <option> Select Category </option>
+              <option value="1"> Desktop Heading </option>
+              <option value="2"> Desktop Sidebar </option>
+              <option value="3"> Mobile </option>
+            </select>
 
-          <Button
-            style={{ background: "#006900" }}
-            className="border-0 p-3 m-5 w-75"
-            onClick={handleSubmit}
-          >
-            {" "}
-            Create Ad{" "}
-          </Button>
-        </section>
+            <Button
+              style={{ background: "#006900" }}
+              className="border-0 p-3 m-5 w-75"
+              onClick={handleSubmit}
+            >
+              {" "}
+              Create Ad{" "}
+            </Button>
+          </section>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default CreateAds;

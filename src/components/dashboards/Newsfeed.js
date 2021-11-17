@@ -3,17 +3,19 @@ import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
 import DashboardSidebar from "./DashboardSidebar";
 import FetchNews from "./FetchNews";
 import axios from "axios";
+import { Button } from "react-bootstrap";
 
 // import { CircularProgress } from "@material-ui/core";
 
 function Newsfeed() {
+  const user = JSON.parse(localStorage.getItem("profile"));
   const [getNews, setGetNews] = useState(null);
   const [loadNews, setLoadNews] = useState(getNews);
 
   const options = {
     method: "GET",
     url: "https://free-news.p.rapidapi.com/v1/search",
-    params: { q: "nigeria good ", lang: "en" },
+    params: { q: "good nigeria ", lang: "en" },
     headers: {
       "x-rapidapi-host": "free-news.p.rapidapi.com",
       "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
@@ -49,43 +51,99 @@ function Newsfeed() {
   const HandleNewsFetch = () => {
     setLoadNews(getNews);
   };
+  const redirect = () => {
+    localStorage.clear();
+    window.location.replace("/authsignin");
+  };
 
-  return (
-    <div>
-      <DashboardNavbar />
-      <div className="d-flex flex-row">
-        <DashboardSidebar className="w-25" />
-        <section className="w-75">
-          <main className="container mt-5">
-            <button onClick={HandleNewsFetch} className="btn btn-success w-100">
-              {" "}
-              Fetch News{" "}
-            </button>
-          </main>
+  if (!user) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+  //
 
-          <main className="">
-            <div className="d-flex flex-wrap">
-              {!loadNews ? (
-                <></>
-              ) : (
-                loadNews.articles.map((article, index) => (
-                  <div className="col-12 col-md-4">
-                    <FetchNews
-                      data={article}
-                      // key={index}
-                      // Title={article.title}
-                      // Imagesrc={article.urlToImage}
-                      // url={article.url}
-                    />
-                  </div>
-                ))
-              )}
-            </div>
-          </main>
-        </section>
+  if (user.token.length > 500) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+
+  if (user.result.role.toLowerCase() !== "admin") {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <div>
+        <DashboardNavbar />
+        <div className="d-flex flex-row">
+          <DashboardSidebar className="w-25" />
+          <section className="w-75">
+            <main className="container mt-5">
+              <button
+                onClick={HandleNewsFetch}
+                className="btn btn-success w-100"
+              >
+                {" "}
+                Fetch News{" "}
+              </button>
+            </main>
+
+            <main className="">
+              <div className="d-flex flex-wrap">
+                {!loadNews ? (
+                  <></>
+                ) : (
+                  loadNews.articles.map((article, index) => (
+                    <div className="col-12 col-md-4">
+                      <FetchNews
+                        data={article}
+                        // key={index}
+                        // Title={article.title}
+                        // Imagesrc={article.urlToImage}
+                        // url={article.url}
+                      />
+                    </div>
+                  ))
+                )}
+              </div>
+            </main>
+          </section>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Newsfeed;

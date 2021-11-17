@@ -13,6 +13,7 @@ import styled from "styled-components";
 import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
 import { CircularProgress } from "@material-ui/core";
 import DashboardSidebar from "./DashboardSidebar";
+import { Button } from "react-bootstrap";
 // import parse from "html-react-parser";
 
 const Editorbar = styled.div`
@@ -23,6 +24,7 @@ const Editorbar = styled.div`
 `;
 
 function Publishnews() {
+  const user = JSON.parse(localStorage.getItem("profile"));
   const dispatch = useDispatch();
 
   //   const [text, setText] = useState("");
@@ -79,99 +81,152 @@ function Publishnews() {
     // clear();
   };
 
-  return (
-    <>
-      <DashboardNavbar />
-      <div className="d-flex flex-row">
-        <DashboardSidebar className="w-25" />
-        <div className="w-75 mt-5 ">
-          <div>
-            <h2> Create News </h2>
-            {!categories ? (
-              <CircularProgress />
-            ) : (
-              <div className="d-flex flex-column align-items-center">
-                <section className="d-flex flex-row container justify-content-between mb-3 w-100">
-                  <div className="pe-2 w-30">
-                    <label> Title </label>
-                    <input
-                      className="form-control"
-                      type="text"
-                      placeholder="News title"
-                      onChange={(e) =>
-                        setFormData({ ...formData, title: e.target.value })
-                      }
-                    />
-                  </div>
+  const redirect = () => {
+    localStorage.clear();
+    window.location.replace("/authsignin");
+  };
 
-                  <div className="pe-2 w-30">
-                    <label> Thumbnail URL </label>
-                    <input
-                      className="form-control"
-                      type="text"
-                      onChange={(e) =>
-                        setFormData({ ...formData, imageUrl: e.target.value })
-                      }
-                    />
-                  </div>
+  if (!user) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+  //
 
-                  <div className="w-40">
-                    <label> Categories </label>
-                    <select
-                      className="form-control"
-                      onChange={(e) =>
-                        setFormData({ ...formData, category: e.target.value })
-                      }
-                    >
-                      <option></option>
-                      {categories.data.map((cat) => (
-                        <option value={cat._id}>{cat.title}</option>
-                      ))}
-                    </select>
-                  </div>
-                </section>
+  if (user.token.length > 500) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
 
-                <section>
-                  <div className="contain">
-                    <label> Description </label>
-                    <textarea
-                      className="form-control"
-                      type="text"
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          description: e.target.value,
-                        })
-                      }
-                    ></textarea>
-                    <label> Name Of Author </label>
-                    <input
-                      className="form-control"
-                      type="text"
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          nameOfAuthor: e.target.value,
-                        })
-                      }
-                    />
-                  </div>
-                </section>
+  if (user.result.role.toLowerCase() !== "admin") {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <DashboardNavbar />
+        <div className="d-flex flex-row">
+          <DashboardSidebar className="w-25" />
+          <div className="w-75 mt-5 ">
+            <div>
+              <h2> Create News </h2>
+              {!categories ? (
+                <CircularProgress />
+              ) : (
+                <div className="d-flex flex-column align-items-center">
+                  <section className="d-flex flex-row container justify-content-between mb-3 w-100">
+                    <div className="pe-2 w-30">
+                      <label> Title </label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        placeholder="News title"
+                        onChange={(e) =>
+                          setFormData({ ...formData, title: e.target.value })
+                        }
+                      />
+                    </div>
 
-                <section className="container w-100">
-                  <Editorbar className="editor">
-                    <Editor
-                      editorState={editorState}
-                      toolbarClassName="toolbarClassName"
-                      wrapperClassName="wrapperClassName"
-                      editorClassName="editorClassName"
-                      onEditorStateChange={onEditorStateChange}
-                      // onContentStateChange={onEditorStateChange}
-                    />
-                  </Editorbar>
-                </section>
+                    <div className="pe-2 w-30">
+                      <label> Thumbnail URL </label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        onChange={(e) =>
+                          setFormData({ ...formData, imageUrl: e.target.value })
+                        }
+                      />
+                    </div>
 
-                {/* <div className="editor container p-5">
+                    <div className="w-40">
+                      <label> Categories </label>
+                      <select
+                        className="form-control"
+                        onChange={(e) =>
+                          setFormData({ ...formData, category: e.target.value })
+                        }
+                      >
+                        <option></option>
+                        {categories.data.map((cat) => (
+                          <option value={cat._id}>{cat.title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </section>
+
+                  <section>
+                    <div className="contain">
+                      <label> Description </label>
+                      <textarea
+                        className="form-control"
+                        type="text"
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            description: e.target.value,
+                          })
+                        }
+                      ></textarea>
+                      <label> Name Of Author </label>
+                      <input
+                        className="form-control"
+                        type="text"
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            nameOfAuthor: e.target.value,
+                          })
+                        }
+                      />
+                    </div>
+                  </section>
+
+                  <section className="container w-100">
+                    <Editorbar className="editor">
+                      <Editor
+                        editorState={editorState}
+                        toolbarClassName="toolbarClassName"
+                        wrapperClassName="wrapperClassName"
+                        editorClassName="editorClassName"
+                        onEditorStateChange={onEditorStateChange}
+                        // onContentStateChange={onEditorStateChange}
+                      />
+                    </Editorbar>
+                  </section>
+
+                  {/* <div className="editor container p-5">
           <CKEditor
             editor={ClassicEditor}
             data={text}
@@ -181,25 +236,26 @@ function Publishnews() {
             }}
           />
         </div> */}
-                <div className="w-100 container mt-3 mb-3">
-                  <button
-                    className="w-100 btn btn-primary"
-                    onClick={handleSubmit}
-                  >
-                    {" "}
-                    Publish{" "}
-                  </button>
-                </div>
-                {/* <div>
+                  <div className="w-100 container mt-3 mb-3">
+                    <button
+                      className="w-100 btn btn-primary"
+                      onClick={handleSubmit}
+                    >
+                      {" "}
+                      Publish{" "}
+                    </button>
+                  </div>
+                  {/* <div>
           <p>{parse(text)}</p>
         </div> */}
-              </div>
-            )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 }
 
 export default Publishnews;

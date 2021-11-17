@@ -4,6 +4,7 @@ import { fetchPosts } from "../../actions/posts";
 import DashboardSidebar from "./DashboardSidebar";
 import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
 import Tables from "../Table/Table";
+import { Button } from "react-bootstrap";
 // import Form from "../Form/Form";
 import UpdatePublishedNews from "./UpdatePublishedNews";
 
@@ -22,6 +23,7 @@ function MyPost(props) {
   }, [currentId, dispatch]);
 
   const redirect = () => {
+    localStorage.clear();
     window.location.replace("/authsignin");
   };
 
@@ -31,13 +33,43 @@ function MyPost(props) {
         <DashboardNavbar />
         <div>
           <br /> <br />
-          <h2>Login as an Admin to acess this Page</h2>
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
           <h2>
-            Click this{" "}
-            <button className="btn btn-success" onClick={redirect}>
-              Link{" "}
-            </button>{" "}
-            to go to Login Page
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+  //
+
+  if (user.token.length > 500) {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
+          </h2>
+        </div>
+      </>
+    );
+  }
+
+  if (user.result.role.toLowerCase() !== "admin") {
+    return (
+      <>
+        <DashboardNavbar />
+        <div>
+          <br /> <br />
+          <h2>You are not an Admin, Login as an Admin to access this Page</h2>
+          <h2>
+            Click this <Button onClick={redirect}>Link </Button> to go to Login
+            Page
           </h2>
         </div>
       </>
