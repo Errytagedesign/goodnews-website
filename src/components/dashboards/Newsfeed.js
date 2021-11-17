@@ -43,6 +43,7 @@ function Newsfeed() {
         setGetNews(response.data);
         console.log(response.data.articles);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const HandleNewsFetch = () => {
