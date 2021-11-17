@@ -10,15 +10,15 @@ function Newsfeed() {
   const [getNews, setGetNews] = useState(null);
   const [loadNews, setLoadNews] = useState(getNews);
 
-  // const options = {
-  //   method: "GET",
-  //   url: "https://free-news.p.rapidapi.com/v1/search",
-  //   params: { q: "good news ng", lang: "en" },
-  //   headers: {
-  //     "x-rapidapi-host": "free-news.p.rapidapi.com",
-  //     "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
-  //   },
-  // };
+  const options = {
+    method: "GET",
+    url: "https://free-news.p.rapidapi.com/v1/search",
+    params: { q: "nigeria good ", lang: "en" },
+    headers: {
+      "x-rapidapi-host": "free-news.p.rapidapi.com",
+      "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
+    },
+  };
 
   // const options = {
   //   method: "GET",
@@ -34,10 +34,10 @@ function Newsfeed() {
 
   useEffect(() => {
     axios
-      .get(
+      .request(
         // "https://newsapi.org/v2/everything?q=Good News&from=2021-10-28&to=2021-10-28&sortBy=publishedAt&pageSize=50&page=1&apiKey=60d1c163741e4400b34162d265f80fc9"
-        "https://newsapi.org/v2/top-headlines?country=ng&apiKey=60d1c163741e4400b34162d265f80fc9"
-        // options
+        // "https://newsapi.org/v2/top-headlines?country=ng&apiKey=60d1c163741e4400b34162d265f80fc9"
+        options
       )
       .then((response) => {
         setGetNews(response.data);

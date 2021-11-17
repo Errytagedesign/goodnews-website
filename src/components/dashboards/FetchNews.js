@@ -89,7 +89,7 @@ function FetchNews(props) {
     <div>
       <section className="p-3 mt-2 fetchnews">
         <div className="col-12">
-          <img className="" src={props.data.urlToImage} alt="" />{" "}
+          <img className="" src={props.data.media} alt="" />{" "}
         </div>
         <div
         //   onClick={() =>
@@ -99,8 +99,8 @@ function FetchNews(props) {
         //     }, 2000)
         //   }
         >
-          <a href={props.data.url} target="_blank" rel="noreferrer">
-            <h2>{props.data.title.slice(0, 40) + "..."}</h2>{" "}
+          <a href={props.data.link} target="_blank" rel="noreferrer">
+            <h2>{props.data.title}</h2>{" "}
           </a>
         </div>
       </section>
