@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { Avatar, Button, Typography } from "@material-ui/core";
+import { Avatar, Typography } from "@material-ui/core";
+import { Button } from "react-bootstrap";
 import { withStyles } from "@material-ui/core/styles";
 import axios from "axios";
 import {
@@ -66,6 +67,41 @@ const SubMenuLink = styled(Link)`
     border-left: 4px solid var(--sec-color);
     cursor: pointer;
     color: #fff;
+  }
+`;
+
+const SignInLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+
+  :hover {
+    color: #fff;
+    background: var(--sec-color);
+  }
+`;
+
+const ButtonWrap = styled(Button)`
+  border: 2px var(--sec-color) solid;
+  color: var(--sec-color);
+
+  :hover {
+    color: #fff;
+    background: var(--sec-color);
+  }
+`;
+
+const ButtonWrapIn = styled(Button)`
+  background: var(--sec-color);
+  color: var(--sec-color);
+  border: none;
+
+  :hover {
+    color: #fff;
+    background: var(--pry-color);
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 1em;
   }
 `;
 
@@ -144,23 +180,18 @@ function SidebarCat() {
             <WhiteTextTypography className={classes.userName} variant="h6">
               {user?.result.name}
             </WhiteTextTypography>
-            <Button
-              variant="contained"
-              className={classes.logout}
-              color="secondary"
-              onClick={logout}
-            >
+            <Button variant="secondary" onClick={logout}>
               Logout
             </Button>
           </>
         ) : (
-          <div className="d-flex flex-row col-12 justify-content-between">
-            <Button component={Link} to="/authsignin" variant="contained">
-              Sign In
-            </Button>
-            <Button component={Link} to="/authsignup" variant="contained">
-              Sign up
-            </Button>
+          <div className="d-flex flex-column flex-md-row col-12 justify-content-between">
+            <ButtonWrapIn variant="secondary">
+              <SignInLink to="/authsignin">Sign In </SignInLink>
+            </ButtonWrapIn>
+            <ButtonWrap variant="outline-success">
+              <SignInLink to="/authsignup"> Sign up</SignInLink>
+            </ButtonWrap>
           </div>
         )}
       </div>
