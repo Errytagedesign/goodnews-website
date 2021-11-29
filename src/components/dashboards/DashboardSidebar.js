@@ -17,6 +17,10 @@ const Nav = styled.section`
 
   overflow: scroll;
   padding: 1.5em;
+
+  @media screen and (max-width: 780px) {
+    padding: 0.5em;
+  }
 `;
 
 function Menu() {

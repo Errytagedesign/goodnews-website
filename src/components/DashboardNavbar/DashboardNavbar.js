@@ -66,7 +66,7 @@ function DashboardNavbar() {
         <header className="LogoSearch">
           <div className=" align-items-center  d-flex flex-row justify-content-between">
             {/* logo */}
-            <div className="text-start gLogo col-4 col-md-3 ">
+            <div className="text-start gLogo col-4 ">
               <Link to="/">
                 {" "}
                 <img
@@ -77,20 +77,8 @@ function DashboardNavbar() {
               </Link>
             </div>
 
-            {/* <div className="col-2 col-md-4 text-end d-md-block d-none">
-            {user ? (
-              <>
-                <Avatar className={classes.green} src={user?.result.imageUrl} alt={user.name}>{user?.result.name.charAt(0)}</Avatar>
-                <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
-                <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
-              </>
-            ) : (
-              <Button component={Link} to="/auth" variant="contained" color={classes.green}>Sign In</Button>
-            )}
-          </div> */}
-
             {/* Hamburger */}
-            <div className="col-2 col-md-2 text-end d-md-block d-none">
+            <div className="col-2  ">
               <Menu />
             </div>
           </div>

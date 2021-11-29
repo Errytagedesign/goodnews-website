@@ -20,10 +20,17 @@ const SubMenuLink = styled(Link)`
     cursor: pointer;
     color: #fff;
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 0.5em;
+  }
 `;
 const SubMenuLabel = styled.span`
   color: #fff;
   margin-left: 1em;
+  @media screen and (max-width: 780px) {
+    padding: 0.5em;
+  }
 `;
 
 const DropdownLink = styled(Link)`
@@ -43,6 +50,10 @@ const DropdownLink = styled(Link)`
     cursor: pointer;
     color: #fff;
   }
+
+  @media screen and (max-width: 780px) {
+    padding: 1em;
+  }
 `;
 
 function SubMenu({ item }) {
@@ -55,7 +66,10 @@ function SubMenu({ item }) {
       <SubMenuLink to={item.path} onClick={item.subCat && showSubCat}>
         <div>
           {item.icon}
-          <SubMenuLabel> {item.title} </SubMenuLabel>
+          <SubMenuLabel className="d-none d-lg-block">
+            {" "}
+            {item.title}{" "}
+          </SubMenuLabel>
         </div>
 
         <div>
@@ -72,7 +86,10 @@ function SubMenu({ item }) {
           return (
             <DropdownLink to={cat.path} key={index}>
               {cat.icon}
-              <SubMenuLabel> {cat.title} </SubMenuLabel>
+              <SubMenuLabel className="d-none d-lg-block">
+                {" "}
+                {cat.title}{" "}
+              </SubMenuLabel>
             </DropdownLink>
           );
         })}

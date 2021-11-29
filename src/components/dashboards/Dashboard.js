@@ -115,27 +115,27 @@ function Dashboard(props) {
       <>
         <DashboardNavbar />
         <div className="d-flex flex-row">
-          <DashboardSidebar className="w-25" />
-          <div className="w-75 container ">
+          <DashboardSidebar className="col-2 col-md-6" />
+          <div className="col-10 col-md-6 container ">
             <div className="d-flex flex-wrap  mt-5 ">
               {!dashboardData ? (
                 <CircularProgress />
               ) : (
                 <>
-                  <CardWrapp className="col-5">
+                  <CardWrapp className="col-12 col-md-5">
                     {" "}
                     <h2> User </h2> <h3> {dashboardData.totalNumberOfUser} </h3>{" "}
                   </CardWrapp>
-                  <CardWrapp className="col-5 ">
+                  <CardWrapp className="col-12 col-md-5 ">
                     {" "}
                     <h2>Post</h2> <h3> {dashboardData.totalNumberOfPost} </h3>{" "}
                   </CardWrapp>
-                  <CardWrapp className="col-5 ">
+                  <CardWrapp className="col-12 col-md-5 ">
                     {" "}
                     <h2>Categories</h2>{" "}
                     <h3> {dashboardData.totalNumberOfCategories} </h3>{" "}
                   </CardWrapp>
-                  <CardWrapp className="col-5">
+                  <CardWrapp className="col-12 col-md-5">
                     {" "}
                     <h2>Videos</h2>{" "}
                     <h3 style={{ color: "white" }}>

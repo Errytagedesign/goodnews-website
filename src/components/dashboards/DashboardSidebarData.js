@@ -1,11 +1,17 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 import {
-  MenuButton,
+  PlusSquare,
   Youtube,
   CaretDownFill,
   CaretUpFill,
   CpuFill,
+  Newspaper,
+  Rss,
+  FileEarmark,
+  CardList,
+  BadgeAd,
+  Table,
 } from "react-bootstrap-icons";
 // import axios from "axios";
 
@@ -13,14 +19,14 @@ export const DashboardSidebarData = [
   {
     title: "Newsfeeds",
     path: "/newsfeed",
-    icon: <MenuButton size={20} />,
+    icon: <Rss size={20} />,
     iconClosed: <CaretDownFill className="ms-3" />,
     iconOpen: <CaretUpFill className="ms-3" />,
   },
   {
     title: "News",
     path: "#",
-    icon: <MenuButton size={20} />,
+    icon: <Newspaper size={20} />,
     iconClosed: <CaretDownFill className="ms-3" />,
     iconOpen: <CaretUpFill className="ms-3" />,
 
@@ -28,20 +34,20 @@ export const DashboardSidebarData = [
       {
         title: "New Post",
         path: "/publishnews",
-        icon: <CpuFill size={20} />,
+        icon: <FileEarmark size={20} />,
       },
 
       {
         title: "My Posts",
         path: "/mypost",
-        icon: <CpuFill size={20} />,
+        icon: <Table size={20} />,
       },
     ],
   },
   {
     title: "Adverts",
     path: "#",
-    icon: <MenuButton size={20} />,
+    icon: <BadgeAd size={20} />,
     iconClosed: <CaretDownFill className="ms-3" />,
     iconOpen: <CaretUpFill className="ms-3" />,
 
@@ -49,13 +55,13 @@ export const DashboardSidebarData = [
       {
         title: "New Ads",
         path: "/createads",
-        icon: <CpuFill size={20} />,
+        icon: <PlusSquare size={20} />,
       },
 
       {
         title: "My Ads",
         path: "/myads",
-        icon: <CpuFill size={20} />,
+        icon: <CardList size={20} />,
       },
     ],
   },
