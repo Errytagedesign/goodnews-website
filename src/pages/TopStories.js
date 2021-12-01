@@ -23,6 +23,7 @@ import Slider from "react-slick";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomepagePost from "../components/HomepagePost";
 import { fetchAdsPosts } from "../actions/ads";
+import ApiNewsfeeds from "../components/APINewsFeeds/ApiNewsfeeds";
 
 // Style component styling
 const ImageWrapper = styled.img`
@@ -97,7 +98,18 @@ function TopNews() {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [dispatch]);
 
+  // const [apifeeds, setApifeeds] = useState(null);
+
   const [postcaty, setPostcaty] = useState(null);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(`${baseURL}/posts/cat/61a52ebdf62a3b6260f36704`)
+  //     .then((response) => {
+  //       setApifeeds(response.data.data);
+  //       console.log(response.data.data);
+  //     });
+  // }, []);
 
   useEffect(() => {
     axios.get(`${baseURL}/posts/category-posts`).then((response) => {
@@ -113,12 +125,19 @@ function TopNews() {
 
   const newData = data.filter((item) => {
     return (
-      item.categoryId !== "615d60765b9e9d000424fa62" && item.posts.length >= 1
+      item.categoryId !== "61a52ebdf62a3b6260f36704" &&
+      item.categoryId !== "615d60765b9e9d000424fa62" &&
+      item.posts.length >= 1
     );
   });
   console.log(newData);
 
   // console.log(categories)
+
+  const GeneralNews = data.filter((item) => {
+    return item.categoryId === "61a52ebdf62a3b6260f36704";
+  });
+  console.log(GeneralNews);
 
   return (
     <>
@@ -160,6 +179,13 @@ function TopNews() {
 
         <main className=" container mt-5 d-flex flex-column flex-md-row">
           <div className="col-12 col-md-8">
+            {!GeneralNews ? (
+              <CircularProgress />
+            ) : (
+              <section>
+                <ApiNewsfeeds data={GeneralNews} />
+              </section>
+            )}
             {!data ? (
               <CircularProgress />
             ) : (

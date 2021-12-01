@@ -28,6 +28,10 @@ const Label = styled.label`
     background: var(--pry-color);
     box-shadow: 1px 2px 3px 1.5px #c1c1c1;
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const LabelHeading = styled.label`
@@ -36,6 +40,10 @@ const LabelHeading = styled.label`
   font-size: 1.5rem;
 
   margin: 0 auto;
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 function CreateAds() {

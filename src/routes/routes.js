@@ -9,6 +9,8 @@ import ContactUs from "../components/contactus/ContactUs";
 import AboutUs from "../pages/AboutUs";
 import AuthSignIn from "../components/Auth/AuthSignIn";
 import AuthSignUp from "../components/Auth/AuthSignUp";
+import APINewsRead from "../components/APINewsFeeds/APINewsRead";
+import APINewsCategory from "../components/APINewsFeeds/APINewsCategory";
 
 export const routes = [
   {
@@ -38,6 +40,13 @@ export const routes = [
   },
 
   {
+    path: "/newsread",
+    exact: true,
+    name: "NewsRead",
+    component: APINewsRead,
+  },
+
+  {
     path: "/search",
     exact: true,
     name: "Search",
@@ -50,6 +59,14 @@ export const routes = [
     name: "Categories",
     component: Categories,
   },
+
+  {
+    path: "/apicategory",
+    exact: true,
+    name: "Categories",
+    component: APINewsCategory,
+  },
+
   {
     path: "/videos",
     exact: true,

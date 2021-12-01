@@ -121,7 +121,7 @@ function CreatedAdvert({ setCurrentAdsId }) {
     ) : (
       <section className="d-flex flex-wrap justify-content-between container">
         {ads.map((ad) => (
-          <div className="col-3 p-2 card">
+          <div className="col-12 col-md-4 p-2 card">
             <LandingPageLink href={ad.url} target="_blank" rel="noreferrer">
               <div className="w-100">
                 <ImageWrapper src={ad.imageUrl} />

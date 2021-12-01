@@ -107,8 +107,10 @@ function Newsfeed() {
     return (
       <div>
         <DashboardNavbar />
-        <div className="d-flex flex-row">
-          <DashboardSidebar className="w-25" />
+        <div className="d-flex flex-row justify-content-between">
+          <div className="w-25">
+            <DashboardSidebar />
+          </div>
           <section className="w-75">
             <main className="container mt-5">
               <button

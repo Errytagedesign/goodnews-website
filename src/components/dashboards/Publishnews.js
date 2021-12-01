@@ -20,6 +20,7 @@ const Editorbar = styled.div`
   align-items: center;
   background: #fff;
   height: 500px;
+  border: lightGrey solid 1px;
   overflow-y: scroll;
 `;
 
@@ -141,14 +142,14 @@ function Publishnews() {
           <DashboardSidebar className="w-25" />
           <div className="w-75 mt-5 ">
             <div>
-              <h2> Create News </h2>
+              <h2 className="mb-3"> Create News </h2>
               {!categories ? (
                 <CircularProgress />
               ) : (
-                <div className="d-flex flex-column align-items-center">
-                  <section className="d-flex flex-row container justify-content-between mb-3 w-100">
-                    <div className="pe-2 w-30">
-                      <label> Title </label>
+                <div className=" container d-flex flex-column align-items-center">
+                  <section className="d-flex flex-column flex-md-row flex-wrap container justify-content-between mb-3 col-12">
+                    <div className="pe-2 mt-1 col-12 col-md-6">
+                      <label className="mb-2"> Title </label>
                       <input
                         className="form-control"
                         type="text"
@@ -159,10 +160,11 @@ function Publishnews() {
                       />
                     </div>
 
-                    <div className="pe-2 w-30">
-                      <label> Thumbnail URL </label>
+                    <div className="pe-2 mt-1 col-12 col-md-6">
+                      <label className="mb-2"> Thumbnail URL </label>
                       <input
                         className="form-control"
+                        placeholder="Image url"
                         type="text"
                         onChange={(e) =>
                           setFormData({ ...formData, imageUrl: e.target.value })
@@ -170,37 +172,24 @@ function Publishnews() {
                       />
                     </div>
 
-                    <div className="w-40">
-                      <label> Categories </label>
+                    <div className=" pe-2 col-12 mt-1 col-md-6">
+                      <label className="mb-2"> Categories </label>
                       <select
                         className="form-control"
                         onChange={(e) =>
                           setFormData({ ...formData, category: e.target.value })
                         }
                       >
-                        <option></option>
+                        <option> Select Category </option>
                         {categories.data.map((cat) => (
                           <option value={cat._id}>{cat.title}</option>
                         ))}
                       </select>
                     </div>
-                  </section>
-
-                  <section>
-                    <div className="contain">
-                      <label> Description </label>
-                      <textarea
-                        className="form-control"
-                        type="text"
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            description: e.target.value,
-                          })
-                        }
-                      ></textarea>
-                      <label> Name Of Author </label>
+                    <div className="col-12 mt-1 col-md-6">
+                      <label className="mb-2"> Name Of Author </label>
                       <input
+                        placeholder="author name"
                         className="form-control"
                         type="text"
                         onChange={(e) =>
@@ -213,7 +202,25 @@ function Publishnews() {
                     </div>
                   </section>
 
-                  <section className="container w-100">
+                  <section className=" container col-12">
+                    <div className="mt-3 mb-3">
+                      <label className="mb-2"> Description </label>
+                      <textarea
+                        className="form-control w-100"
+                        placeholder="Article descriptions"
+                        type="text"
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            description: e.target.value,
+                          })
+                        }
+                      ></textarea>
+                    </div>
+                  </section>
+
+                  <section className="container col-12">
+                    <label className="mb-3"> Article Contents </label>
                     <Editorbar className="editor">
                       <Editor
                         editorState={editorState}
@@ -236,9 +243,9 @@ function Publishnews() {
             }}
           />
         </div> */}
-                  <div className="w-100 container mt-3 mb-3">
+                  <div className="col-12 container mt-3 mb-3">
                     <button
-                      className="w-100 btn btn-primary"
+                      className="col-12 btn btn-primary"
                       onClick={handleSubmit}
                     >
                       {" "}

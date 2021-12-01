@@ -26,6 +26,10 @@ const Label = styled.label`
     background: var(--pry-color);
     box-shadow: 1px 2px 3px 1.5px #c1c1c1;
   }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const LabelHeading = styled.label`
@@ -34,6 +38,10 @@ const LabelHeading = styled.label`
   font-size: 1.5rem;
 
   margin: 0 auto;
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const PopupBox = styled.div`
@@ -57,7 +65,6 @@ const Box = styled.div`
   overflow-x: scroll;
   margin-top: 20px;
   background: #fff;
-  border-radius: 20px;
 
   border: 1px solid #999;
 
@@ -244,7 +251,7 @@ function UpdateAds({ currentAdsId, setCurrentAdsId }) {
 
             <Button
               style={{ background: "#006900" }}
-              className="border-0 p-3 m-5 w-75"
+              className="border-0 p-3 mt-3 mb-5 w-75"
               onClick={handleUpdateAds}
             >
               {" "}
