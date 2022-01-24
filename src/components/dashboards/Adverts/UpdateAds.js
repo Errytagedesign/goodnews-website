@@ -5,7 +5,7 @@ import axios from "axios";
 import { X } from "react-bootstrap-icons";
 import { Button } from "react-bootstrap";
 
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 import styled from "styled-components";
 
@@ -163,7 +163,7 @@ function UpdateAds({ currentAdsId, setCurrentAdsId }) {
 
     if (currentAdsId !== 0) {
       dispatch(updateAdsPost(currentAdsId, formdata));
-      Swal.fire("Article Updated Succesfully");
+      // Swal.fire("Article Updated Succesfully");
       setTimeout(() => {
         window.location.reload();
       }, 2000);

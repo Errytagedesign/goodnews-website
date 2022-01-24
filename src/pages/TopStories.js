@@ -142,6 +142,7 @@ function TopNews() {
   return (
     <>
       <div className="mt-2">
+        {/* Big screen Advert */}
         <Slider {...settings} className="col-12 col-lg-10 m-auto ">
           {desktopHeading.map((banner) => (
             <LandingPageLink

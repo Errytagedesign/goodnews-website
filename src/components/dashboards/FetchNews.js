@@ -29,11 +29,18 @@ function FetchNews(props) {
     console.log(categories);
     let newsData = {
       nameOfAuthor: "Good News",
-      content: e.data.summary,
-      title: e.data.title,
-      description: e.data.summary,
-      imageUrl: e.data.media,
+      content: "",
+      title: "",
+      description: "",
+      imageUrl: "",
     };
+    // let newsData = {
+    //   nameOfAuthor: "Good News",
+    //   content: e.data.summary,
+    //   title: e.data.title,
+    //   description: e.data.summary,
+    //   imageUrl: e.data.media,
+    // };
 
     // let categories = [
     //   { id: "1", title: "hello" },

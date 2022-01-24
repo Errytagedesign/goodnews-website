@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePost } from "../../actions/posts";
 import { Button } from "react-bootstrap";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
 
 import { Editor } from "react-draft-wysiwyg";
@@ -117,7 +117,7 @@ function UpdatePublishedNews({ currentId, setCurrentId }) {
 
     if (currentId !== 0) {
       dispatch(updatePost(currentId, formData));
-      Swal.fire("Article Updated Succesfully");
+      // Swal.fire("Article Updated Succesfully");
     }
     clear();
   }
