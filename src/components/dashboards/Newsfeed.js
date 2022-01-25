@@ -23,101 +23,27 @@ function Newsfeed() {
   const [loadNews, setLoadNews] = useState(getNews);
   // const [loadMore, setLoadMore] = useState(false);
 
-  // const options = {
-  //   method: "GET",
-  //   url: "https://free-news.p.rapidapi.com/v1/search",
-  //   params: { q: "good nigeria ", lang: "en" },
-  //   headers: {
-  //     "x-rapidapi-host": "free-news.p.rapidapi.com",
-  //     "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
-  //   },
-  // };
-
-  // const options = {
-  //   method: "GET",
-  //   url: "https://api.mediastack.com/v1/news",
-  //   data: {
-  //     access_key: "d17686380efef65b897d2912ab5da83d",
-  //     languages: "fr,-en",
-  //     countries: "ng",
-  //     limit: 30,
-  //     offset: 30,
-  //   },
-  // };
-
-  // const options = {
-  //   method: "GET",
-  //   url: "https://google-news1.p.rapidapi.com/search",
-  //   params: {
-  //     q: "Covid",
-  //     country: "US",
-  //     lang: "en",
-  //     source: "cnn.com",
-  //     limit: "50",
-  //     when: "30d",
-  //     media: "True",
-  //   },
-  //   headers: {
-  //     "x-rapidapi-host": "google-news1.p.rapidapi.com",
-  //     "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
-  //   },
-  // };
-
-  const options = {
-    method: "GET",
-    url: "https://newscatcher.p.rapidapi.com/v1/search_free",
-    params: { q: `${keywords}`, lang: "en", media: "True" },
-    headers: {
-      "x-rapidapi-host": "newscatcher.p.rapidapi.com",
-      "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
-    },
-  };
-
-  // const options = {
-  //   method: "GET",
-  //   url: "https://google-news.p.rapidapi.com/v1/search",
-  //   params: { q: "Good News nigeria", lang: "en" },
-  //   headers: {
-  //     "x-rapidapi-host": "google-news.p.rapidapi.com",
-  //     "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
-  //   },
-  // };
-
   useEffect(() => {
-    axios
-      .request(
-        // "https://newsapi.org/v2/everything?q=Good-News&sortBy=popularity&pageSize=50&page=1&apiKey=60d1c163741e4400b34162d265f80fc9"
-        // "https://newsapi.org/v2/top-headlines?country=ng&apiKey=60d1c163741e4400b34162d265f80fc9"
-        options
-      )
-      .then((response) => {
-        setGetNews(response.data);
-        console.log(response.data);
-      });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const options = {
+      method: "GET",
+      url: "https://newscatcher.p.rapidapi.com/v1/search_free",
+      params: { q: `${keywords}`, lang: "en", media: "True" },
+      headers: {
+        "x-rapidapi-host": "newscatcher.p.rapidapi.com",
+        "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
+      },
+    };
+
+    axios.request(options).then((response) => {
+      setGetNews(response.data);
+      console.log(response.data);
+    });
   }, []);
 
   // Fetch and display articles on button click
   const HandleNewsFetch = () => {
     setLoadNews(getNews);
   };
-
-  // useEffect(() => {
-  //   setLoadNews(loadNews.page + 1);
-  // }, [loadNews.page]);
-  // To load more articles page
-
-  // const HandLoadMore = () => {
-  //   // loadNews(getNews.page + 1);
-  //   // setLoadMore(false);
-
-  //   setLoadNews(loadNews.page + 1);
-  //   setLoadMore(true);
-
-  //   //   loadNews.page < loadNews.total_page
-  //   //     ? setLoadMore(loadNews.page + 1)
-  //   //     : setLoadMore(false);
-  // };
 
   function redirect() {
     localStorage.clear();

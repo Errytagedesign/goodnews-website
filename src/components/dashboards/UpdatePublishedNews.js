@@ -29,6 +29,29 @@ const Editorbar = styled.div`
   overflow-y: scroll;
 `;
 
+const Input = styled.input`
+  display: none;
+`;
+
+const Label = styled.label`
+  padding: 1em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  background: var(--main-color);
+  width: 80%;
+  margin-top: 2em;
+  border-radius: 15px;
+  &:hover {
+    background: var(--pry-color);
+    box-shadow: 1px 2px 3px 1.5px #c1c1c1;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.5rem;
+  }
+`;
+
 const baseURL = "https://api-good-news.herokuapp.com/api";
 
 // function getQuery() {
@@ -98,6 +121,26 @@ function UpdatePublishedNews({ currentId, setCurrentId }) {
       content: draftToHtml(convertToRaw(editorState.getCurrentContent())),
     });
     return setEditorState(editorState);
+  };
+
+  // Update article image by uploading new one
+  const [artcileThumb, setArtcileThumb] = useState();
+  const HandleUpdateImage = (e) => {
+    const files = e.target.files[0];
+
+    const uploadData = new FormData();
+    uploadData.append("file", files);
+    uploadData.append("upload_preset", "gztyasbe");
+
+    axios
+      .post(
+        "https://api.cloudinary.com/v1_1/dmsyfdo0y/image/upload",
+        uploadData
+      )
+      .then((response) => {
+        setFormData({ ...formData, imageUrl: response.data.secure_url });
+        setArtcileThumb(response.data.secure_url);
+      });
   };
 
   function clear() {
@@ -179,116 +222,132 @@ function UpdatePublishedNews({ currentId, setCurrentId }) {
       <>
         {/* <DashboardNavbar /> */}
         <div>
-          <h2> Edit News </h2>
           {!post ? (
             <></>
           ) : (
-            <div className="d-flex flex-column align-items-center">
-              <section className="d-flex flex-row container justify-content-between mb-3 w-100">
-                <div className="pe-2 w-30">
-                  <label> Title </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="id"
-                    placeholder="News title"
-                    value={formData.title}
-                    onChange={(e) =>
-                      setFormData({ ...formData, title: e.target.value })
-                    }
-                  />
-                </div>
+            <>
+              <h2> Edit News </h2>
+              <div className="d-flex flex-column align-items-center">
+                <section className="d-flex flex-row container justify-content-between mb-3 w-100">
+                  <div className="pe-2 w-50">
+                    <label className="mb-2"> Title </label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      id="id"
+                      placeholder="News title"
+                      value={formData.title}
+                      onChange={(e) =>
+                        setFormData({ ...formData, title: e.target.value })
+                      }
+                    />
+                  </div>
 
-                <div className="pe-2 w-30">
-                  <label> Thumbnail URL </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    value={formData.imageUrl}
-                    onChange={(e) =>
-                      setFormData({ ...formData, imageUrl: e.target.value })
-                    }
-                  />
-                </div>
+                  <div className="w-40">
+                    <label className="mb-2"> Categories </label>
+                    <select
+                      className="form-control"
+                      onChange={(e) =>
+                        setFormData({ ...formData, category: e.target.value })
+                      }
+                    >
+                      <option value={post.category._id}>
+                        {post.category.title}
+                      </option>
+                      {categories.data.map((cat) => (
+                        <option value={cat._id}>{cat.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="w-40">
+                    <label className="mb-2"> Name Of Author </label>
+                    <input
+                      className="form-control"
+                      type="text"
+                      value={formData.nameOfAuthor}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          nameOfAuthor: e.target.value,
+                        })
+                      }
+                    />
+                  </div>
+                </section>
 
-                <div className="w-40">
-                  <label> Categories </label>
-                  <select
-                    className="form-control"
-                    onChange={(e) =>
-                      setFormData({ ...formData, category: e.target.value })
-                    }
+                <section className="col-12">
+                  <div className="contain ">
+                    <label className="mb-2"> Description </label>
+                    <textarea
+                      className="form-control col-12"
+                      width=""
+                      type="text"
+                      value={formData.description}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          description: e.target.value,
+                        })
+                      }
+                    ></textarea>
+                  </div>
+                </section>
+                <section>
+                  <div className=" w-30">
+                    <Label htmlFor="file"> Thumbnail URL </Label>
+                    <Input
+                      className="form-control"
+                      id="file"
+                      type="file"
+                      onChange={HandleUpdateImage}
+                    />
+
+                    <img
+                      className="p-3 m-2 "
+                      src={artcileThumb ? artcileThumb : formData.imageUrl}
+                      alt=""
+                    />
+                  </div>
+                </section>
+
+                <section className="container w-100">
+                  <label className="mb-3"> Article Contents </label>
+                  <Editorbar className="editor">
+                    <Editor
+                      editorState={editorState}
+                      toolbarClassName="toolbarClassName"
+                      wrapperClassName="wrapperClassName"
+                      editorClassName="editorClassName"
+                      onEditorStateChange={onEditorStateChange}
+                      value="textxss"
+                    />
+                  </Editorbar>
+                </section>
+
+                {/* <div className="editor container p-5">
+<CKEditor
+  editor={ClassicEditor}
+  data={text}
+  onChange={(event, editor) => {
+    const data = editor.getData();
+    setText(data);
+  }}
+/>
+</div> */}
+                <div className="w-100 container mt-3 mb-3">
+                  <button
+                    className="w-100 btn btn-primary"
+                    onClick={handleUpdateNews}
                   >
-                    <option value={post.category._id}>
-                      {post.category.title}
-                    </option>
-                    {categories.data.map((cat) => (
-                      <option value={cat._id}>{cat.title}</option>
-                    ))}
-                  </select>
+                    {" "}
+                    Update News{" "}
+                  </button>
                 </div>
-              </section>
-
-              <section>
-                <div className="contain">
-                  <label> Description </label>
-                  <textarea
-                    className="form-control"
-                    type="text"
-                    value={formData.description}
-                    onChange={(e) =>
-                      setFormData({ ...formData, description: e.target.value })
-                    }
-                  ></textarea>
-                  <label> Name Of Author </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    value={formData.nameOfAuthor}
-                    onChange={(e) =>
-                      setFormData({ ...formData, nameOfAuthor: e.target.value })
-                    }
-                  />
-                </div>
-              </section>
-
-              <section className="container w-100">
-                <Editorbar className="editor">
-                  <Editor
-                    editorState={editorState}
-                    toolbarClassName="toolbarClassName"
-                    wrapperClassName="wrapperClassName"
-                    editorClassName="editorClassName"
-                    onEditorStateChange={onEditorStateChange}
-                    value="textxss"
-                    // onContentStateChange={onEditorStateChange}
-                  />
-                </Editorbar>
-              </section>
-
-              {/* <div className="editor container p-5">
-          <CKEditor
-            editor={ClassicEditor}
-            data={text}
-            onChange={(event, editor) => {
-              const data = editor.getData();
-              setText(data);
-            }}
-          />
-        </div> */}
-              <div className="w-100 container mt-3 mb-3">
-                <button
-                  className="w-100 btn btn-primary"
-                  onClick={handleUpdateNews}
-                >
-                  {" "}
-                  Update News{" "}
-                </button>
+                {/* <div>
+<p>{parse(text)}</p>
+</div> */}
               </div>
-              {/* <div>
-          <p>{parse(text)}</p>
-        </div> */}
-            </div>
+            </>
           )}
         </div>
       </>

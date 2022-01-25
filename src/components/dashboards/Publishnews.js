@@ -23,6 +23,28 @@ const Editorbar = styled.div`
   border: lightGrey solid 1px;
   overflow-y: scroll;
 `;
+const Input = styled.input`
+  display: none;
+`;
+
+const Label = styled.label`
+  padding: 1em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  background: var(--main-color);
+  width: 80%;
+  margin-top: 2em;
+  border-radius: 15px;
+  &:hover {
+    background: var(--pry-color);
+    box-shadow: 1px 2px 3px 1.5px #c1c1c1;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.5rem;
+  }
+`;
 
 function Publishnews() {
   const user = JSON.parse(localStorage.getItem("profile"));
@@ -30,6 +52,7 @@ function Publishnews() {
 
   //   const [text, setText] = useState("");
 
+  // Get data for all form fields including the wysiwyg
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -39,8 +62,8 @@ function Publishnews() {
     content: "",
   });
 
+  // Fetching categories into category select field
   const [categories, setCategories] = useState(null);
-
   useEffect(() => {
     axios
       .get("https://api-good-news.herokuapp.com/api/categories/all")
@@ -49,6 +72,7 @@ function Publishnews() {
       });
   }, []);
 
+  // Set up for wysiwyg
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
   const onEditorStateChange = (editorState) => {
@@ -59,6 +83,33 @@ function Publishnews() {
     return setEditorState(editorState);
   };
 
+  // Handle Image upload for news article
+  const [artcileThumb, setArtcileThumb] = useState();
+  const HandleImageUpload = (e) => {
+    // accessing the value of the input
+    const files = e.target.files[0];
+
+    //  getting and appending the value to send to CDN via axios.post
+    const uploadData = new FormData();
+    uploadData.append("file", files);
+    uploadData.append("upload_preset", "gztyasbe");
+    console.log(uploadData);
+
+    axios
+      .post(
+        "https://api.cloudinary.com/v1_1/dmsyfdo0y/image/upload",
+        uploadData
+      )
+      .then((response) => {
+        // set the response data to state using spread operator to get other datas too
+        setFormData({ ...formData, imageUrl: response.data.secure_url });
+
+        // set response.data.secure_url to image state so as to be able to display the uploaded image
+        setArtcileThumb(response.data.secure_url);
+
+        console.log(response);
+      });
+  };
   // function clear() {
   //   setFormData({
   //     nameOfAuthor: "",
@@ -161,15 +212,19 @@ function Publishnews() {
                     </div>
 
                     <div className="pe-2 mt-1 col-12 col-md-6">
-                      <label className="mb-2"> Thumbnail URL </label>
-                      <input
+                      <Label htmlFor="file" className="mb-2">
+                        {" "}
+                        Thumbnail URL{" "}
+                      </Label>
+                      <Input
+                        id="file"
                         className="form-control"
                         placeholder="Image url"
-                        type="text"
-                        onChange={(e) =>
-                          setFormData({ ...formData, imageUrl: e.target.value })
-                        }
+                        type="file"
+                        onChange={HandleImageUpload}
                       />
+
+                      <img src={artcileThumb} alt="" />
                     </div>
 
                     <div className=" pe-2 col-12 mt-1 col-md-6">
