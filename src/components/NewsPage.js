@@ -45,6 +45,14 @@ const ReadAlso = styled.div`
   margin-bottom: 6em;
 `;
 
+// const ReadMore = styled.a`
+//   text-decoration: none;
+//   background: var(--main-color);
+//   color: #fff;
+//   margin-top: 7em;
+//   padding: 1em;
+// `;
+
 function NewsPage(props) {
   const {
     articleTitle,
@@ -57,6 +65,7 @@ function NewsPage(props) {
     catId,
     createdAt,
     categoryName,
+    // readmoreUrl,
   } = props;
 
   const [user, setUser] = useState(null);
@@ -195,7 +204,13 @@ function NewsPage(props) {
 
       <img className="col-12 " src={articleImage} alt="" />
 
-      <p className="p-5"> {articleContents} </p>
+      <p className="p-5">
+        {" "}
+        {articleContents}{" "}
+        {/* <ReadMore href={readmoreUrl} target="_blank" rel="noreferrer">
+          Continue Reading
+        </ReadMore>{" "} */}
+      </p>
 
       {/* Social share start */}
       <section className="d-flex text-center flex-column flex-md-row justify-content-around align-items-center likeIcon mb-5">

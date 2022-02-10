@@ -17,33 +17,73 @@ const keywords =
 
 // import { CircularProgress } from "@material-ui/core";
 
+const initialState = {
+  page: 0,
+  articles: [],
+  total_page: 0,
+  total_hits: 0,
+};
+
 function Newsfeed() {
   const user = JSON.parse(localStorage.getItem("profile"));
-  const [getNews, setGetNews] = useState(null);
+  const [getNews, setGetNews] = useState(initialState);
   const [loadNews, setLoadNews] = useState(getNews);
-  // const [loadMore, setLoadMore] = useState(false);
+  const [loadMore, setLoadMore] = useState(false);
 
-  useEffect(() => {
+  const fetchNews = async (page) => {
+    // Page Params will trigger pagenumber
     const options = {
       method: "GET",
       url: "https://newscatcher.p.rapidapi.com/v1/search_free",
-      params: { q: `${keywords}`, lang: "en", media: "True" },
+      params: {
+        q: `${keywords}`,
+        lang: "en",
+        page: `${page}`,
+        media: "True",
+      },
       headers: {
         "x-rapidapi-host": "newscatcher.p.rapidapi.com",
         "x-rapidapi-key": "78bf95013fmsh55c60620a15fb9dp10fddcjsn6f4b315f827c",
       },
     };
 
-    axios.request(options).then((response) => {
-      setGetNews(response.data);
-      console.log(response.data);
+    await axios.request(options).then((response) => {
+      const news = response.data;
+
+      // spread the response data so as to make immutable
+      setGetNews((prev) => ({
+        ...news,
+        articles:
+          page < 1 ? [...prev.articles, ...news.articles] : [...news.articles],
+      }));
     });
+  };
+  console.log(getNews);
+  useEffect(() => {
+    setGetNews(initialState);
+    fetchNews(1);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Loadmore
+  useEffect(() => {
+    // if !loadmore, return empty
+    if (!loadMore) return;
+    // otherwise, load next page
+    fetchNews(getNews.page + 1);
+    setLoadMore(false);
+  }, [getNews.page, loadMore]);
+
+  console.log(getNews.page + 1);
   // Fetch and display articles on button click
   const HandleNewsFetch = () => {
-    setLoadNews(getNews);
+    setLoadNews(loadNews);
   };
+
+  // const HandLoadMore = () => {
+  //   setLoadNews(loadNews);
+  // };
 
   function redirect() {
     localStorage.clear();
@@ -102,7 +142,7 @@ function Newsfeed() {
       <div>
         <DashboardNavbar />
         <div className="d-flex flex-row justify-content-between">
-          <div className="w-25">
+          <div className="w-25" style={{ background: "green" }}>
             <DashboardSidebar />
           </div>
           <section className="w-75">
@@ -118,10 +158,10 @@ function Newsfeed() {
 
             <main className="">
               <div className="d-flex flex-wrap">
-                {!loadNews ? (
+                {!getNews ? (
                   <></>
                 ) : (
-                  loadNews.articles.map((article, index) => (
+                  getNews.articles.map((article, index) => (
                     <div className="col-12 col-md-4">
                       <FetchNews
                         data={article}
@@ -134,11 +174,16 @@ function Newsfeed() {
                   ))
                 )}
               </div>
-              {/* {!loadNews ? (
-                <></>
-              ) : (
-                <Button onClick={HandLoadMore}>Loadmore</Button>
-              )} */}
+              {
+                <Button
+                  className="w-100 mt-3"
+                  onClick={() => {
+                    setLoadMore(true);
+                  }}
+                >
+                  Loadmore
+                </Button>
+              }
             </main>
           </section>
         </div>

@@ -11,9 +11,18 @@ import { createPost } from "../../actions/posts";
 
 import Swal from "sweetalert2";
 
+// let initialState = {
+//   nameOfAuthor: "Good News",
+//   content: "",
+//   title: "",
+//   description: "",
+//   imageUrl: "",
+// }
+
 function FetchNews(props) {
   const user = JSON.parse(localStorage.getItem("profile"));
   const [categories, setCategories] = useState(null);
+  // const [publishData, setPublishData] = useState(initialState)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,20 +36,23 @@ function FetchNews(props) {
   function handlePublish(e) {
     console.log(e.data);
     console.log(categories);
-    let newsData = {
-      nameOfAuthor: "Good News",
-      content: "",
-      title: "",
-      description: "",
-      imageUrl: "",
-    };
     // let newsData = {
     //   nameOfAuthor: "Good News",
-    //   content: e.data.summary,
-    //   title: e.data.title,
-    //   description: e.data.summary,
-    //   imageUrl: e.data.media,
+    //   content: "",
+    //   title: "",
+    //   description: "",
+    //   imageUrl: "",
     // };
+    let newsData = {
+      nameOfAuthor: "Good News",
+      content: e.data.summary,
+      title: e.data.title,
+      description: e.data.summary,
+      imageUrl: e.data.media,
+      linkToNews: e.data.link,
+    };
+
+    //  setPublishData(e.data)
 
     // let categories = [
     //   { id: "1", title: "hello" },
@@ -60,7 +72,7 @@ function FetchNews(props) {
         autocapitalize: "off",
       },
       showCancelButton: true,
-      confirmButtonText: "Look up",
+      confirmButtonText: "Publish",
       showLoaderOnConfirm: true,
       preConfirm: (e) => {
         console.log(e);
@@ -70,7 +82,7 @@ function FetchNews(props) {
 
         newsData.category = category._id;
         console.log(newsData);
-        console.log(category);
+        // console.log(category);
         // return fetch("/api", newsData)
         //   .then((response) => {
         //     if (!response.ok) {
@@ -84,14 +96,15 @@ function FetchNews(props) {
         //   });
         return dispatch(createPost(newsData));
       },
+
       allowOutsideClick: () => !Swal.isLoading(),
     }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "New post created",
-          text: "It was successful",
-        });
-      }
+      // if (result.isConfirmed) {
+      //   Swal.fire({
+      //     title: "New post created",
+      //     text: "It was successful",
+      //   });
+      // }
     });
   }
 

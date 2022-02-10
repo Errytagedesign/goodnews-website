@@ -66,6 +66,7 @@ function NewsReadUrl() {
           createdAt={data.createdAt}
           categoryName={data.category.title}
           catId={data.category._id}
+          readMoreUrl={data.link}
         />
       )}
     </div>
