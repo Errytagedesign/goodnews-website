@@ -1,6 +1,9 @@
 // components
 import { useState } from "react";
 
+// Google Analytics
+import ReactGA from "react-ga";
+
 // import { useDispatch } from "react-redux";
 // import { fetchPosts } from "./actions/posts"
 import Dashboard from "./components/dashboards/Dashboard";
@@ -23,14 +26,19 @@ import MyPost from "./components/dashboards/MyPost";
 import Publishnews from "./components/dashboards/Publishnews";
 import CreateAds from "./components/dashboards/Adverts/CreateAds";
 import MyAds from "./components/dashboards/Adverts/MyAds";
+import RouteChangeTracker from "./components/RouteChangeTracker";
 // import PreLoader from "./components/PreLoader/PreLoader";
 
 function App() {
+  const TRACKING_ID = "UA-222205827-1";
+  ReactGA.initialize(TRACKING_ID);
+
   const [currentId, setCurrentId] = useState(0);
   const [currentAdsId, setCurrentAdsId] = useState(0);
 
   return (
     <div className="App">
+      <RouteChangeTracker />
       <Router>
         {/* <PreLoader /> */}
 
