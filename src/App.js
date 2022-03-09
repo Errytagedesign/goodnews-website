@@ -38,8 +38,8 @@ function App() {
 
   return (
     <div className="App">
-      <RouteChangeTracker />
       <Router>
+        <RouteChangeTracker />
         {/* <PreLoader /> */}
 
         <Switch>
