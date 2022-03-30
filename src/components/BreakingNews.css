@@ -1,5 +1,5 @@
 .NewsCardWrapper {
-  position: relative;
+  /* position: relative; */
 }
 
 .Readmore {
@@ -9,13 +9,17 @@
   color: var(--main-color);
 }
 
-img {
+/* img {
   width: 100%;
-}
+} */
 
 .BreakingTitle {
-  position: inherit;
-  top: -55px;
+  /* position: inherit;
+  top: -55px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: var(--main-color);
   padding: 1em;
 }
@@ -25,10 +29,20 @@ img {
   color: #fff;
 }
 
-.slick-next,
+.HeadImg img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.BreakingTitle h3 {
+  font-size: 1rem;
+}
+
+/* .slick-next,
 .slick-prev {
   visibility: hidden !important;
-}
+} */
 
 @media screen and (max-width: 500px) {
   .BreakingTitle {

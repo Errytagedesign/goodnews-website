@@ -79,13 +79,13 @@ function BreakingNews(props) {
 
   return (
     <div>
-      <section className="">
-        <div className="d-flex flex-column NewsCardWrapper ">
-          <div className="">
+      <section className="d-flex ">
+        <div className="d-flex flex-column col-12 justify-content-around flex-md-row  NewsCardWrapper ">
+          <div className="HeadImg col-12 col-md-7">
             {" "}
             <img className="col-12" src={imagesrc} alt="" />
           </div>
-          <div className="BreakingTitle m-0 ms-md-5 me-md-5">
+          <div className="BreakingTitle col-12 col-md-5 ">
             <Link
               onClick={() =>
                 setTimeout(() => {

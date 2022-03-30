@@ -19,10 +19,20 @@ const settings = {
   infinite: true,
   centerPadding: "60px",
   slidesToShow: 1,
+  // slidesToScroll: 1,
   swipeToSlide: true,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 10000,
+
   cssEase: "linear",
+  // dots: true,
+  // infinite: true,
+  // slidesToShow: 1,
+  // slidesToScroll: 1,
+  // autoplay: true,
+  // speed: 2000,
+  // autoplaySpeed: 2000,
+  // cssEase: "linear",
 };
 
 function Headlines() {
@@ -56,27 +66,29 @@ function Headlines() {
       {!headLineCategories.length ? (
         <CircularProgress />
       ) : (
-        <Slider {...settings}>
-          {headLineCategories.map((newsheadlines, index) => (
-            <div>
-              <BreakingNews
-                key={index}
-                title={newsheadlines.title}
-                name={newsheadlines.nameOfAuthor}
-                imagesrc={newsheadlines.imageUrl}
-                description={newsheadlines.description.slice(0, 150)}
-                url={"/post?id=" + newsheadlines._id}
-                likes={newsheadlines.numberOfLikes}
-                views={newsheadlines.numberOfViews}
-                comment={newsheadlines.comments.length}
-                postId={newsheadlines._id}
-                likeArray={newsheadlines.likes}
-                posts={headLineCategories}
-                headline={true}
-              />
-            </div>
-          ))}
-        </Slider>
+        <div>
+          <Slider {...settings}>
+            {headLineCategories.map((newsheadlines, index) => (
+              <div>
+                <BreakingNews
+                  key={index}
+                  title={newsheadlines.title}
+                  name={newsheadlines.nameOfAuthor}
+                  imagesrc={newsheadlines.imageUrl}
+                  description={newsheadlines.description.slice(0, 150)}
+                  url={"/post?id=" + newsheadlines._id}
+                  likes={newsheadlines.numberOfLikes}
+                  views={newsheadlines.numberOfViews}
+                  comment={newsheadlines.comments.length}
+                  postId={newsheadlines._id}
+                  likeArray={newsheadlines.likes}
+                  posts={headLineCategories}
+                  headline={true}
+                />{" "}
+              </div>
+            ))}
+          </Slider>
+        </div>
       )}
     </div>
   );
