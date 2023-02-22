@@ -4,9 +4,10 @@ import { fetchCatPosts } from "../../actions/cat";
 import Styled from "styled-components";
 // bootsrapt css
 import "bootstrap/dist/css/bootstrap.min.css";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 import NewsCard from "../NewsCard";
 import Pagination from "../Pagination";
+import { Spinner } from "react-bootstrap";
 
 const Pagins = Styled.div`
 
@@ -17,7 +18,7 @@ justify-content: center;
 `;
 
 // import axios from "axios";
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 function getQuery() {
   let search = window.location.search;
@@ -58,7 +59,7 @@ function APINewsCategory() {
   return (
     <>
       {!categories.length ? (
-        <CircularProgress />
+        <Spinner />
       ) : (
         <div>
           <section className="container d-flex flex-wrap">

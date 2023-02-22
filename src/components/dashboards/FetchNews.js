@@ -27,7 +27,7 @@ function FetchNews(props) {
 
   useEffect(() => {
     axios
-      .get("https://api-good-news.herokuapp.com/api/categories/all")
+      .get("https://goodnews-ng.herokuapp.com/api/categories/all")
       .then((response) => {
         setCategories(response.data);
       });

@@ -11,9 +11,9 @@ import draftToHtml from "draftjs-to-html";
 
 import styled from "styled-components";
 import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 import DashboardSidebar from "./DashboardSidebar";
-import { Button } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 // import parse from "html-react-parser";
 
 const Editorbar = styled.div`
@@ -66,7 +66,7 @@ function Publishnews() {
   const [categories, setCategories] = useState(null);
   useEffect(() => {
     axios
-      .get("https://api-good-news.herokuapp.com/api/categories/all")
+      .get("https://goodnews-ng.herokuapp.com/api/categories/all")
       .then((response) => {
         setCategories(response.data);
       });
@@ -195,7 +195,7 @@ function Publishnews() {
             <div>
               <h2 className="mb-3"> Create News </h2>
               {!categories ? (
-                <CircularProgress />
+                <Spinner />
               ) : (
                 <div className=" container d-flex flex-column align-items-center">
                   <section className="d-flex flex-column flex-md-row flex-wrap container justify-content-between mb-3 col-12">

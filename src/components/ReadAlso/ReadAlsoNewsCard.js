@@ -12,7 +12,7 @@ import { ChatFill, HeartFill } from "react-bootstrap-icons";
 import { Eye } from "react-bootstrap-icons";
 // import Image from '../assets/Greater Lagos 5.jpg'
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 function NewsCard(props) {
   const [user, setUser] = useState(null);

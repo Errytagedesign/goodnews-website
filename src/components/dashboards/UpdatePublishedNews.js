@@ -19,7 +19,7 @@ import draftToHtml from "draftjs-to-html";
 
 import styled from "styled-components";
 // import DashboardNavbar from "../DashboardNavbar/DashboardNavbar";
-// import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 // import parse from "html-react-parser";
 
 const Editorbar = styled.div`
@@ -52,7 +52,7 @@ const Label = styled.label`
   }
 `;
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 // function getQuery() {
 //   let search = window.location.search;

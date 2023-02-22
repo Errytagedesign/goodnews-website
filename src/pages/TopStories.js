@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 // import { useDispatch } from "react-redux";
 // import { fetchTopPosts } from "../actions/posts";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 
 // import Swal from "sweetalert2";
-
-import { CircularProgress } from "@material-ui/core";
 
 // News Components
 import Headlines from "../components/Headlines";
@@ -24,6 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HomepagePost from "../components/HomepagePost";
 import { fetchAdsPosts } from "../actions/ads";
 import ApiNewsfeeds from "../components/APINewsFeeds/ApiNewsfeeds";
+import { Spinner } from "react-bootstrap";
 
 // Style component styling
 const ImageWrapper = styled.img`
@@ -63,16 +62,23 @@ const settings = {
   cssEase: "linear",
 };
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 // const baseURL = "http://localhost:3001/api";
 
 function TopNews() {
+  const [postcaty, setPostcaty] = useState(null);
+
   const ads = useSelector((state) => state.AdsPosts);
-  console.log(ads);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAdsPosts());
-  }, [dispatch]);
+  // console.log(ads);
+
+  useMemo(() => dispatch(fetchAdsPosts()), [dispatch]);
+
+  // useEffect(() => {
+  //   console.log("re-render");
+  //   // dispatch(fetchAdsPosts());
+  //   FetchIt();
+  // }, []);
 
   let desktopHeading = [],
     desktopSidebar = [],
@@ -88,28 +94,7 @@ function TopNews() {
     }
   }
 
-  console.log(desktopSidebar, desktopHeading, mobile);
-
-  // const posts = useSelector((state) => state.posts);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchTopPosts());
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [dispatch]);
-
-  // const [apifeeds, setApifeeds] = useState(null);
-
-  const [postcaty, setPostcaty] = useState(null);
-
-  // useEffect(() => {
-  //   axios
-  //     .get(`${baseURL}/posts/cat/61a52ebdf62a3b6260f36704`)
-  //     .then((response) => {
-  //       setApifeeds(response.data.data);
-  //       console.log(response.data.data);
-  //     });
-  // }, []);
+  // console.log(desktopSidebar, desktopHeading, mobile);
 
   useEffect(() => {
     axios.get(`${baseURL}/posts/category-posts`).then((response) => {
@@ -130,14 +115,14 @@ function TopNews() {
       item.posts.length >= 1
     );
   });
-  console.log(newData);
+  // console.log(newData);
 
   // console.log(categories)
 
   const GeneralNews = data.filter((item) => {
     return item.categoryId === "61a52ebdf62a3b6260f36704";
   });
-  console.log(GeneralNews);
+  // console.log(GeneralNews);
 
   return (
     <>
@@ -181,14 +166,14 @@ function TopNews() {
         <main className=" container mt-5 d-flex flex-column flex-md-row">
           <div className="col-12 col-md-8">
             {!GeneralNews ? (
-              <CircularProgress />
+              <Spinner />
             ) : (
               <section>
                 <ApiNewsfeeds data={GeneralNews} />
               </section>
             )}
             {!data ? (
-              <CircularProgress />
+              <Spinner />
             ) : (
               newData.map((post, index) => (
                 <section>

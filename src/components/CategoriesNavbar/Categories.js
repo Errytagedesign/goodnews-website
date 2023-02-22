@@ -14,7 +14,7 @@ function getQuery() {
   return foo;
 }
 
-// const baseURL = "https://api-good-news.herokuapp.com/api";
+// const baseURL = "https://goodnews-ng.herokuapp.com/api";
 const NavBarCategories = () => {
   // const [categories, setCategories] = useState(null);
   // useEffect(() => {

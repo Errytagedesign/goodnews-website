@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchOnePost } from "../../actions/posts";
 import APINewsPage from "./APINewsPage";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 
 // import axios from "axios";
 
@@ -14,7 +15,7 @@ import { CircularProgress } from "@material-ui/core";
 
 // import {FashionData} from '../components/FashionLifestyleData';
 
-// const baseURL = "https://api-good-news.herokuapp.com/api";
+// const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 function getQuery() {
   let search = window.location.search;
@@ -50,7 +51,7 @@ function APINewsRead() {
   return (
     <div>
       {!data ? (
-        <CircularProgress />
+        <Spinner />
       ) : (
         <APINewsPage
           articleTitle={data.title}

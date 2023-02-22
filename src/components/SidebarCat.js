@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { Avatar, Typography } from "@material-ui/core";
 import { Button } from "react-bootstrap";
-import { withStyles } from "@material-ui/core/styles";
+// import { withStyles } from "@mui/styles";
 import axios from "axios";
 import {
   MenuButton,
@@ -15,7 +14,7 @@ import {
   PersonLinesFill,
   FilePersonFill,
 } from "react-bootstrap-icons";
-import useStyles from "../components/Navbar/styles";
+// import useStyles from "../components/Navbar/styles";
 
 import styled from "styled-components";
 const DropdownLink = styled(Link)`
@@ -105,6 +104,21 @@ const ButtonWrapIn = styled(Button)`
   }
 `;
 
+const UserDP = styled.div`
+  background: var(--sec-color);
+  border-radius: 50%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+`;
+
 // const ButtonSignIn = styled.div`
 //   color: white;
 //   background-color: red;
@@ -113,21 +127,21 @@ const ButtonWrapIn = styled(Button)`
 //   text-decoration: none;
 // `;
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 // const baseURL = "http://localhost:3001/api";
 
-const WhiteTextTypography = withStyles({
-  root: {
-    color: "#FFFFFF",
-  },
-})(Typography);
+// const WhiteTextTypography = withStyles({
+//   root: {
+//     color: "#FFFFFF",
+//   },
+// })(Typography);
 
 function SidebarCat() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
   const dispatch = useDispatch();
   const location = useLocation();
   const history = useHistory();
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const logout = () => {
     dispatch({ type: "LOGOUT" });
@@ -169,21 +183,22 @@ function SidebarCat() {
     <>
       <div className="col-8 text-end ">
         {user ? (
-          <>
-            <Avatar
-              className={classes.green}
-              src={user?.result.imageUrl}
-              alt={user.name}
+          <section className="d-flex flex-column flex-md-row col-12 justify-content-between">
+            <UserDP
+            // className={classes.green}
             >
-              {user?.result.name.charAt(0)}
-            </Avatar>
-            <WhiteTextTypography className={classes.userName} variant="h6">
-              {user?.result.name}
-            </WhiteTextTypography>
-            <Button variant="secondary" onClick={logout}>
+              {/* {!user?.result.imageUrl ? (
+                <PersonCircle size={95} color="white" />
+              ) : (
+                <img src={user?.result.imageUrl} alt={user.name} />
+              )} */}
+              <h2> {user?.result.name.slice(0, 2)}</h2>
+            </UserDP>
+            {/* <div className="btn-danger">{user?.result.name}</div> */}
+            <ButtonWrap variant="outline-success" onClick={logout}>
               Logout
-            </Button>
-          </>
+            </ButtonWrap>
+          </section>
         ) : (
           <div className="d-flex flex-column flex-md-row col-12 justify-content-between">
             <ButtonWrapIn variant="secondary">

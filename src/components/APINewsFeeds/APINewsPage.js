@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCatPosts } from "../../actions/cat";
 import moment from "moment";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 // import { likePost } from "../actions/posts";
-// import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-// import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
-import { Button } from "@material-ui/core";
+// import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+// import ThumbUpAltOutlined from '@mui/icons-material/ThumbUpAltOutlined';
+// import { Button } from "@mui/material";
 
 import "../NewsPage.css";
 import {
@@ -26,7 +26,7 @@ import { HeartFill } from "react-bootstrap-icons";
 
 import axios from "axios";
 
-// import { TextField, Button } from "@material-ui/core";
+// import { TextField, Button } from "@mui/material";
 
 import styled from "styled-components";
 // import Technology from "../pages/Technology";
@@ -35,8 +35,9 @@ import Comments from "../Comments/Comments";
 import Newscard from "../NewsCard";
 // import ReadAlsoNewsCard from "./ReadAlso/ReadAlsoNewsCard";
 
-import SendIcon from "@mui/icons-material/Send";
+// import SendIcon from "@mui/icons-material/Send";
 import { NEWS_LIKE } from "../../constants/actionTypes";
+import { Spinner } from "react-bootstrap";
 
 const ReadAlso = styled.div`
   background: var(--main-color);
@@ -57,25 +58,23 @@ const ReadMore = styled.a`
   }
 `;
 
-function APINewsPage(props) {
-  const {
-    articleTitle,
-    articleImage,
-    articleContents,
-    postId,
-    url,
-    comments,
-    likeArray,
-    catId,
-    createdAt,
-    categoryName,
-    readmoreUrl,
-  } = props;
-
+function APINewsPage({
+  articleTitle,
+  articleImage,
+  articleContents,
+  postId,
+  url,
+  comments,
+  likeArray,
+  catId,
+  createdAt,
+  categoryName,
+  readmoreUrl,
+}) {
   const [user, setUser] = useState(null);
   const [comment, setComment] = useState({});
 
-  const baseURL = "https://api-good-news.herokuapp.com/api";
+  const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("profile"))?.result);
@@ -177,14 +176,14 @@ function APINewsPage(props) {
             </h6>
           </div>
 
-          <Button
+          <button
             size="small"
             color="primary"
             disabled={!user}
             onClick={addLike}
           >
             <Likes />
-          </Button>
+          </button>
         </div>
 
         <div className="d-flex flex-row justify-content-around  col-10 col-md-7 ps-4 likeIcon">
@@ -242,12 +241,7 @@ function APINewsPage(props) {
             }}
             value={comment.comment}
           />
-          <button
-            endIcon={<SendIcon />}
-            type="submit"
-            className="form-control"
-            onClick={postComment}
-          >
+          <button type="submit" className="form-control" onClick={postComment}>
             Send
           </button>
         </form>
@@ -257,7 +251,7 @@ function APINewsPage(props) {
       <ReadAlso>
         <h6 className=""> Read Also </h6>
         {!categories ? (
-          <CircularProgress />
+          <Spinner />
         ) : (
           <section className="container d-flex flex-wrap">
             {categories.slice(0, 3).map((news) => (

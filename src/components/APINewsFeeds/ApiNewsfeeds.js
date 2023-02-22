@@ -17,9 +17,8 @@ background-color: var(--main-color);
 
 `;
 
-function ApiNewsfeeds(props) {
-  const { data } = props;
-  console.log(data.posts);
+function ApiNewsfeeds({ data }) {
+  // console.log(data.posts);
 
   return (
     <div className="d-flex flex-column justify-content-between">
@@ -36,7 +35,7 @@ function ApiNewsfeeds(props) {
 
       <section className="d-flex flex-wrap">
         {data[0].posts.slice(0, 6).map((news) => (
-          <div className="col-12 col-md-6 col-lg-4 ">
+          <div key={news._id} className="col-12 col-md-6 col-lg-4 ">
             <NewsCard
               key={news._id}
               title={news.title}

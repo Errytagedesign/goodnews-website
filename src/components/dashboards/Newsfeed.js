@@ -15,7 +15,7 @@ const keywords =
   " Nigerians in the diaspora making waves " +
   "Nigerians making impact";
 
-// import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 
 const initialState = {
   page: 0,

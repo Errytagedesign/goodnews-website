@@ -1,20 +1,8 @@
 import React, { useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchOnePost } from "../actions/posts";
 import NewsPage from "../components/NewsPage";
-import { CircularProgress } from "@material-ui/core";
-
-// import axios from "axios";
-
-// import articleImg from '../assets/Greater Lagos 5.jpg';
-
-// import Data from '../topstories.json'
-
-// import {Data} from '../components/TopstoriesData';
-
-// import {FashionData} from '../components/FashionLifestyleData';
-
-// const baseURL = "https://api-good-news.herokuapp.com/api";
 
 function getQuery() {
   let search = window.location.search;
@@ -35,22 +23,13 @@ function NewsReadUrl() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getQuery(), dispatch]);
 
-  // const [post, setPost] = useState(null);
-
-  // useEffect(() => {
-  //   axios.get(`${baseURL}/posts/${getQuery()}`).then((response) => {
-  //     setPost(response.data);
-  //   });
-  // }, []);
-
-  // if (!post) return null;
-  console.log(post.post);
+  // console.log(post.post);
   let data = post.post;
 
   return (
     <div>
       {!data ? (
-        <CircularProgress />
+        <Spinner />
       ) : (
         <NewsPage
           articleTitle={data.title}

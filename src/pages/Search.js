@@ -6,10 +6,10 @@ import { fetchPosts } from "../actions/search";
 import Newscard from "../components/NewsCard";
 // bootsrapt css
 import "bootstrap/dist/css/bootstrap.min.css";
-import { CircularProgress } from "@material-ui/core";
+import { Spinner } from "react-bootstrap";
 
 // import axios from "axios";
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 function Search() {
   const dispatch = useDispatch();
@@ -22,23 +22,10 @@ function Search() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
-  // const [post, setPost] = React.useState(null);
-
-  // React.useEffect(() => {
-  //   axios.get(`${baseURL}/posts/cat/${getQuery()}`).then((response) => {
-  //     setPost(response.data);
-  //   });
-  // }, [post]);
-
-  // if (!post) return null;
-
-  // let data = post.data;
-  // console.log(data);
-
   return (
     <>
       {!searchPosts ? (
-        <CircularProgress />
+        <Spinner />
       ) : searchPosts.length === 0 ? (
         <div>
           <br />

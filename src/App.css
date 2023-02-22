@@ -81,6 +81,25 @@ h2 {
   width: 100%;
 }
 
+.main-btn {
+  padding: 1em 1.5em;
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 12px;
+}
+.sec-btn {
+  padding: 1em 1.5em;
+  color: #fff;
+  background-color: var(--sec-color);
+  border-radius: 12px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 .link a {
   text-decoration: none;
   font-weight: 500;

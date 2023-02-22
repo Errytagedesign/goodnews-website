@@ -2,11 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCatPosts } from "../actions/cat";
 import moment from "moment";
-import { CircularProgress } from "@material-ui/core";
-// import { likePost } from "../actions/posts";
-// import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-// import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
-import { Button } from "@material-ui/core";
 
 import "./NewsPage.css";
 import {
@@ -26,7 +21,7 @@ import { HeartFill } from "react-bootstrap-icons";
 
 import axios from "axios";
 
-// import { TextField, Button } from "@material-ui/core";
+// import { TextField, Button } from "@mui/material";
 
 import styled from "styled-components";
 // import Technology from "../pages/Technology";
@@ -35,8 +30,9 @@ import Comments from "./Comments/Comments";
 import Newscard from "./NewsCard";
 // import ReadAlsoNewsCard from "./ReadAlso/ReadAlsoNewsCard";
 
-import SendIcon from "@mui/icons-material/Send";
+// import SendIcon from "@mui/icons-material/Send";
 import { NEWS_LIKE } from "../constants/actionTypes";
+import { Spinner } from "react-bootstrap";
 
 const ReadAlso = styled.div`
   background: var(--main-color);
@@ -53,26 +49,23 @@ const ReadAlso = styled.div`
 //   padding: 1em;
 // `;
 
-function NewsPage(props) {
-  const {
-    articleTitle,
-    articleImage,
-    articleContents,
-    postId,
-    url,
-    comments,
-    likeArray,
-    catId,
-    createdAt,
-    categoryName,
-    // readmoreUrl,
-  } = props;
-
+function NewsPage({
+  articleTitle,
+  articleImage,
+  articleContents,
+  postId,
+  url,
+  comments,
+  likeArray,
+  catId,
+  createdAt,
+  categoryName,
+}) {
   const [user, setUser] = useState(null);
   const [comment, setComment] = useState({});
   // const [readAlso, setReadAlso] = useState(null);
   // const baseURL = "http://localhost:3001/api";
-  const baseURL = "https://api-good-news.herokuapp.com/api";
+  const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
   // useEffect(() => {
   //   axios
@@ -119,50 +112,22 @@ function NewsPage(props) {
     // eslint-disable-next-line no-restricted-globals
     // location.reload();
   };
-  // const removeLike = async (e) => {
-  //   await axios
-  //     .put(
-  //       `${baseURL}/posts/removeLike/${postId}?userId=614f4d55d35c933f145fa99a`
-  //     )
-  //     .then((response) => {
-  //       // console.log(response);
-  //     });
-  //   // eslint-disable-next-line no-restricted-globals
-  //   location.reload();
-  // };
-  // const Like = async (e) => {
-  //   e.preventDefault();
-  //   const user = await axios.get(
-  //     `${baseURL}/admin-users/aUser/614f4d55d35c933f145fa99a`
-  //   );
-  //   // console.log(user.data.data.userLikedPost);
-  //   if (!user.userLikedPost.includes(postId)) {
-  //     addLike();
-  //   }
-  //   if (user.userLikedPost.includes(postId)) {
-  //     removeLike();
-  //   }
-  // };
 
   const Likes = () => {
     if (likeArray.length > 0) {
       return likeArray.includes(user?.googleId || user?._id) ? (
-        // <><ThumbUpAltIcon fontSize="small" />&nbsp;{(likes > 1) ? `You and ${likes - 1} other${(likes - 1) > 1 ? 's' : ''}` : (likes === 1) ? `You` : `${likes} {${likes} === 1 ? 'Like' : 'Likes'}` }</>
         <>
-          {/* <ThumbUpAltIcon fontSize="small" />&nbsp;{likeArray.length > 2 ? `You and ${likeArray.length - 1} others` : `${likeArray.length} like${likeArray.length > 1 ? 's' : ''}` } */}
           <HeartFill size={25} className={`heart`} />
           {likeArray.length}
         </>
       ) : (
         <>
-          {/* <ThumbUpAltOutlined fontSize="small" />&nbsp;{likes} {likes === 1 ? 'Like' : 'Likes'} */}
           <HeartFill size={25} className={`icons`} />
           {likeArray.length}
         </>
       );
     }
 
-    // return <><ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>;
     return (
       <>
         <HeartFill size={25} className={`icons`} />
@@ -184,16 +149,6 @@ function NewsPage(props) {
     });
   };
 
-  // var liked = "";
-  // if (!user) {
-  //   liked += "icons";
-  // } else if (!user.userLikedPost.includes(postId)) {
-  //   liked += "icons";
-  // } else {
-  //   liked += "heart";
-  // }
-
-  // console.log(comment);
   return (
     <div className="newsPage mt-5 container">
       <div className="newstime d-flex flex-row justify-content-between p-1">
@@ -221,14 +176,14 @@ function NewsPage(props) {
             </h6>
           </div>
           {/* onClick={() => dispatch(likePost(postId, userId))} */}
-          <Button
+          <button
             size="small"
             color="primary"
             disabled={!user}
             onClick={addLike}
           >
             <Likes />
-          </Button>
+          </button>
           <div>{/* <small className="ms-2"> {likes} </small> */}</div>
         </div>
 
@@ -288,7 +243,7 @@ function NewsPage(props) {
             value={comment.comment}
           />
           <button
-            endIcon={<SendIcon />}
+            // endIcon={<SendIcon />}
             type="submit"
             className="form-control"
             onClick={postComment}
@@ -302,7 +257,7 @@ function NewsPage(props) {
       <ReadAlso>
         <h6 className=""> Read Also </h6>
         {!categories ? (
-          <CircularProgress />
+          <Spinner />
         ) : (
           <section className="container d-flex flex-wrap">
             {categories.slice(0, 3).map((news) => (

@@ -10,7 +10,7 @@ import logo from "../../assets/GOOD-NEWS-NG-LOGO-WHITE.png";
 // import Carousel from 'react-elastic-carousel'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { Avatar, Button, Typography } from "@material-ui/core";
+// import { Avatar, Button, Typography } from "@mui/material";
 
 import Menu from "../Menu";
 // import useStyles from "./styles";

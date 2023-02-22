@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCatPosts } from "../actions/headlines";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@mui/material";
 
 // import "./Headline.css";
 
@@ -12,7 +12,8 @@ import Slider from "react-slick";
 // import axios from "axios";
 
 import BreakingNews from "./BreakingNews";
-// const baseURL = "https://api-good-news.herokuapp.com/api";
+import { Spinner } from "react-bootstrap";
+// const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 const settings = {
   className: "center",
@@ -36,20 +37,6 @@ const settings = {
 };
 
 function Headlines() {
-  // const [category, setCategory] = React.useState(null);
-
-  // React.useEffect(() => {
-  //   axios
-  //     .get(`${baseURL}/posts/cat/615d60765b9e9d000424fa62`)
-  //     .then((response) => {
-  //       setCategory(response.data);
-  //     });
-  // }, []);
-
-  // if (!category) return null;
-
-  // let data = category.data;
-
   const headLineCategories = useSelector((state) => state.headlineCat);
   // console.log(categories)
   const dispatch = useDispatch();
@@ -64,12 +51,12 @@ function Headlines() {
   return (
     <div className=" mt-5 col-12 overflow-hidden">
       {!headLineCategories.length ? (
-        <CircularProgress />
+        <Spinner />
       ) : (
         <div>
           <Slider {...settings}>
             {headLineCategories.map((newsheadlines, index) => (
-              <div>
+              <div key={index}>
                 <BreakingNews
                   key={index}
                   title={newsheadlines.title}

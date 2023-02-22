@@ -1,8 +1,6 @@
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
-
-import { CircularProgress } from "@material-ui/core";
-import { Button, Table } from "react-bootstrap";
+import { Button, Spinner, Table } from "react-bootstrap";
 import { deletePost } from "../../actions/posts";
 import Swal from "sweetalert2";
 // import Styled from "styled-components";
@@ -38,7 +36,7 @@ export default function Tables({ setCurrentId }) {
   }
 
   return !posts.length ? (
-    <CircularProgress />
+    <Spinner />
   ) : (
     <div>
       <Table striped bordered hover className="mt-4">

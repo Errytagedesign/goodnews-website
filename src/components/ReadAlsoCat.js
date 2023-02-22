@@ -21,7 +21,7 @@ const ReadAlso = styled.div`
 
 function ReadAlsoCat(props) {
   const [post, setPost] = useState(null);
-  const baseURL = "https://api-good-news.herokuapp.com/api";
+  const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
   useEffect(() => {
     axios.get(`${baseURL}/posts/cat/${props.catId}`).then((response) => {

@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./BreakingNews.css";
 
-// import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-// import DeleteIcon from '@material-ui/icons/Delete';
-// import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-// import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
+// import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+// import DeleteIcon from '@mui/icons-material/Delete';
+// import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
+// import ThumbUpAltOutlined from '@mui/icons-material/ThumbUpAltOutlined';
 
 // import heart from "../assets/icons/Heart.svg";
 // import comments from "../assets/icons/Comment.svg";

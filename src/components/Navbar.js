@@ -11,7 +11,7 @@ import Slider from "react-slick";
 import Menu from "./Menu";
 // import Hamburger from './Hamburger';
 
-const baseURL = "https://api-good-news.herokuapp.com/api";
+const baseURL = "https://goodnews-ng.herokuapp.com/api";
 
 function Navbar() {
   const [categories, setCategories] = useState(null);

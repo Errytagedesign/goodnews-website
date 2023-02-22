@@ -3,8 +3,7 @@ import DashboardSidebar from "./DashboardSidebar";
 import DashboardNavbar from "../../components/DashboardNavbar/DashboardNavbar";
 import styled from "styled-components";
 import axios from "axios";
-import { CircularProgress } from "@material-ui/core";
-import { Button } from "react-bootstrap";
+import { Button, Spinner } from "react-bootstrap";
 
 const CardWrapp = styled.div`
   background-color: var(--main-color);
@@ -26,37 +25,12 @@ function Dashboard(props) {
 
   useEffect(() => {
     axios
-      .get(
-        "https://api-good-news.herokuapp.com/api/admin-users/admin/dashboard"
-      )
+      .get("https://goodnews-ng.herokuapp.com/api/admin-users/admin/dashboard")
       .then((response) => {
         setDashboardData(response.data.data);
         console.log(response.data.data);
       });
   }, []);
-
-  // const redirect = () => {
-  //   window.location.replace("/authsignin");
-  // };
-
-  // if (!user) {
-  //   return (
-  //     <>
-  //       <DashboardNavbar />
-  //       <div>
-  //         <br /> <br />
-  //         <h2>Login as an Admin to acess this Page</h2>
-  //         <h2>
-  //           Click this{" "}
-  //           <button className="btn btn-success" onClick={redirect}>
-  //             Link{" "}
-  //           </button>{" "}
-  //           to go to Login Page
-  //         </h2>
-  //       </div>
-  //     </>
-  //   );
-  // } else {
 
   const redirect = () => {
     localStorage.clear();
@@ -119,7 +93,7 @@ function Dashboard(props) {
           <div className="col-10 col-md-6 container ">
             <div className="d-flex flex-wrap  mt-5 ">
               {!dashboardData ? (
-                <CircularProgress />
+                <Spinner />
               ) : (
                 <>
                   <CardWrapp className="col-12 col-md-5">

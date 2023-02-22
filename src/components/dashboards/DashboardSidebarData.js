@@ -96,7 +96,7 @@ export const DashboardSidebarData = [
 
 //   React.useEffect(() => {
 //     axios
-//       .get("https://api-good-news.herokuapp.com/api/categories/all")
+//       .get("https://goodnews-ng.herokuapp.com/api/categories/all")
 //       .then((response) => {
 //         setCategories(response.data);
 //       });
