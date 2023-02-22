@@ -111,6 +111,8 @@ const UserDP = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100px;
+  width: 100px;
 
   h2 {
     text-transform: uppercase;
@@ -181,9 +183,9 @@ function SidebarCat() {
 
   return (
     <>
-      <div className="col-8 text-end ">
+      <div className="col-12 text-end ">
         {user ? (
-          <section className="d-flex flex-column flex-md-row col-12 justify-content-between">
+          <section className="d-flex flex-column flex-md-row col-12 justify-content-between align-items-center">
             <UserDP
             // className={classes.green}
             >
@@ -195,9 +197,15 @@ function SidebarCat() {
               <h2> {user?.result.name.slice(0, 2)}</h2>
             </UserDP>
             {/* <div className="btn-danger">{user?.result.name}</div> */}
-            <ButtonWrap variant="outline-success" onClick={logout}>
-              Logout
-            </ButtonWrap>
+            <div className="mt-3 mt-lg-0 col-5">
+              <ButtonWrap
+                className="col-12"
+                variant="outline-success"
+                onClick={logout}
+              >
+                Logout
+              </ButtonWrap>
+            </div>
           </section>
         ) : (
           <div className="d-flex flex-column flex-md-row col-12 justify-content-between">

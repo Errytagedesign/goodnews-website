@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import { GoogleLogin } from "react-google-login";
+// import { GoogleLogin } from "react-google-login";
 
 // import Icon from "./icon";
 import { signIn } from "../../actions/auth";
-import { Google } from "react-bootstrap-icons";
+// import { Google } from "react-bootstrap-icons";
 import { Spinner } from "react-bootstrap";
 const initialStateField = {
   firstName: "",
@@ -19,14 +19,14 @@ const Auth = () => {
   const user = JSON.parse(localStorage.getItem("profile"));
   if (user) window.location.replace("/");
   const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState(false);
+  const [error, setError] = useState(false);
 
-  // const classes = useStyles();
-  const dispatch = useDispatch();
-  const history = useHistory();
   const [formData, setFormData] = useState(initialStateField);
 
   const [showPassword] = useState(false);
+  // const classes = useStyles();
+  const dispatch = useDispatch();
+  const history = useHistory();
   // const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   // const [isSignup, setIsSignup] = useState(false);
@@ -42,14 +42,15 @@ const Auth = () => {
     // }
     console.log(loading);
 
-    setLoading(true);
-    dispatch(signIn(formData, history)).catch((e) => {
-      setLoading(false);
-
-      console.log(e);
-    });
-
     setLoading(false);
+    setError(false);
+
+    dispatch(signIn(formData, history, setLoading, setError));
+
+    // setError(true);
+    // setLoading(false);
+
+    console.log(error);
   };
   const handleChange = (e) => {
     // e.preventDefault()
@@ -63,21 +64,21 @@ const Auth = () => {
   // const handleShowConfirmPassword = () =>
   //   setShowConfirmPassword((prevShowPassword) => !prevShowPassword);
 
-  const googleSuccess = async (res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
+  // const googleSuccess = async (res) => {
+  //   const result = res?.profileObj;
+  //   const token = res?.tokenId;
 
-    try {
-      dispatch({ type: "AUTH", data: { result, token } });
-      history.push("/");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //   try {
+  //     dispatch({ type: "AUTH", data: { result, token } });
+  //     history.push("/");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  const googleFailure = () => {
-    console.log("Google Sign In was unsuccessful");
-  };
+  // const googleFailure = () => {
+  //   console.log("Google Sign In was unsuccessful");
+  // };
 
   return (
     <>
@@ -104,11 +105,13 @@ const Auth = () => {
                 className="form-control mt-3"
                 // handleShowPassword={handleShowPassword}
               />
+
+              {error && <small> Wrong Password </small>}
             </section>
             <button className="main-btn mt-5" type="submit">
               {loading && <Spinner />} <h2> Sign In</h2>
             </button>
-            <GoogleLogin
+            {/* <GoogleLogin
               clientId="605636590964-tj8lo0qpu02vfkofbuv79d247j0rb9bs.apps.googleusercontent.com"
               render={(renderProps) => (
                 <button
@@ -127,7 +130,7 @@ const Auth = () => {
               onSuccess={googleSuccess}
               onFailure={googleFailure}
               cookiePolicy="single_host_origin"
-            />
+            /> */}
 
             <p className="mt-2">
               Don't have an account? <Link to="/authsignup">Sign Up!</Link>{" "}
