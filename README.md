@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Welcome to GOODNEWSNIGERIA WEB APP
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Live links
 
-In the project directory, you can run:
+[goodnewsng.netlify.app](https://goodnewsng.netlify.app/).
+[goodnewsnigeria.ng](http://goodnewsnigeria.ng/).
 
-### `npm start`
+## App Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As a developer, I am proud to have created Good News Nigeria, a website dedicated to showcasing the positive stories and accomplishments of Nigerians from all walks of life.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I utilized ReactJS, Redux, and Style Components in the development of this website in order to create a seamless and intuitive user experience. These technologies allowed me to build a responsive and dynamic website that is easy to navigate and enjoyable to use.
 
-### `npm test`
+In addition to the technical aspects of the site, I also focused on providing high-quality content that is engaging and informative. I believe that it's important to celebrate the achievements of our fellow citizens, and to showcase the resilience and determination of the Nigerian people.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I hope that Good News Nigeria will serve as a source of inspiration and hope for all who visit, and that it will help to spread positivity and good news throughout the country. Thank you for supporting this project!
 
-### `npm run build`
+### Tech Tools
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. ReactJs.
+2. [Bootstrap](https://getbootstrap.com).
+3. [Styled-Components](https://styled-components.com).
+4. [Redux](https://redux.js.org/)
+5. [Slick-carousel](https://react-slick.neostack.com/)
+6. [React-draft-wysiwyg](https://jpuri.github.io/react-draft-wysiwyg/#/)
+7. [Axios](https://axios-http.com/docs/intro)
+8. [Cloudinary](https://cloudinary.com/)
+9. [React-share](https://www.npmjs.com/package/react-share)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![goodnewsnigeri](screenshort-1.png)
+![goodnewsnigeri](screenshort-2.png)
+![goodnewsnigeri](screenshort-3.png)
 
-### `npm run eject`
+### Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Authentication
+2. Signup and Signin
+3. Likes
+4. Comments
+5. Axios fetch POST, GET, PUT.
+6. Admin Dashboard
+7. Programitic advert integration
+8. Responsiveness
+9. Browser compatibility
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Backend developer
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Yusuf-Adedeji](https://github.com/hadedeji10k)
