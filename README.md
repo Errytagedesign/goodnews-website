@@ -28,6 +28,7 @@ I hope that Good News Nigeria will serve as a source of inspiration and hope for
 7. [Axios](https://axios-http.com/docs/intro)
 8. [Cloudinary](https://cloudinary.com/)
 9. [React-share](https://www.npmjs.com/package/react-share)
+10. [Sweet-Alert](https://sweetalert.js.org/guides/)
 
 ## Preview
 
