@@ -31,9 +31,9 @@ I hope that Good News Nigeria will serve as a source of inspiration and hope for
 
 ## Preview
 
-![goodnewsnigeri](Screenshort-1.png)
-![goodnewsnigeri](Screenshort-2.png)
-![goodnewsnigeri](Screenshort-3.png)
+![goodnewsnigeri](Screenshot-1.png)
+![goodnewsnigeri](Screenshot-2.png)
+![goodnewsnigeri](Screenshot-3.png)
 
 ## Features
 
