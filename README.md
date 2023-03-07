@@ -17,7 +17,7 @@ In addition to the technical aspects of the site, I also focused on providing hi
 
 I hope that Good News Nigeria will serve as a source of inspiration and hope for all who visit, and that it will help to spread positivity and good news throughout the country. Thank you for supporting this project!
 
-### Tech Tools
+## Tech Tools
 
 1. ReactJs.
 2. [Bootstrap](https://getbootstrap.com).
@@ -29,13 +29,13 @@ I hope that Good News Nigeria will serve as a source of inspiration and hope for
 8. [Cloudinary](https://cloudinary.com/)
 9. [React-share](https://www.npmjs.com/package/react-share)
 
-### Preview
+## Preview
 
-![goodnewsnigeri](screenshort-1.png)
-![goodnewsnigeri](screenshort-2.png)
-![goodnewsnigeri](screenshort-3.png)
+![goodnewsnigeri](Screenshort-1.png)
+![goodnewsnigeri](Screenshort-2.png)
+![goodnewsnigeri](Screenshort-3.png)
 
-### Features
+## Features
 
 1. Authentication
 2. Signup and Signin
@@ -47,6 +47,6 @@ I hope that Good News Nigeria will serve as a source of inspiration and hope for
 8. Responsiveness
 9. Browser compatibility
 
-# Backend developer
+## Backend developer
 
 [Yusuf-Adedeji](https://github.com/hadedeji10k)
